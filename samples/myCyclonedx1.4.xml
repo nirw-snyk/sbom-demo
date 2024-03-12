@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bom
+	xmlns="http://cyclonedx.org/schema/bom/1.4" serialNumber="urn:uuid:a2812c55-5eb6-4af2-b647-eceabf6462fa" version="1">
+	<metadata>
+		<timestamp>2024-03-12T06:15:26Z</timestamp>
+		<tools>
+			<tool>
+				<vendor>Snyk</vendor>
+				<name>snyk-cli</name>
+				<version>1.1267.0</version>
+			</tool>
+			<tool>
+				<vendor>Snyk</vendor>
+				<name>SBOM Export API</name>
+				<version>v1.78.0</version>
+			</tool>
+		</tools>
+		<component bom-ref="1-org.t246osslab.easybuggy:easybuggy@1-SNAPSHOT" type="application">
+			<name>org.t246osslab.easybuggy:easybuggy</name>
+			<version>1-SNAPSHOT</version>
+			<purl>pkg:maven/org.t246osslab.easybuggy/easybuggy@1-SNAPSHOT</purl>
+		</component>
+	</metadata>
+	<components>
+		<component bom-ref="2-javax.servlet:javax.servlet-api@3.0.1" type="library">
+			<group>javax.servlet</group>
+			<name>javax.servlet:javax.servlet-api</name>
+			<version>3.0.1</version>
+			<purl>pkg:maven/javax.servlet/javax.servlet-api@3.0.1</purl>
+		</component>
+		<component bom-ref="3-javax.servlet.jsp:jsp-api@2.2" type="library">
+			<group>javax.servlet.jsp</group>
+			<name>javax.servlet.jsp:jsp-api</name>
+			<version>2.2</version>
+			<purl>pkg:maven/javax.servlet.jsp/jsp-api@2.2</purl>
+		</component>
+		<component bom-ref="4-javax.servlet:jstl@1.2" type="library">
+			<group>javax.servlet</group>
+			<name>javax.servlet:jstl</name>
+			<version>1.2</version>
+			<purl>pkg:maven/javax.servlet/jstl@1.2</purl>
+		</component>
+		<component bom-ref="5-org.apache.derby:derby@10.8.3.0" type="library">
+			<group>org.apache.derby</group>
+			<name>org.apache.derby:derby</name>
+			<version>10.8.3.0</version>
+			<purl>pkg:maven/org.apache.derby/derby@10.8.3.0</purl>
+		</component>
+		<component bom-ref="6-javassist:javassist@3.12.1.GA" type="library">
+			<group>javassist</group>
+			<name>javassist:javassist</name>
+			<version>3.12.1.GA</version>
+			<purl>pkg:maven/javassist/javassist@3.12.1.GA</purl>
+		</component>
+		<component bom-ref="7-org.openjdk.jol:jol-core@0.6" type="library">
+			<group>org.openjdk.jol</group>
+			<name>org.openjdk.jol:jol-core</name>
+			<version>0.6</version>
+			<purl>pkg:maven/org.openjdk.jol/jol-core@0.6</purl>
+		</component>
+		<component bom-ref="8-mysql:mysql-connector-java@5.1.25" type="library">
+			<group>mysql</group>
+			<name>mysql:mysql-connector-java</name>
+			<version>5.1.25</version>
+			<purl>pkg:maven/mysql/mysql-connector-java@5.1.25</purl>
+		</component>
+		<component bom-ref="9-org.slf4j:slf4j-api@1.5.0" type="library">
+			<group>org.slf4j</group>
+			<name>org.slf4j:slf4j-api</name>
+			<version>1.5.0</version>
+			<purl>pkg:maven/org.slf4j/slf4j-api@1.5.0</purl>
+		</component>
+		<component bom-ref="10-org.slf4j:slf4j-log4j12@1.5.0" type="library">
+			<group>org.slf4j</group>
+			<name>org.slf4j:slf4j-log4j12</name>
+			<version>1.5.0</version>
+			<purl>pkg:maven/org.slf4j/slf4j-log4j12@1.5.0</purl>
+		</component>
+		<component bom-ref="11-org.apache.directory.server:apacheds-all@1.5.5" type="library">
+			<group>org.apache.directory.server</group>
+			<name>org.apache.directory.server:apacheds-all</name>
+			<version>1.5.5</version>
+			<purl>pkg:maven/org.apache.directory.server/apacheds-all@1.5.5</purl>
+		</component>
+		<component bom-ref="12-org.owasp.esapi:esapi@2.1.0.1" type="library">
+			<group>org.owasp.esapi</group>
+			<name>org.owasp.esapi:esapi</name>
+			<version>2.1.0.1</version>
+			<purl>pkg:maven/org.owasp.esapi/esapi@2.1.0.1</purl>
+		</component>
+		<component bom-ref="13-ognl:ognl@3.0.17" type="library">
+			<group>ognl</group>
+			<name>ognl:ognl</name>
+			<version>3.0.17</version>
+			<purl>pkg:maven/ognl/ognl@3.0.17</purl>
+		</component>
+		<component bom-ref="14-com.sun.mail:javax.mail@1.5.1" type="library">
+			<group>com.sun.mail</group>
+			<name>com.sun.mail:javax.mail</name>
+			<version>1.5.1</version>
+			<purl>pkg:maven/com.sun.mail/javax.mail@1.5.1</purl>
+		</component>
+		<component bom-ref="15-org.apache.logging.log4j:log4j-core@2.1" type="library">
+			<group>org.apache.logging.log4j</group>
+			<name>org.apache.logging.log4j:log4j-core</name>
+			<version>2.1</version>
+			<purl>pkg:maven/org.apache.logging.log4j/log4j-core@2.1</purl>
+		</component>
+		<component bom-ref="16-log4j:log4j@1.2.13" type="library">
+			<group>log4j</group>
+			<name>log4j:log4j</name>
+			<version>1.2.13</version>
+			<purl>pkg:maven/log4j/log4j@1.2.13</purl>
+		</component>
+		<component bom-ref="17-commons-configuration:commons-configuration@1.10" type="library">
+			<group>commons-configuration</group>
+			<name>commons-configuration:commons-configuration</name>
+			<version>1.10</version>
+			<purl>pkg:maven/commons-configuration/commons-configuration@1.10</purl>
+		</component>
+		<component bom-ref="18-commons-beanutils:commons-beanutils-core@1.8.3" type="library">
+			<group>commons-beanutils</group>
+			<name>commons-beanutils:commons-beanutils-core</name>
+			<version>1.8.3</version>
+			<purl>pkg:maven/commons-beanutils/commons-beanutils-core@1.8.3</purl>
+		</component>
+		<component bom-ref="19-commons-fileupload:commons-fileupload@1.3.1" type="library">
+			<group>commons-fileupload</group>
+			<name>commons-fileupload:commons-fileupload</name>
+			<version>1.3.1</version>
+			<purl>pkg:maven/commons-fileupload/commons-fileupload@1.3.1</purl>
+		</component>
+		<component bom-ref="20-commons-collections:commons-collections@3.2.2" type="library">
+			<group>commons-collections</group>
+			<name>commons-collections:commons-collections</name>
+			<version>3.2.2</version>
+			<purl>pkg:maven/commons-collections/commons-collections@3.2.2</purl>
+		</component>
+		<component bom-ref="21-xom:xom@1.2.5" type="library">
+			<group>xom</group>
+			<name>xom:xom</name>
+			<version>1.2.5</version>
+			<purl>pkg:maven/xom/xom@1.2.5</purl>
+		</component>
+		<component bom-ref="22-org.beanshell:bsh-core@2.0b4" type="library">
+			<group>org.beanshell</group>
+			<name>org.beanshell:bsh-core</name>
+			<version>2.0b4</version>
+			<purl>pkg:maven/org.beanshell/bsh-core@2.0b4</purl>
+		</component>
+		<component bom-ref="23-org.owasp.antisamy:antisamy@1.5.3" type="library">
+			<group>org.owasp.antisamy</group>
+			<name>org.owasp.antisamy:antisamy</name>
+			<version>1.5.3</version>
+			<purl>pkg:maven/org.owasp.antisamy/antisamy@1.5.3</purl>
+		</component>
+		<component bom-ref="24-org.apache.xmlgraphics:batik-css@1.8" type="library">
+			<group>org.apache.xmlgraphics</group>
+			<name>org.apache.xmlgraphics:batik-css</name>
+			<version>1.8</version>
+			<purl>pkg:maven/org.apache.xmlgraphics/batik-css@1.8</purl>
+		</component>
+		<component bom-ref="25-javax.activation:activation@1.1" type="library">
+			<group>javax.activation</group>
+			<name>javax.activation:activation</name>
+			<version>1.1</version>
+			<purl>pkg:maven/javax.activation/activation@1.1</purl>
+		</component>
+		<component bom-ref="26-org.apache.logging.log4j:log4j-api@2.1" type="library">
+			<group>org.apache.logging.log4j</group>
+			<name>org.apache.logging.log4j:log4j-api</name>
+			<version>2.1</version>
+			<purl>pkg:maven/org.apache.logging.log4j/log4j-api@2.1</purl>
+		</component>
+		<component bom-ref="27-commons-lang:commons-lang@2.6" type="library">
+			<group>commons-lang</group>
+			<name>commons-lang:commons-lang</name>
+			<version>2.6</version>
+			<purl>pkg:maven/commons-lang/commons-lang@2.6</purl>
+		</component>
+		<component bom-ref="28-commons-logging:commons-logging@1.1.1" type="library">
+			<group>commons-logging</group>
+			<name>commons-logging:commons-logging</name>
+			<version>1.1.1</version>
+			<purl>pkg:maven/commons-logging/commons-logging@1.1.1</purl>
+		</component>
+		<component bom-ref="29-commons-io:commons-io@2.2" type="library">
+			<group>commons-io</group>
+			<name>commons-io:commons-io</name>
+			<version>2.2</version>
+			<purl>pkg:maven/commons-io/commons-io@2.2</purl>
+		</component>
+		<component bom-ref="30-xml-apis:xml-apis@1.3.03" type="library">
+			<group>xml-apis</group>
+			<name>xml-apis:xml-apis</name>
+			<version>1.3.03</version>
+			<purl>pkg:maven/xml-apis/xml-apis@1.3.03</purl>
+		</component>
+		<component bom-ref="31-xerces:xercesImpl@2.8.0" type="library">
+			<group>xerces</group>
+			<name>xerces:xercesImpl</name>
+			<version>2.8.0</version>
+			<purl>pkg:maven/xerces/xercesImpl@2.8.0</purl>
+		</component>
+		<component bom-ref="32-xalan:xalan@2.7.0" type="library">
+			<group>xalan</group>
+			<name>xalan:xalan</name>
+			<version>2.7.0</version>
+			<purl>pkg:maven/xalan/xalan@2.7.0</purl>
+		</component>
+		<component bom-ref="33-net.sourceforge.nekohtml:nekohtml@1.9.16" type="library">
+			<group>net.sourceforge.nekohtml</group>
+			<name>net.sourceforge.nekohtml:nekohtml</name>
+			<version>1.9.16</version>
+			<purl>pkg:maven/net.sourceforge.nekohtml/nekohtml@1.9.16</purl>
+		</component>
+		<component bom-ref="34-commons-httpclient:commons-httpclient@3.1" type="library">
+			<group>commons-httpclient</group>
+			<name>commons-httpclient:commons-httpclient</name>
+			<version>3.1</version>
+			<purl>pkg:maven/commons-httpclient/commons-httpclient@3.1</purl>
+		</component>
+		<component bom-ref="35-org.apache.xmlgraphics:batik-ext@1.8" type="library">
+			<group>org.apache.xmlgraphics</group>
+			<name>org.apache.xmlgraphics:batik-ext</name>
+			<version>1.8</version>
+			<purl>pkg:maven/org.apache.xmlgraphics/batik-ext@1.8</purl>
+		</component>
+		<component bom-ref="36-org.apache.xmlgraphics:batik-util@1.8" type="library">
+			<group>org.apache.xmlgraphics</group>
+			<name>org.apache.xmlgraphics:batik-util</name>
+			<version>1.8</version>
+			<purl>pkg:maven/org.apache.xmlgraphics/batik-util@1.8</purl>
+		</component>
+		<component bom-ref="37-xml-apis:xml-apis-ext@1.3.04" type="library">
+			<group>xml-apis</group>
+			<name>xml-apis:xml-apis-ext</name>
+			<version>1.3.04</version>
+			<purl>pkg:maven/xml-apis/xml-apis-ext@1.3.04</purl>
+		</component>
+		<component bom-ref="38-commons-codec:commons-codec@1.2" type="library">
+			<group>commons-codec</group>
+			<name>commons-codec:commons-codec</name>
+			<version>1.2</version>
+			<purl>pkg:maven/commons-codec/commons-codec@1.2</purl>
+		</component>
+	</components>
+	<dependencies>
+		<dependency ref="1-org.t246osslab.easybuggy:easybuggy@1-SNAPSHOT">
+			<dependency ref="2-javax.servlet:javax.servlet-api@3.0.1"></dependency>
+			<dependency ref="3-javax.servlet.jsp:jsp-api@2.2"></dependency>
+			<dependency ref="4-javax.servlet:jstl@1.2"></dependency>
+			<dependency ref="5-org.apache.derby:derby@10.8.3.0"></dependency>
+			<dependency ref="6-javassist:javassist@3.12.1.GA"></dependency>
+			<dependency ref="7-org.openjdk.jol:jol-core@0.6"></dependency>
+			<dependency ref="8-mysql:mysql-connector-java@5.1.25"></dependency>
+			<dependency ref="9-org.slf4j:slf4j-api@1.5.0"></dependency>
+			<dependency ref="10-org.slf4j:slf4j-log4j12@1.5.0"></dependency>
+			<dependency ref="11-org.apache.directory.server:apacheds-all@1.5.5"></dependency>
+			<dependency ref="12-org.owasp.esapi:esapi@2.1.0.1"></dependency>
+			<dependency ref="13-ognl:ognl@3.0.17"></dependency>
+			<dependency ref="14-com.sun.mail:javax.mail@1.5.1"></dependency>
+			<dependency ref="15-org.apache.logging.log4j:log4j-core@2.1"></dependency>
+		</dependency>
+		<dependency ref="2-javax.servlet:javax.servlet-api@3.0.1"></dependency>
+		<dependency ref="3-javax.servlet.jsp:jsp-api@2.2"></dependency>
+		<dependency ref="4-javax.servlet:jstl@1.2"></dependency>
+		<dependency ref="5-org.apache.derby:derby@10.8.3.0"></dependency>
+		<dependency ref="6-javassist:javassist@3.12.1.GA"></dependency>
+		<dependency ref="7-org.openjdk.jol:jol-core@0.6"></dependency>
+		<dependency ref="8-mysql:mysql-connector-java@5.1.25"></dependency>
+		<dependency ref="9-org.slf4j:slf4j-api@1.5.0"></dependency>
+		<dependency ref="10-org.slf4j:slf4j-log4j12@1.5.0">
+			<dependency ref="16-log4j:log4j@1.2.13"></dependency>
+		</dependency>
+		<dependency ref="11-org.apache.directory.server:apacheds-all@1.5.5"></dependency>
+		<dependency ref="12-org.owasp.esapi:esapi@2.1.0.1">
+			<dependency ref="17-commons-configuration:commons-configuration@1.10"></dependency>
+			<dependency ref="18-commons-beanutils:commons-beanutils-core@1.8.3"></dependency>
+			<dependency ref="19-commons-fileupload:commons-fileupload@1.3.1"></dependency>
+			<dependency ref="20-commons-collections:commons-collections@3.2.2"></dependency>
+			<dependency ref="21-xom:xom@1.2.5"></dependency>
+			<dependency ref="22-org.beanshell:bsh-core@2.0b4"></dependency>
+			<dependency ref="23-org.owasp.antisamy:antisamy@1.5.3"></dependency>
+			<dependency ref="24-org.apache.xmlgraphics:batik-css@1.8"></dependency>
+		</dependency>
+		<dependency ref="13-ognl:ognl@3.0.17"></dependency>
+		<dependency ref="14-com.sun.mail:javax.mail@1.5.1">
+			<dependency ref="25-javax.activation:activation@1.1"></dependency>
+		</dependency>
+		<dependency ref="15-org.apache.logging.log4j:log4j-core@2.1">
+			<dependency ref="26-org.apache.logging.log4j:log4j-api@2.1"></dependency>
+		</dependency>
+		<dependency ref="16-log4j:log4j@1.2.13"></dependency>
+		<dependency ref="17-commons-configuration:commons-configuration@1.10">
+			<dependency ref="27-commons-lang:commons-lang@2.6"></dependency>
+			<dependency ref="28-commons-logging:commons-logging@1.1.1"></dependency>
+		</dependency>
+		<dependency ref="18-commons-beanutils:commons-beanutils-core@1.8.3"></dependency>
+		<dependency ref="19-commons-fileupload:commons-fileupload@1.3.1">
+			<dependency ref="29-commons-io:commons-io@2.2"></dependency>
+		</dependency>
+		<dependency ref="20-commons-collections:commons-collections@3.2.2"></dependency>
+		<dependency ref="21-xom:xom@1.2.5">
+			<dependency ref="30-xml-apis:xml-apis@1.3.03"></dependency>
+			<dependency ref="31-xerces:xercesImpl@2.8.0"></dependency>
+			<dependency ref="32-xalan:xalan@2.7.0"></dependency>
+		</dependency>
+		<dependency ref="22-org.beanshell:bsh-core@2.0b4"></dependency>
+		<dependency ref="23-org.owasp.antisamy:antisamy@1.5.3">
+			<dependency ref="33-net.sourceforge.nekohtml:nekohtml@1.9.16"></dependency>
+			<dependency ref="34-commons-httpclient:commons-httpclient@3.1"></dependency>
+		</dependency>
+		<dependency ref="24-org.apache.xmlgraphics:batik-css@1.8">
+			<dependency ref="35-org.apache.xmlgraphics:batik-ext@1.8"></dependency>
+			<dependency ref="36-org.apache.xmlgraphics:batik-util@1.8"></dependency>
+			<dependency ref="37-xml-apis:xml-apis-ext@1.3.04"></dependency>
+		</dependency>
+		<dependency ref="25-javax.activation:activation@1.1"></dependency>
+		<dependency ref="26-org.apache.logging.log4j:log4j-api@2.1"></dependency>
+		<dependency ref="27-commons-lang:commons-lang@2.6"></dependency>
+		<dependency ref="28-commons-logging:commons-logging@1.1.1"></dependency>
+		<dependency ref="29-commons-io:commons-io@2.2"></dependency>
+		<dependency ref="30-xml-apis:xml-apis@1.3.03"></dependency>
+		<dependency ref="31-xerces:xercesImpl@2.8.0"></dependency>
+		<dependency ref="32-xalan:xalan@2.7.0"></dependency>
+		<dependency ref="33-net.sourceforge.nekohtml:nekohtml@1.9.16"></dependency>
+		<dependency ref="34-commons-httpclient:commons-httpclient@3.1">
+			<dependency ref="38-commons-codec:commons-codec@1.2"></dependency>
+		</dependency>
+		<dependency ref="35-org.apache.xmlgraphics:batik-ext@1.8"></dependency>
+		<dependency ref="36-org.apache.xmlgraphics:batik-util@1.8"></dependency>
+		<dependency ref="37-xml-apis:xml-apis-ext@1.3.04"></dependency>
+		<dependency ref="38-commons-codec:commons-codec@1.2"></dependency>
+	</dependencies>
+</bom>
