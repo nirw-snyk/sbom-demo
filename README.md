@@ -1,5 +1,5 @@
 # SBOM Demo Lab
-This lab will demonstrate generating / testing and enreaching sbom files using snyk.
+This lab will demonstrate generating / testing and enriching sbom files using snyk.
 
 ## Pre-requisites:
 - Having a snyk account/token/cli
