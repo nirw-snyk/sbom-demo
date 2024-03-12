@@ -34,14 +34,14 @@ easybuggy git:(demo-feature-branch) ✗ snyk sbom --format=cyclonedx1.4+json --a
 ```
 example file [here](https://github.com/nirw-snyk/sbom-demo/blob/main/samples/myCyclonedx1.4.json)
 
-note: the raw json output was beautified
+>Note: the raw json output was beautified
 
 
 ##### create a cyclonedx1.4.xml sbom file using snyk sbom cli:
  snyk sbom --format=cyclonedx1.4+xml --all-projects >&myCyclonedx1.4.xml
 example file [here](https://github.com/nirw-snyk/sbom-demo/blob/main/samples/myCyclonedx1.4.xml)
 
-note: the raw json output was beautified
+>Note: the raw XML output was beautified
 
 
 #### create a spdx2.3.json file using snyk Get project's SBOM ducument API:
