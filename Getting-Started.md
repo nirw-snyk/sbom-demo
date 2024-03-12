@@ -1,4 +1,4 @@
-# Getting-Started before running the SBOM Demo
+# Getting Started before running the SBOM Demo
 
 ### Running some tests to warm up and check the environment is working
 configuring non-default endpoint + snyk token:
