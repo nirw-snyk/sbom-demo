@@ -55,6 +55,7 @@ curl -X GET "<Snyk-REST-Base-URL>/orgs/<Org-Id>/projects/<Project-Id>/sbom?versi
  -H "authorization: Token <API-Token>" \
 ```
 using the Postman collection [here](https://github.com/nirw-snyk/sbom-demo/blob/main/SBOM.postman_collection.json)
+
 example file [here](https://github.com/nirw-snyk/sbom-demo/blob/main/samples/mySpdx2.3.json)
 
 
@@ -69,6 +70,7 @@ curl -X GET "<Snyk-REST-Base-URL>/orgs/<Org-Id>/targets/<Target-Id>/sbom?version
  -H "authorization: Token <API-Token>" \
 ```
 using the Postman collection [here](https://github.com/nirw-snyk/sbom-demo/blob/main/SBOM.postman_collection.json)
+
 example file [here](https://github.com/nirw-snyk/sbom-demo/blob/main/samples/myTargetCyclondx1.4.json)
 
 #### create a cyclondx1.4.json file using snyk Get a collection’s SBOM document API:
@@ -82,6 +84,7 @@ curl -X GET "<Snyk-REST-Base-URL>/orgs/<Org-Id>/collections/<Collection-Id>/sbom
  -H "authorization: Token <API-Token>" \
 ```
 using the Postman collection [here](https://github.com/nirw-snyk/sbom-demo/blob/main/SBOM.postman_collection.json)
+
 example file [here](https://github.com/nirw-snyk/sbom-demo/blob/main/samples/myCollectionCyclondx1.4.json)
 
 
