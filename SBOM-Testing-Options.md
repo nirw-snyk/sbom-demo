@@ -204,7 +204,7 @@ Version: 0.4.8
 ➜  easybuggy git:(demo-feature-branch) ✗
 
 ```
-bomber html report sample [here](https://github.com/nirw-snyk/sbom-demo/blob/main/samples/20240314-22-39-03-bomber-results.html)
+bomber html report sample [here](https://htmlpreview.github.io/?https://github.com/nirw-snyk/sbom-demo/blob/main/samples/20240314-22-39-03-bomber-results.html)
 ## Test SBOM using API
 Postman collection [here](https://github.com/nirw-snyk/sbom-demo/blob/main/SBOM.postman_collection.json)
 
