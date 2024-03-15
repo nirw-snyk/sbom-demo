@@ -5,7 +5,7 @@ This lab will demonstrate generating / testing and enriching sbom files using sn
 - Having a snyk account/token/cli
 - Having a sample code to run SCA tests on which will be used for the sbom. In this lab the [following](https://github.com/nirw-snyk/easybuggy) repo is used for the demo purpose
 - other 3rd party tools
-    - To view CLI resulys in a friendly html format, we'll use [snyk-to-html](https://docs.snyk.io/snyk-cli/scan-and-maintain-projects-using-the-cli/cli-tools/snyk-to-html)
+    - To view CLI results in a friendly html format, we'll use [snyk-to-html](https://docs.snyk.io/snyk-cli/scan-and-maintain-projects-using-the-cli/cli-tools/snyk-to-html)
     - To test snyk generated sbom for vulns using the CLI, we'll use the snyk provider for [bomber](https://github.com/devops-kung-fu/bomber)
 
 

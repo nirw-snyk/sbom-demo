@@ -1,0 +1,1930 @@
+{
+    "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.4",
+    "serialNumber": "urn:uuid:bcbd9e8a-253e-4999-a0c3-5fa0513c01fc",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2024-03-12T05:47:26Z",
+        "tools": [
+            {
+                "vendor": "Snyk",
+                "name": "snyk-cli",
+                "version": "1.1267.0"
+            },
+            {
+                "vendor": "Snyk",
+                "name": "SBOM Export API",
+                "version": "v1.78.0"
+            }
+        ],
+        "component": {
+            "bom-ref": "1-org.t246osslab.easybuggy:easybuggy@1-SNAPSHOT",
+            "type": "application",
+            "name": "org.t246osslab.easybuggy:easybuggy",
+            "version": "1-SNAPSHOT",
+            "purl": "pkg:maven/org.t246osslab.easybuggy/easybuggy@1-SNAPSHOT"
+        }
+    },
+    "components": [
+        {
+            "bom-ref": "2-javax.servlet:javax.servlet-api@3.0.1",
+            "type": "library",
+            "supplier": {
+                "name": "Java EE",
+                "url": [
+                    "oracle.com/javaee"
+                ]
+            },
+            "author": "Java EE",
+            "group": "javax.servlet",
+            "name": "javax.servlet:javax.servlet-api",
+            "version": "3.0.1",
+            "description": "Java.net - The Source for Java Technology Collaboration",
+            "licenses": [
+                {
+                    "expression": "GPL-2.0-with-classpath-exception"
+                }
+            ],
+            "purl": "pkg:maven/javax.servlet/javax.servlet-api@3.0.1",
+            "externalReferences": [
+                {
+                    "url": "https://javaee.github.io/servlet-spec/",
+                    "type": "website"
+                },
+                {
+                    "url": "https://repo.maven.apache.org/maven2/javax/servlet/javax.servlet-api/",
+                    "type": "distribution"
+                },
+                {
+                    "url": "https://github.com/javaee/servlet-spec",
+                    "type": "vcs"
+                },
+                {
+                    "url": "https://appdoc.app/artifact/javax.servlet/javax.servlet-api/",
+                    "type": "documentation"
+                }
+            ],
+            "properties": [
+                {
+                    "name": "ecosystems:first_release_published_at",
+                    "value": "2011-07-12T19:40:53Z"
+                },
+                {
+                    "name": "ecosystems:latest_release_published_at",
+                    "value": "2018-04-20T07:19:20Z"
+                },
+                {
+                    "name": "ecosystems:repository_archived",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "bom-ref": "3-javax.servlet.jsp:jsp-api@2.2",
+            "type": "library",
+            "group": "javax.servlet.jsp",
+            "name": "javax.servlet.jsp:jsp-api",
+            "version": "2.2",
+            "licenses": [
+                {
+                    "expression": "GPL-2.0-with-classpath-exception"
+                }
+            ],
+            "purl": "pkg:maven/javax.servlet.jsp/jsp-api@2.2",
+            "externalReferences": [
+                {
+                    "url": "http://java.net/projects/jsp",
+                    "type": "website"
+                },
+                {
+                    "url": "https://repo.maven.apache.org/maven2/javax/servlet/jsp/jsp-api/",
+                    "type": "distribution"
+                },
+                {
+                    "url": "http://java.net/projects/uel/sources/svn/show/tags/jsp-api-2.2.1-b03",
+                    "type": "vcs"
+                },
+                {
+                    "url": "https://appdoc.app/artifact/javax.servlet.jsp/jsp-api/",
+                    "type": "documentation"
+                }
+            ],
+            "properties": [
+                {
+                    "name": "ecosystems:first_release_published_at",
+                    "value": "2008-04-17T00:11:22Z"
+                },
+                {
+                    "name": "ecosystems:latest_release_published_at",
+                    "value": "2010-05-20T00:48:49Z"
+                }
+            ]
+        },
+        {
+            "bom-ref": "4-javax.servlet:jstl@1.2",
+            "type": "library",
+            "group": "javax.servlet",
+            "name": "javax.servlet:jstl",
+            "version": "1.2",
+            "purl": "pkg:maven/javax.servlet/jstl@1.2",
+            "externalReferences": [
+                {
+                    "url": "https://repo.maven.apache.org/maven2/javax/servlet/jstl/",
+                    "type": "distribution"
+                },
+                {
+                    "url": "",
+                    "type": "vcs"
+                },
+                {
+                    "url": "https://appdoc.app/artifact/javax.servlet/jstl/",
+                    "type": "documentation"
+                }
+            ],
+            "properties": [
+                {
+                    "name": "ecosystems:first_release_published_at",
+                    "value": "2005-11-26T04:48:03Z"
+                },
+                {
+                    "name": "ecosystems:latest_release_published_at",
+                    "value": "2005-11-26T04:48:03Z"
+                }
+            ]
+        },
+        {
+            "bom-ref": "5-org.apache.derby:derby@10.8.3.0",
+            "type": "library",
+            "group": "org.apache.derby",
+            "name": "org.apache.derby:derby",
+            "version": "10.8.3.0",
+            "description": "Contains the core Apache Derby database engine, which also includes the embedded JDBC driver.",
+            "licenses": [
+                {
+                    "expression": "Apache-2.0"
+                }
+            ],
+            "purl": "pkg:maven/org.apache.derby/derby@10.8.3.0",
+            "externalReferences": [
+                {
+                    "url": "http://db.apache.org/derby/",
+                    "type": "website"
+                },
+                {
+                    "url": "https://repo.maven.apache.org/maven2/org/apache/derby/derby/",
+                    "type": "distribution"
+                },
+                {
+                    "url": "http://svn.apache.org/viewcvs.cgi/db/derby/code/trunk/?root=Apache-SVN",
+                    "type": "vcs"
+                },
+                {
+                    "url": "https://appdoc.app/artifact/org.apache.derby/derby/",
+                    "type": "documentation"
+                }
+            ],
+            "properties": [
+                {
+                    "name": "ecosystems:first_release_published_at",
+                    "value": "2010-05-18T14:40:59Z"
+                },
+                {
+                    "name": "ecosystems:latest_release_published_at",
+                    "value": "2023-11-10T17:47:39Z"
+                }
+            ]
+        },
+        {
+            "bom-ref": "6-javassist:javassist@3.12.1.GA",
+            "type": "library",
+            "group": "javassist",
+            "name": "javassist:javassist",
+            "version": "3.12.1.GA",
+            "description": "Javassist (JAVA programming ASSISTant) makes Java bytecode manipulation simple. It is a class library for editing bytecodes in Java.",
+            "licenses": [
+                {
+                    "expression": "SSPL-1.0"
+                }
+            ],
+            "purl": "pkg:maven/javassist/javassist@3.12.1.GA",
+            "externalReferences": [
+                {
+                    "url": "http://www.javassist.org/",
+                    "type": "website"
+                },
+                {
+                    "url": "https://repo.maven.apache.org/maven2/javassist/javassist/",
+                    "type": "distribution"
+                },
+                {
+                    "url": "http://fisheye.jboss.org/browse/javassist/tags/rel_3_12_1_ga",
+                    "type": "vcs"
+                },
+                {
+                    "url": "https://appdoc.app/artifact/javassist/javassist/",
+                    "type": "documentation"
+                }
+            ],
+            "properties": [
+                {
+                    "name": "ecosystems:first_release_published_at",
+                    "value": "2008-04-01T06:08:53Z"
+                },
+                {
+                    "name": "ecosystems:latest_release_published_at",
+                    "value": "2012-09-20T13:23:24Z"
+                }
+            ]
+        },
+        {
+            "bom-ref": "7-org.openjdk.jol:jol-core@0.6",
+            "type": "library",
+            "supplier": {
+                "name": "OpenJDK",
+                "url": [
+                    "https://openjdk.org"
+                ]
+            },
+            "author": "OpenJDK",
+            "group": "org.openjdk.jol",
+            "name": "org.openjdk.jol:jol-core",
+            "version": "0.6",
+            "description": "JOL is the set of tools for examining field and object layouts in JVM.",
+            "licenses": [
+                {
+                    "expression": "GPL-2.0+"
+                }
+            ],
+            "purl": "pkg:maven/org.openjdk.jol/jol-core@0.6",
+            "externalReferences": [
+                {
+                    "url": "http://maven.apache.org",
+                    "type": "website"
+                },
+                {
+                    "url": "https://repo.maven.apache.org/maven2/org/openjdk/jol/jol-core/",
+                    "type": "distribution"
+                },
+                {
+                    "url": "https://github.com/openjdk/jol",
+                    "type": "vcs"
+                },
+                {
+                    "url": "https://appdoc.app/artifact/org.openjdk.jol/jol-core/",
+                    "type": "documentation"
+                }
+            ],
+            "properties": [
+                {
+                    "name": "ecosystems:first_release_published_at",
+                    "value": "2013-12-23T18:10:22Z"
+                },
+                {
+                    "name": "ecosystems:latest_release_published_at",
+                    "value": "2017-01-18T13:22:48Z"
+                }
+            ]
+        },
+        {
+            "bom-ref": "8-mysql:mysql-connector-java@5.1.25",
+            "type": "library",
+            "group": "mysql",
+            "name": "mysql:mysql-connector-java",
+            "version": "5.1.25",
+            "licenses": [
+                {
+                    "expression": "GPL-1.0+"
+                }
+            ],
+            "purl": "pkg:maven/mysql/mysql-connector-java@5.1.25",
+            "externalReferences": [
+                {
+                    "url": "https://repo.maven.apache.org/maven2/mysql/mysql-connector-java/",
+                    "type": "distribution"
+                },
+                {
+                    "url": "",
+                    "type": "vcs"
+                },
+                {
+                    "url": "https://appdoc.app/artifact/mysql/mysql-connector-java/",
+                    "type": "documentation"
+                }
+            ],
+            "properties": [
+                {
+                    "name": "ecosystems:first_release_published_at",
+                    "value": "2015-04-20T17:25:57Z"
+                },
+                {
+                    "name": "ecosystems:latest_release_published_at",
+                    "value": "2023-03-07T16:15:54Z"
+                }
+            ]
+        },
+        {
+            "bom-ref": "9-org.slf4j:slf4j-api@1.5.0",
+            "type": "library",
+            "supplier": {
+                "name": "QOS.CH (Switzerland)",
+                "url": [
+                    "http://www.qos.ch"
+                ]
+            },
+            "author": "QOS.CH (Switzerland)",
+            "group": "org.slf4j",
+            "name": "org.slf4j:slf4j-api",
+            "version": "1.5.0",
+            "description": "The slf4j API",
+            "licenses": [
+                {
+                    "expression": "MIT"
+                }
+            ],
+            "purl": "pkg:maven/org.slf4j/slf4j-api@1.5.0",
+            "externalReferences": [
+                {
+                    "url": "http://www.slf4j.org",
+                    "type": "website"
+                },
+                {
+                    "url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/",
+                    "type": "distribution"
+                },
+                {
+                    "url": "https://github.com/qos-ch/slf4j",
+                    "type": "vcs"
+                },
+                {
+                    "url": "https://appdoc.app/artifact/org.slf4j/slf4j-api/",
+                    "type": "documentation"
+                }
+            ],
+            "properties": [
+                {
+                    "name": "ecosystems:first_release_published_at",
+                    "value": "2006-11-09T20:49:35Z"
+                },
+                {
+                    "name": "ecosystems:latest_release_published_at",
+                    "value": "2024-02-05T21:33:01Z"
+                },
+                {
+                    "name": "ecosystems:owner_location",
+                    "value": "Switzerland"
+                }
+            ]
+        },
+        {
+            "bom-ref": "10-org.slf4j:slf4j-log4j12@1.5.0",
+            "type": "library",
+            "supplier": {
+                "name": "QOS.CH (Switzerland)",
+                "url": [
+                    "http://www.qos.ch"
+                ]
+            },
+            "author": "QOS.CH (Switzerland)",
+            "group": "org.slf4j",
+            "name": "org.slf4j:slf4j-log4j12",
+            "version": "1.5.0",
+            "description": "SLF4J LOG4J-12 relocated to slf4j-reload4j",
+            "licenses": [
+                {
+                    "expression": "MIT"
+                }
+            ],
+            "purl": "pkg:maven/org.slf4j/slf4j-log4j12@1.5.0",
+            "externalReferences": [
+                {
+                    "url": "http://www.slf4j.org",
+                    "type": "website"
+                },
+                {
+                    "url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-log4j12/",
+                    "type": "distribution"
+                },
+                {
+                    "url": "https://github.com/qos-ch/slf4j",
+                    "type": "vcs"
+                },
+                {
+                    "url": "https://appdoc.app/artifact/org.slf4j/slf4j-log4j12/",
+                    "type": "documentation"
+                }
+            ],
+            "properties": [
+                {
+                    "name": "ecosystems:first_release_published_at",
+                    "value": "2005-11-08T22:27:37Z"
+                },
+                {
+                    "name": "ecosystems:latest_release_published_at",
+                    "value": "2024-02-05T21:34:11Z"
+                },
+                {
+                    "name": "ecosystems:owner_location",
+                    "value": "Switzerland"
+                }
+            ]
+        },
+        {
+            "bom-ref": "11-org.apache.directory.server:apacheds-all@1.5.5",
+            "type": "library",
+            "supplier": {
+                "name": "The Apache Software Foundation",
+                "url": [
+                    "https://www.apache.org/"
+                ]
+            },
+            "author": "The Apache Software Foundation",
+            "group": "org.apache.directory.server",
+            "name": "org.apache.directory.server:apacheds-all",
+            "version": "1.5.5",
+            "description": "ApacheDS is an embbedable directory server entirely written in Java, which has been certified LDAPv3 compatible by the Open Group. It has been designed to introduce triggers, stored procedures, queues and views to the world of LDAP which has lacked these rich constructs.",
+            "licenses": [
+                {
+                    "expression": "Apache-2.0"
+                }
+            ],
+            "purl": "pkg:maven/org.apache.directory.server/apacheds-all@1.5.5",
+            "externalReferences": [
+                {
+                    "url": "https://directory.apache.org/apacheds/1.5",
+                    "type": "website"
+                },
+                {
+                    "url": "https://repo.maven.apache.org/maven2/org/apache/directory/server/apacheds-all/",
+                    "type": "distribution"
+                },
+                {
+                    "url": "https://github.com/apache/directory-server",
+                    "type": "vcs"
+                },
+                {
+                    "url": "https://appdoc.app/artifact/org.apache.directory.server/apacheds-all/",
+                    "type": "documentation"
+                }
+            ],
+            "properties": [
+                {
+                    "name": "ecosystems:first_release_published_at",
+                    "value": "2008-09-11T23:35:47Z"
+                },
+                {
+                    "name": "ecosystems:latest_release_published_at",
+                    "value": "2010-04-02T23:24:40Z"
+                },
+                {
+                    "name": "ecosystems:topic",
+                    "value": "directory"
+                },
+                {
+                    "name": "ecosystems:topic",
+                    "value": "java"
+                },
+                {
+                    "name": "ecosystems:topic",
+                    "value": "network-client"
+                },
+                {
+                    "name": "ecosystems:topic",
+                    "value": "network-server"
+                }
+            ]
+        },
+        {
+            "bom-ref": "12-org.owasp.esapi:esapi@2.1.0.1",
+            "type": "library",
+            "supplier": {
+                "name": "Enterprise Security API"
+            },
+            "author": "Enterprise Security API",
+            "group": "org.owasp.esapi",
+            "name": "org.owasp.esapi:esapi",
+            "version": "2.1.0.1",
+            "description": "The Enterprise Security API (ESAPI) project is an OWASP project to create simple strong security controls for every web platform. Security controls are not simple to build. You can read about the hundreds of pitfalls for unwary developers on the OWASP web site. By providing developers with a set of strong controls, we aim to eliminate some of the complexity of creating secure web applications. This can result in significant cost savings across the SDLC.",
+            "licenses": [
+                {
+                    "expression": "BSD-3-Clause"
+                }
+            ],
+            "purl": "pkg:maven/org.owasp.esapi/esapi@2.1.0.1",
+            "externalReferences": [
+                {
+                    "url": "https://owasp.org/www-project-enterprise-security-api/",
+                    "type": "website"
+                },
+                {
+                    "url": "https://repo.maven.apache.org/maven2/org/owasp/esapi/esapi/",
+                    "type": "distribution"
+                },
+                {
+                    "url": "https://github.com/ESAPI/esapi-java-legacy",
+                    "type": "vcs"
+                },
+                {
+                    "url": "https://appdoc.app/artifact/org.owasp.esapi/esapi/",
+                    "type": "documentation"
+                }
+            ],
+            "properties": [
+                {
+                    "name": "ecosystems:first_release_published_at",
+                    "value": "2010-09-07T17:44:36Z"
+                },
+                {
+                    "name": "ecosystems:latest_release_published_at",
+                    "value": "2013-09-03T01:17:59Z"
+                },
+                {
+                    "name": "ecosystems:topic",
+                    "value": "java"
+                },
+                {
+                    "name": "ecosystems:topic",
+                    "value": "security"
+                }
+            ]
+        },
+        {
+            "bom-ref": "13-ognl:ognl@3.0.17",
+            "type": "library",
+            "supplier": {
+                "name": "Orphan Open Source Software",
+                "url": [
+                    "https://orphan.software/"
+                ]
+            },
+            "author": "Orphan Open Source Software",
+            "group": "ognl",
+            "name": "ognl:ognl",
+            "version": "3.0.17",
+            "description": "OGNL - Object Graph Navigation Library",
+            "licenses": [
+                {
+                    "expression": "Apache-2.0"
+                }
+            ],
+            "purl": "pkg:maven/ognl/ognl@3.0.17",
+            "externalReferences": [
+                {
+                    "url": "https://github.com/orphan-oss/ognl/orphan/ognl/",
+                    "type": "website"
+                },
+                {
+                    "url": "https://repo.maven.apache.org/maven2/ognl/ognl/",
+                    "type": "distribution"
+                },
+                {
+                    "url": "https://github.com/orphan-oss/ognl",
+                    "type": "vcs"
+                },
+                {
+                    "url": "https://appdoc.app/artifact/ognl/ognl/",
+                    "type": "documentation"
+                }
+            ],
+            "properties": [
+                {
+                    "name": "ecosystems:first_release_published_at",
+                    "value": "2010-12-14T15:57:41Z"
+                },
+                {
+                    "name": "ecosystems:latest_release_published_at",
+                    "value": "2023-08-23T06:01:55Z"
+                },
+                {
+                    "name": "ecosystems:owner_location",
+                    "value": "Poland"
+                }
+            ]
+        },
+        {
+            "bom-ref": "14-com.sun.mail:javax.mail@1.5.1",
+            "type": "library",
+            "supplier": {
+                "name": "Java EE",
+                "url": [
+                    "oracle.com/javaee"
+                ]
+            },
+            "author": "Java EE",
+            "group": "com.sun.mail",
+            "name": "com.sun.mail:javax.mail",
+            "version": "1.5.1",
+            "description": "JavaMail API distribution",
+            "licenses": [
+                {
+                    "expression": "libpng-2.0"
+                }
+            ],
+            "purl": "pkg:maven/com.sun.mail/javax.mail@1.5.1",
+            "externalReferences": [
+                {
+                    "url": "http://javaee.github.io/javamail",
+                    "type": "website"
+                },
+                {
+                    "url": "https://repo.maven.apache.org/maven2/com/sun/mail/javax.mail/",
+                    "type": "distribution"
+                },
+                {
+                    "url": "https://github.com/javaee/javamail",
+                    "type": "vcs"
+                },
+                {
+                    "url": "https://appdoc.app/artifact/com.sun.mail/javax.mail/",
+                    "type": "documentation"
+                }
+            ],
+            "properties": [
+                {
+                    "name": "ecosystems:first_release_published_at",
+                    "value": "2012-02-08T22:27:38Z"
+                },
+                {
+                    "name": "ecosystems:latest_release_published_at",
+                    "value": "2018-08-29T22:30:52Z"
+                },
+                {
+                    "name": "ecosystems:repository_archived",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "bom-ref": "15-org.apache.logging.log4j:log4j-core@2.1",
+            "type": "library",
+            "supplier": {
+                "name": "The Apache Software Foundation",
+                "url": [
+                    "https://www.apache.org/"
+                ]
+            },
+            "author": "The Apache Software Foundation",
+            "group": "org.apache.logging.log4j",
+            "name": "org.apache.logging.log4j:log4j-core",
+            "version": "2.1",
+            "description": "The Apache Log4j Implementation",
+            "licenses": [
+                {
+                    "expression": "Apache-2.0"
+                }
+            ],
+            "purl": "pkg:maven/org.apache.logging.log4j/log4j-core@2.1",
+            "externalReferences": [
+                {
+                    "url": "https://logging.apache.org/log4j/3.x/",
+                    "type": "website"
+                },
+                {
+                    "url": "https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-core/",
+                    "type": "distribution"
+                },
+                {
+                    "url": "https://github.com/apache/logging-log4j2",
+                    "type": "vcs"
+                },
+                {
+                    "url": "https://appdoc.app/artifact/org.apache.logging.log4j/log4j-core/",
+                    "type": "documentation"
+                }
+            ],
+            "properties": [
+                {
+                    "name": "ecosystems:first_release_published_at",
+                    "value": "2012-07-29T19:13:06Z"
+                },
+                {
+                    "name": "ecosystems:latest_release_published_at",
+                    "value": "2024-03-06T12:32:46Z"
+                },
+                {
+                    "name": "ecosystems:topic",
+                    "value": "apache"
+                },
+                {
+                    "name": "ecosystems:topic",
+                    "value": "api"
+                },
+                {
+                    "name": "ecosystems:topic",
+                    "value": "java"
+                },
+                {
+                    "name": "ecosystems:topic",
+                    "value": "jvm"
+                },
+                {
+                    "name": "ecosystems:topic",
+                    "value": "library"
+                },
+                {
+                    "name": "ecosystems:topic",
+                    "value": "log4j"
+                },
+                {
+                    "name": "ecosystems:topic",
+                    "value": "log4j2"
+                },
+                {
+                    "name": "ecosystems:topic",
+                    "value": "logger"
+                },
+                {
+                    "name": "ecosystems:topic",
+                    "value": "logging"
+                },
+                {
+                    "name": "ecosystems:topic",
+                    "value": "syslog"
+                }
+            ]
+        },
+        {
+            "bom-ref": "16-log4j:log4j@1.2.13",
+            "type": "library",
+            "group": "log4j",
+            "name": "log4j:log4j",
+            "version": "1.2.13",
+            "description": "Apache Log4j 1.2",
+            "licenses": [
+                {
+                    "expression": "Apache-2.0"
+                }
+            ],
+            "purl": "pkg:maven/log4j/log4j@1.2.13",
+            "externalReferences": [
+                {
+                    "url": "http://logging.apache.org/log4j/1.2/",
+                    "type": "website"
+                },
+                {
+                    "url": "https://repo.maven.apache.org/maven2/log4j/log4j/",
+                    "type": "distribution"
+                },
+                {
+                    "url": "http://svn.apache.org/viewvc/logging/log4j/tags/v1_2_17_rc3",
+                    "type": "vcs"
+                },
+                {
+                    "url": "https://appdoc.app/artifact/log4j/log4j/",
+                    "type": "documentation"
+                }
+            ],
+            "properties": [
+                {
+                    "name": "ecosystems:first_release_published_at",
+                    "value": "2005-11-08T22:08:35Z"
+                },
+                {
+                    "name": "ecosystems:latest_release_published_at",
+                    "value": "2012-05-26T09:43:39Z"
+                }
+            ]
+        },
+        {
+            "bom-ref": "17-commons-configuration:commons-configuration@1.10",
+            "type": "library",
+            "group": "commons-configuration",
+            "name": "commons-configuration:commons-configuration",
+            "version": "1.10",
+            "description": "Tools to assist in the reading of configuration/preferences files in various formats.",
+            "licenses": [
+                {
+                    "expression": "Apache-2.0"
+                }
+            ],
+            "purl": "pkg:maven/commons-configuration/commons-configuration@1.10",
+            "externalReferences": [
+                {
+                    "url": "http://commons.apache.org/configuration/",
+                    "type": "website"
+                },
+                {
+                    "url": "https://repo.maven.apache.org/maven2/commons-configuration/commons-configuration/",
+                    "type": "distribution"
+                },
+                {
+                    "url": "http://svn.apache.org/viewvc/commons/proper/configuration/tags/CONFIGURATION_1_10RC2",
+                    "type": "vcs"
+                },
+                {
+                    "url": "https://appdoc.app/artifact/commons-configuration/commons-configuration/",
+                    "type": "documentation"
+                }
+            ],
+            "properties": [
+                {
+                    "name": "ecosystems:first_release_published_at",
+                    "value": "2005-11-08T22:20:55Z"
+                },
+                {
+                    "name": "ecosystems:latest_release_published_at",
+                    "value": "2013-10-24T08:22:14Z"
+                }
+            ]
+        },
+        {
+            "bom-ref": "18-commons-beanutils:commons-beanutils-core@1.8.3",
+            "type": "library",
+            "group": "commons-beanutils",
+            "name": "commons-beanutils:commons-beanutils-core",
+            "version": "1.8.3",
+            "description": "The Apache Software Foundation provides support for the Apache community of open-source software projects. The Apache projects are characterized by a collaborative, consensus based development process, an open and pragmatic software license, and a desire to create high quality software that leads the way in its field. We consider ourselves not simply a group of projects sharing a server, but rather a community of developers and users.",
+            "licenses": [
+                {
+                    "expression": "Apache-2.0"
+                }
+            ],
+            "purl": "pkg:maven/commons-beanutils/commons-beanutils-core@1.8.3",
+            "externalReferences": [
+                {
+                    "url": "http://commons.apache.org/beanutils/",
+                    "type": "website"
+                },
+                {
+                    "url": "https://repo.maven.apache.org/maven2/commons-beanutils/commons-beanutils-core/",
+                    "type": "distribution"
+                },
+                {
+                    "url": "http://svn.apache.org/viewvc/maven/pom/tags/apache-4",
+                    "type": "vcs"
+                },
+                {
+                    "url": "https://appdoc.app/artifact/commons-beanutils/commons-beanutils-core/",
+                    "type": "documentation"
+                }
+            ],
+            "properties": [
+                {
+                    "name": "ecosystems:first_release_published_at",
+                    "value": "2005-12-28T13:05:26Z"
+                },
+                {
+                    "name": "ecosystems:latest_release_published_at",
+                    "value": "2010-03-24T17:33:22Z"
+                }
+            ]
+        },
+        {
+            "bom-ref": "19-commons-fileupload:commons-fileupload@1.3.1",
+            "type": "library",
+            "group": "commons-fileupload",
+            "name": "commons-fileupload:commons-fileupload",
+            "version": "1.3.1",
+            "description": "The Apache Commons FileUpload component provides a simple yet flexible means of adding support for multipart file upload functionality to servlets and web applications.",
+            "licenses": [
+                {
+                    "expression": "Apache-2.0"
+                }
+            ],
+            "purl": "pkg:maven/commons-fileupload/commons-fileupload@1.3.1",
+            "externalReferences": [
+                {
+                    "url": "https://commons.apache.org/proper/commons-fileupload/",
+                    "type": "website"
+                },
+                {
+                    "url": "https://repo.maven.apache.org/maven2/commons-fileupload/commons-fileupload/",
+                    "type": "distribution"
+                },
+                {
+                    "url": "https://gitbox.apache.org/repos/asf?p=commons-fileupload.git",
+                    "type": "vcs"
+                },
+                {
+                    "url": "https://appdoc.app/artifact/commons-fileupload/commons-fileupload/",
+                    "type": "documentation"
+                }
+            ],
+            "properties": [
+                {
+                    "name": "ecosystems:first_release_published_at",
+                    "value": "2007-02-20T11:32:43Z"
+                },
+                {
+                    "name": "ecosystems:latest_release_published_at",
+                    "value": "2017-06-09T23:00:03Z"
+                }
+            ]
+        },
+        {
+            "bom-ref": "20-commons-collections:commons-collections@3.2.2",
+            "type": "library",
+            "group": "commons-collections",
+            "name": "commons-collections:commons-collections",
+            "version": "3.2.2",
+            "purl": "pkg:maven/commons-collections/commons-collections@3.2.2",
+            "externalReferences": [
+                {
+                    "url": "https://repo.maven.apache.org/maven2/commons-collections/commons-collections/",
+                    "type": "distribution"
+                },
+                {
+                    "url": "",
+                    "type": "vcs"
+                },
+                {
+                    "url": "https://appdoc.app/artifact/commons-collections/commons-collections/",
+                    "type": "documentation"
+                }
+            ],
+            "properties": [
+                {
+                    "name": "ecosystems:first_release_published_at",
+                    "value": "2005-11-08T22:31:31Z"
+                },
+                {
+                    "name": "ecosystems:latest_release_published_at",
+                    "value": "2015-11-12T23:11:26Z"
+                }
+            ]
+        },
+        {
+            "bom-ref": "21-xom:xom@1.2.5",
+            "type": "library",
+            "group": "xom",
+            "name": "xom:xom",
+            "version": "1.2.5",
+            "description": "The XOM Dual Streaming/Tree API for Processing XML",
+            "licenses": [
+                {
+                    "expression": "LGPL-2.1"
+                }
+            ],
+            "purl": "pkg:maven/xom/xom@1.2.5",
+            "externalReferences": [
+                {
+                    "url": "https://xom.nu",
+                    "type": "website"
+                },
+                {
+                    "url": "https://repo.maven.apache.org/maven2/xom/xom/",
+                    "type": "distribution"
+                },
+                {
+                    "url": "https://github.com/elharo/xom",
+                    "type": "vcs"
+                },
+                {
+                    "url": "https://appdoc.app/artifact/xom/xom/",
+                    "type": "documentation"
+                }
+            ],
+            "properties": [
+                {
+                    "name": "ecosystems:first_release_published_at",
+                    "value": "2019-02-18T17:04:30Z"
+                },
+                {
+                    "name": "ecosystems:latest_release_published_at",
+                    "value": "2023-05-14T21:15:11Z"
+                },
+                {
+                    "name": "ecosystems:topic",
+                    "value": "java"
+                },
+                {
+                    "name": "ecosystems:topic",
+                    "value": "xinclude"
+                },
+                {
+                    "name": "ecosystems:topic",
+                    "value": "xml"
+                },
+                {
+                    "name": "ecosystems:topic",
+                    "value": "xpath"
+                },
+                {
+                    "name": "ecosystems:topic",
+                    "value": "xslt"
+                }
+            ]
+        },
+        {
+            "bom-ref": "22-org.beanshell:bsh-core@2.0b4",
+            "type": "library",
+            "group": "org.beanshell",
+            "name": "org.beanshell:bsh-core",
+            "version": "2.0b4",
+            "purl": "pkg:maven/org.beanshell/bsh-core@2.0b4"
+        },
+        {
+            "bom-ref": "23-org.owasp.antisamy:antisamy@1.5.3",
+            "type": "library",
+            "supplier": {
+                "name": "Arshan Dabirsiaghi"
+            },
+            "author": "Arshan Dabirsiaghi",
+            "group": "org.owasp.antisamy",
+            "name": "org.owasp.antisamy:antisamy",
+            "version": "1.5.3",
+            "description": "A library for performing fast, configurable cleansing of HTML coming from untrusted sources.",
+            "licenses": [
+                {
+                    "expression": "BSD-3-Clause-Attribution"
+                }
+            ],
+            "purl": "pkg:maven/org.owasp.antisamy/antisamy@1.5.3",
+            "externalReferences": [
+                {
+                    "url": "https://github.com/nahsra/antisamy",
+                    "type": "website"
+                },
+                {
+                    "url": "https://repo.maven.apache.org/maven2/org/owasp/antisamy/antisamy/",
+                    "type": "distribution"
+                },
+                {
+                    "url": "https://github.com/nahsra/antisamy",
+                    "type": "vcs"
+                },
+                {
+                    "url": "https://appdoc.app/artifact/org.owasp.antisamy/antisamy/",
+                    "type": "documentation"
+                }
+            ],
+            "properties": [
+                {
+                    "name": "ecosystems:first_release_published_at",
+                    "value": "2010-12-08T05:38:39Z"
+                },
+                {
+                    "name": "ecosystems:latest_release_published_at",
+                    "value": "2024-02-02T15:49:43Z"
+                },
+                {
+                    "name": "ecosystems:owner_location",
+                    "value": "Baltimore, MD"
+                },
+                {
+                    "name": "ecosystems:topic",
+                    "value": "html"
+                },
+                {
+                    "name": "ecosystems:topic",
+                    "value": "java-library"
+                },
+                {
+                    "name": "ecosystems:topic",
+                    "value": "javascript"
+                },
+                {
+                    "name": "ecosystems:topic",
+                    "value": "security-tools"
+                },
+                {
+                    "name": "ecosystems:topic",
+                    "value": "xss-filter"
+                }
+            ]
+        },
+        {
+            "bom-ref": "24-org.apache.xmlgraphics:batik-css@1.8",
+            "type": "library",
+            "group": "org.apache.xmlgraphics",
+            "name": "org.apache.xmlgraphics:batik-css",
+            "version": "1.8",
+            "description": "Batik CSS engine",
+            "licenses": [
+                {
+                    "expression": "Apache-2.0"
+                }
+            ],
+            "purl": "pkg:maven/org.apache.xmlgraphics/batik-css@1.8",
+            "externalReferences": [
+                {
+                    "url": "http://xmlgraphics.apache.org/batik/",
+                    "type": "website"
+                },
+                {
+                    "url": "https://repo.maven.apache.org/maven2/org/apache/xmlgraphics/batik-css/",
+                    "type": "distribution"
+                },
+                {
+                    "url": "scm:svn:https://svn.apache.org/repos/asf/xmlgraphics/batik/trunk/",
+                    "type": "vcs"
+                },
+                {
+                    "url": "https://appdoc.app/artifact/org.apache.xmlgraphics/batik-css/",
+                    "type": "documentation"
+                }
+            ],
+            "properties": [
+                {
+                    "name": "ecosystems:first_release_published_at",
+                    "value": "2008-01-09T10:43:05Z"
+                },
+                {
+                    "name": "ecosystems:latest_release_published_at",
+                    "value": "2017-07-25T15:00:59Z"
+                }
+            ]
+        },
+        {
+            "bom-ref": "25-javax.activation:activation@1.1",
+            "type": "library",
+            "group": "javax.activation",
+            "name": "javax.activation:activation",
+            "version": "1.1",
+            "description": "The JavaBeans(TM) Activation Framework is used by the JavaMail(TM) API to manage MIME data",
+            "licenses": [
+                {
+                    "expression": "CDDL-1.0"
+                }
+            ],
+            "purl": "pkg:maven/javax.activation/activation@1.1",
+            "externalReferences": [
+                {
+                    "url": "http://java.sun.com/javase/technologies/desktop/javabeans/jaf/index.jsp",
+                    "type": "website"
+                },
+                {
+                    "url": "https://repo.maven.apache.org/maven2/javax/activation/activation/",
+                    "type": "distribution"
+                },
+                {
+                    "url": "",
+                    "type": "vcs"
+                },
+                {
+                    "url": "https://appdoc.app/artifact/javax.activation/activation/",
+                    "type": "documentation"
+                }
+            ],
+            "properties": [
+                {
+                    "name": "ecosystems:first_release_published_at",
+                    "value": "2005-11-08T21:58:11Z"
+                },
+                {
+                    "name": "ecosystems:latest_release_published_at",
+                    "value": "2009-10-23T18:26:03Z"
+                }
+            ]
+        },
+        {
+            "bom-ref": "26-org.apache.logging.log4j:log4j-api@2.1",
+            "type": "library",
+            "supplier": {
+                "name": "The Apache Software Foundation",
+                "url": [
+                    "https://www.apache.org/"
+                ]
+            },
+            "author": "The Apache Software Foundation",
+            "group": "org.apache.logging.log4j",
+            "name": "org.apache.logging.log4j:log4j-api",
+            "version": "2.1",
+            "description": "The Apache Log4j API",
+            "licenses": [
+                {
+                    "expression": "Apache-2.0"
+                }
+            ],
+            "purl": "pkg:maven/org.apache.logging.log4j/log4j-api@2.1",
+            "externalReferences": [
+                {
+                    "url": "https://logging.apache.org/log4j/3.x/",
+                    "type": "website"
+                },
+                {
+                    "url": "https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-api/",
+                    "type": "distribution"
+                },
+                {
+                    "url": "https://github.com/apache/logging-log4j2",
+                    "type": "vcs"
+                },
+                {
+                    "url": "https://appdoc.app/artifact/org.apache.logging.log4j/log4j-api/",
+                    "type": "documentation"
+                }
+            ],
+            "properties": [
+                {
+                    "name": "ecosystems:first_release_published_at",
+                    "value": "2012-07-29T19:11:52Z"
+                },
+                {
+                    "name": "ecosystems:latest_release_published_at",
+                    "value": "2024-03-06T12:32:45Z"
+                },
+                {
+                    "name": "ecosystems:topic",
+                    "value": "apache"
+                },
+                {
+                    "name": "ecosystems:topic",
+                    "value": "api"
+                },
+                {
+                    "name": "ecosystems:topic",
+                    "value": "java"
+                },
+                {
+                    "name": "ecosystems:topic",
+                    "value": "jvm"
+                },
+                {
+                    "name": "ecosystems:topic",
+                    "value": "library"
+                },
+                {
+                    "name": "ecosystems:topic",
+                    "value": "log4j"
+                },
+                {
+                    "name": "ecosystems:topic",
+                    "value": "log4j2"
+                },
+                {
+                    "name": "ecosystems:topic",
+                    "value": "logger"
+                },
+                {
+                    "name": "ecosystems:topic",
+                    "value": "logging"
+                },
+                {
+                    "name": "ecosystems:topic",
+                    "value": "syslog"
+                }
+            ]
+        },
+        {
+            "bom-ref": "27-commons-lang:commons-lang@2.6",
+            "type": "library",
+            "group": "commons-lang",
+            "name": "commons-lang:commons-lang",
+            "version": "2.6",
+            "description": "Commons Lang, a package of Java utility classes for the classes that are in java.lang's hierarchy, or are considered to be so standard as to justify existence in java.lang.",
+            "licenses": [
+                {
+                    "expression": "Apache-2.0"
+                }
+            ],
+            "purl": "pkg:maven/commons-lang/commons-lang@2.6",
+            "externalReferences": [
+                {
+                    "url": "http://commons.apache.org/lang/",
+                    "type": "website"
+                },
+                {
+                    "url": "https://repo.maven.apache.org/maven2/commons-lang/commons-lang/",
+                    "type": "distribution"
+                },
+                {
+                    "url": "http://svn.apache.org/viewvc/commons/proper/lang/branches/LANG_2_X",
+                    "type": "vcs"
+                },
+                {
+                    "url": "https://appdoc.app/artifact/commons-lang/commons-lang/",
+                    "type": "documentation"
+                }
+            ],
+            "properties": [
+                {
+                    "name": "ecosystems:first_release_published_at",
+                    "value": "2005-11-08T22:31:32Z"
+                },
+                {
+                    "name": "ecosystems:latest_release_published_at",
+                    "value": "2005-11-24T05:20:21Z"
+                }
+            ]
+        },
+        {
+            "bom-ref": "28-commons-logging:commons-logging@1.1.1",
+            "type": "library",
+            "group": "commons-logging",
+            "name": "commons-logging:commons-logging",
+            "version": "1.1.1",
+            "description": "Apache Commons Logging is a thin adapter allowing configurable bridging to other, well known logging systems.",
+            "licenses": [
+                {
+                    "expression": "Apache-2.0"
+                }
+            ],
+            "purl": "pkg:maven/commons-logging/commons-logging@1.1.1",
+            "externalReferences": [
+                {
+                    "url": "https://commons.apache.org/proper/commons-logging/",
+                    "type": "website"
+                },
+                {
+                    "url": "https://repo.maven.apache.org/maven2/commons-logging/commons-logging/",
+                    "type": "distribution"
+                },
+                {
+                    "url": "https://gitbox.apache.org/repos/asf/commons-logging",
+                    "type": "vcs"
+                },
+                {
+                    "url": "https://appdoc.app/artifact/commons-logging/commons-logging/",
+                    "type": "documentation"
+                }
+            ],
+            "properties": [
+                {
+                    "name": "ecosystems:first_release_published_at",
+                    "value": "2005-11-08T22:16:41Z"
+                },
+                {
+                    "name": "ecosystems:latest_release_published_at",
+                    "value": "2023-11-26T21:38:47Z"
+                }
+            ]
+        },
+        {
+            "bom-ref": "29-commons-io:commons-io@2.2",
+            "type": "library",
+            "group": "commons-io",
+            "name": "commons-io:commons-io",
+            "version": "2.2",
+            "description": "The Apache Commons IO library contains utility classes, stream implementations, file filters, file comparators, endian transformation classes, and much more.",
+            "licenses": [
+                {
+                    "expression": "Apache-2.0"
+                }
+            ],
+            "purl": "pkg:maven/commons-io/commons-io@2.2",
+            "externalReferences": [
+                {
+                    "url": "https://commons.apache.org/proper/commons-io/",
+                    "type": "website"
+                },
+                {
+                    "url": "https://repo.maven.apache.org/maven2/commons-io/commons-io/",
+                    "type": "distribution"
+                },
+                {
+                    "url": "https://gitbox.apache.org/repos/asf?p=commons-io.git",
+                    "type": "vcs"
+                },
+                {
+                    "url": "https://appdoc.app/artifact/commons-io/commons-io/",
+                    "type": "documentation"
+                }
+            ],
+            "properties": [
+                {
+                    "name": "ecosystems:first_release_published_at",
+                    "value": "2005-11-08T22:29:08Z"
+                },
+                {
+                    "name": "ecosystems:latest_release_published_at",
+                    "value": "2023-11-24T16:28:22Z"
+                }
+            ]
+        },
+        {
+            "bom-ref": "30-xml-apis:xml-apis@1.3.03",
+            "type": "library",
+            "group": "xml-apis",
+            "name": "xml-apis:xml-apis",
+            "version": "1.3.03",
+            "purl": "pkg:maven/xml-apis/xml-apis@1.3.03",
+            "externalReferences": [
+                {
+                    "url": "https://repo.maven.apache.org/maven2/xml-apis/xml-apis/",
+                    "type": "distribution"
+                },
+                {
+                    "url": "",
+                    "type": "vcs"
+                },
+                {
+                    "url": "https://appdoc.app/artifact/xml-apis/xml-apis/",
+                    "type": "documentation"
+                }
+            ],
+            "properties": [
+                {
+                    "name": "ecosystems:first_release_published_at",
+                    "value": "2005-11-08T21:51:32Z"
+                },
+                {
+                    "name": "ecosystems:latest_release_published_at",
+                    "value": "2007-02-09T00:30:46Z"
+                }
+            ]
+        },
+        {
+            "bom-ref": "31-xerces:xercesImpl@2.8.0",
+            "type": "library",
+            "group": "xerces",
+            "name": "xerces:xercesImpl",
+            "version": "2.8.0",
+            "description": "Xerces2 provides high performance, fully compliant XML parsers in the Apache Xerces family. This new version of Xerces continues to build upon the Xerces Native Interface (XNI), a complete framework for building parser components and configurations that is extremely modular and easy to program. The Apache Xerces2 parser is the reference implementation of XNI but other parser components, configurations, and parsers can be written using the Xerces Native Interface. For complete design and implementation documents, refer to the XNI Manual. Xerces2 provides fully conforming XML Schema 1.0 and 1.1 processors. An experimental implementation of the \"XML Schema Definition Language (XSD): Component Designators (SCD) Candidate Recommendation (January 2010)\" is also provided for evaluation. For more information, refer to the XML Schema page. Xerces2 also provides a complete implementation of the Document Object Model Level 3 Core and Load/Save W3C Recommendations and provides a complete implementation of the XML Inclusions (XInclude) W3C Recommendation. It also provides support for OASIS XML Catalogs v1.1. Xerces2 is able to parse documents written according to the XML 1.1 Recommendation, except that it does not yet provide an option to enable normalization checking as described in section 2.13 of this specification. It also handles namespaces according to the XML Namespaces 1.1 Recommendation, and will correctly serialize XML 1.1 documents if the DOM level 3 load/save APIs are in use.",
+            "licenses": [
+                {
+                    "expression": "Apache-2.0"
+                }
+            ],
+            "purl": "pkg:maven/xerces/xercesImpl@2.8.0",
+            "externalReferences": [
+                {
+                    "url": "https://xerces.apache.org/xerces2-j/",
+                    "type": "website"
+                },
+                {
+                    "url": "https://repo.maven.apache.org/maven2/xerces/xercesImpl/",
+                    "type": "distribution"
+                },
+                {
+                    "url": "https://svn.apache.org/repos/asf/xerces/java/",
+                    "type": "vcs"
+                },
+                {
+                    "url": "https://appdoc.app/artifact/xerces/xercesImpl/",
+                    "type": "documentation"
+                }
+            ],
+            "properties": [
+                {
+                    "name": "ecosystems:first_release_published_at",
+                    "value": "2005-11-08T21:51:33Z"
+                },
+                {
+                    "name": "ecosystems:latest_release_published_at",
+                    "value": "2022-01-27T10:18:24Z"
+                }
+            ]
+        },
+        {
+            "bom-ref": "32-xalan:xalan@2.7.0",
+            "type": "library",
+            "group": "xalan",
+            "name": "xalan:xalan",
+            "version": "2.7.0",
+            "purl": "pkg:maven/xalan/xalan@2.7.0",
+            "externalReferences": [
+                {
+                    "url": "https://repo.maven.apache.org/maven2/xalan/xalan/",
+                    "type": "distribution"
+                },
+                {
+                    "url": "",
+                    "type": "vcs"
+                },
+                {
+                    "url": "https://appdoc.app/artifact/xalan/xalan/",
+                    "type": "documentation"
+                }
+            ],
+            "properties": [
+                {
+                    "name": "ecosystems:first_release_published_at",
+                    "value": "2005-11-08T22:07:38Z"
+                },
+                {
+                    "name": "ecosystems:latest_release_published_at",
+                    "value": "2023-05-04T12:31:31Z"
+                }
+            ]
+        },
+        {
+            "bom-ref": "33-net.sourceforge.nekohtml:nekohtml@1.9.16",
+            "type": "library",
+            "group": "net.sourceforge.nekohtml",
+            "name": "net.sourceforge.nekohtml:nekohtml",
+            "version": "1.9.16",
+            "description": "An HTML parser and tag balancer.",
+            "licenses": [
+                {
+                    "expression": "Apache-2.0"
+                }
+            ],
+            "purl": "pkg:maven/net.sourceforge.nekohtml/nekohtml@1.9.16",
+            "externalReferences": [
+                {
+                    "url": "http://nekohtml.sourceforge.net/",
+                    "type": "website"
+                },
+                {
+                    "url": "https://repo.maven.apache.org/maven2/net/sourceforge/nekohtml/nekohtml/",
+                    "type": "distribution"
+                },
+                {
+                    "url": "http://nekohtml.svn.sourceforge.net/viewvc/nekohtml/",
+                    "type": "vcs"
+                },
+                {
+                    "url": "https://appdoc.app/artifact/net.sourceforge.nekohtml/nekohtml/",
+                    "type": "documentation"
+                }
+            ],
+            "properties": [
+                {
+                    "name": "ecosystems:first_release_published_at",
+                    "value": "2008-04-05T19:59:46Z"
+                },
+                {
+                    "name": "ecosystems:latest_release_published_at",
+                    "value": "2015-04-17T12:42:42Z"
+                }
+            ]
+        },
+        {
+            "bom-ref": "34-commons-httpclient:commons-httpclient@3.1",
+            "type": "library",
+            "group": "commons-httpclient",
+            "name": "commons-httpclient:commons-httpclient",
+            "version": "3.1",
+            "description": "The HttpClient component supports the client-side of RFC 1945 (HTTP/1.0) and RFC 2616 (HTTP/1.1) , several related specifications (RFC 2109 (Cookies) , RFC 2617 (HTTP Authentication) , etc.), and provides a framework by which new request types (methods) or HTTP extensions can be created easily.",
+            "licenses": [
+                {
+                    "expression": "Apache-1.1"
+                }
+            ],
+            "purl": "pkg:maven/commons-httpclient/commons-httpclient@3.1",
+            "externalReferences": [
+                {
+                    "url": "http://jakarta.apache.org/httpcomponents/httpclient-3.x/",
+                    "type": "website"
+                },
+                {
+                    "url": "https://repo.maven.apache.org/maven2/commons-httpclient/commons-httpclient/",
+                    "type": "distribution"
+                },
+                {
+                    "url": "http://svn.apache.org/repos/asf/jakarta/httpcomponents/oac.hc3x/trunk",
+                    "type": "vcs"
+                },
+                {
+                    "url": "https://appdoc.app/artifact/commons-httpclient/commons-httpclient/",
+                    "type": "documentation"
+                }
+            ],
+            "properties": [
+                {
+                    "name": "ecosystems:first_release_published_at",
+                    "value": "2005-11-08T22:29:12Z"
+                },
+                {
+                    "name": "ecosystems:latest_release_published_at",
+                    "value": "2006-05-07T20:31:59Z"
+                }
+            ]
+        },
+        {
+            "bom-ref": "35-org.apache.xmlgraphics:batik-ext@1.8",
+            "type": "library",
+            "group": "org.apache.xmlgraphics",
+            "name": "org.apache.xmlgraphics:batik-ext",
+            "version": "1.8",
+            "description": "Batik external code",
+            "licenses": [
+                {
+                    "expression": "Apache-2.0"
+                }
+            ],
+            "purl": "pkg:maven/org.apache.xmlgraphics/batik-ext@1.8",
+            "externalReferences": [
+                {
+                    "url": "http://xmlgraphics.apache.org/batik/",
+                    "type": "website"
+                },
+                {
+                    "url": "https://repo.maven.apache.org/maven2/org/apache/xmlgraphics/batik-ext/",
+                    "type": "distribution"
+                },
+                {
+                    "url": "scm:svn:https://svn.apache.org/repos/asf/xmlgraphics/batik/trunk/",
+                    "type": "vcs"
+                },
+                {
+                    "url": "https://appdoc.app/artifact/org.apache.xmlgraphics/batik-ext/",
+                    "type": "documentation"
+                }
+            ],
+            "properties": [
+                {
+                    "name": "ecosystems:first_release_published_at",
+                    "value": "2008-01-09T10:43:05Z"
+                },
+                {
+                    "name": "ecosystems:latest_release_published_at",
+                    "value": "2017-07-25T15:01:18Z"
+                }
+            ]
+        },
+        {
+            "bom-ref": "36-org.apache.xmlgraphics:batik-util@1.8",
+            "type": "library",
+            "group": "org.apache.xmlgraphics",
+            "name": "org.apache.xmlgraphics:batik-util",
+            "version": "1.8",
+            "description": "Batik utility library",
+            "licenses": [
+                {
+                    "expression": "Apache-2.0"
+                }
+            ],
+            "purl": "pkg:maven/org.apache.xmlgraphics/batik-util@1.8",
+            "externalReferences": [
+                {
+                    "url": "http://xmlgraphics.apache.org/batik/",
+                    "type": "website"
+                },
+                {
+                    "url": "https://repo.maven.apache.org/maven2/org/apache/xmlgraphics/batik-util/",
+                    "type": "distribution"
+                },
+                {
+                    "url": "scm:svn:https://svn.apache.org/repos/asf/xmlgraphics/batik/trunk/",
+                    "type": "vcs"
+                },
+                {
+                    "url": "https://appdoc.app/artifact/org.apache.xmlgraphics/batik-util/",
+                    "type": "documentation"
+                }
+            ],
+            "properties": [
+                {
+                    "name": "ecosystems:first_release_published_at",
+                    "value": "2008-01-09T10:43:04Z"
+                },
+                {
+                    "name": "ecosystems:latest_release_published_at",
+                    "value": "2017-07-25T15:04:58Z"
+                }
+            ]
+        },
+        {
+            "bom-ref": "37-xml-apis:xml-apis-ext@1.3.04",
+            "type": "library",
+            "group": "xml-apis",
+            "name": "xml-apis:xml-apis-ext",
+            "version": "1.3.04",
+            "description": "xml-commons provides an Apache-hosted set of DOM, SAX, and JAXP interfaces for use in other xml-based projects. Our hope is that we can standardize on both a common version and packaging scheme for these critical XML standards interfaces to make the lives of both our developers and users easier. The External Components portion of xml-commons contains interfaces that are defined by external standards organizations. For DOM, that's the W3C; for SAX it's David Megginson and sax.sourceforge.net; for JAXP it's Sun.",
+            "licenses": [
+                {
+                    "expression": "Apache-2.0"
+                }
+            ],
+            "purl": "pkg:maven/xml-apis/xml-apis-ext@1.3.04",
+            "externalReferences": [
+                {
+                    "url": "http://xml.apache.org/commons/components/external/",
+                    "type": "website"
+                },
+                {
+                    "url": "https://repo.maven.apache.org/maven2/xml-apis/xml-apis-ext/",
+                    "type": "distribution"
+                },
+                {
+                    "url": "http://svn.apache.org/viewvc/xml/commons/tags/xml-commons-external-1_3_04/",
+                    "type": "vcs"
+                },
+                {
+                    "url": "https://appdoc.app/artifact/xml-apis/xml-apis-ext/",
+                    "type": "documentation"
+                }
+            ],
+            "properties": [
+                {
+                    "name": "ecosystems:first_release_published_at",
+                    "value": "2006-12-22T13:37:52Z"
+                },
+                {
+                    "name": "ecosystems:latest_release_published_at",
+                    "value": "2006-12-22T13:37:52Z"
+                }
+            ]
+        },
+        {
+            "bom-ref": "38-commons-codec:commons-codec@1.2",
+            "type": "library",
+            "supplier": {
+                "name": "The Apache Software Foundation",
+                "url": [
+                    "https://www.apache.org/"
+                ]
+            },
+            "author": "The Apache Software Foundation",
+            "group": "commons-codec",
+            "name": "commons-codec:commons-codec",
+            "version": "1.2",
+            "description": "The Apache Commons Codec component contains encoder and decoders for various formats such as Base16, Base32, Base64, digest, and Hexadecimal. In addition to these widely used encoders and decoders, the codec package also maintains a collection of phonetic encoding utilities.",
+            "licenses": [
+                {
+                    "expression": "Apache-2.0"
+                }
+            ],
+            "purl": "pkg:maven/commons-codec/commons-codec@1.2",
+            "externalReferences": [
+                {
+                    "url": "https://commons.apache.org/proper/commons-codec/",
+                    "type": "website"
+                },
+                {
+                    "url": "https://repo.maven.apache.org/maven2/commons-codec/commons-codec/",
+                    "type": "distribution"
+                },
+                {
+                    "url": "https://github.com/apache/commons-codec",
+                    "type": "vcs"
+                },
+                {
+                    "url": "https://appdoc.app/artifact/commons-codec/commons-codec/",
+                    "type": "documentation"
+                }
+            ],
+            "properties": [
+                {
+                    "name": "ecosystems:first_release_published_at",
+                    "value": "2005-11-08T22:29:51Z"
+                },
+                {
+                    "name": "ecosystems:latest_release_published_at",
+                    "value": "2024-02-04T15:31:06Z"
+                },
+                {
+                    "name": "ecosystems:topic",
+                    "value": "commons"
+                }
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "ref": "1-org.t246osslab.easybuggy:easybuggy@1-SNAPSHOT",
+            "dependsOn": [
+                "2-javax.servlet:javax.servlet-api@3.0.1",
+                "3-javax.servlet.jsp:jsp-api@2.2",
+                "4-javax.servlet:jstl@1.2",
+                "5-org.apache.derby:derby@10.8.3.0",
+                "6-javassist:javassist@3.12.1.GA",
+                "7-org.openjdk.jol:jol-core@0.6",
+                "8-mysql:mysql-connector-java@5.1.25",
+                "9-org.slf4j:slf4j-api@1.5.0",
+                "10-org.slf4j:slf4j-log4j12@1.5.0",
+                "11-org.apache.directory.server:apacheds-all@1.5.5",
+                "12-org.owasp.esapi:esapi@2.1.0.1",
+                "13-ognl:ognl@3.0.17",
+                "14-com.sun.mail:javax.mail@1.5.1",
+                "15-org.apache.logging.log4j:log4j-core@2.1"
+            ]
+        },
+        {
+            "ref": "2-javax.servlet:javax.servlet-api@3.0.1"
+        },
+        {
+            "ref": "3-javax.servlet.jsp:jsp-api@2.2"
+        },
+        {
+            "ref": "4-javax.servlet:jstl@1.2"
+        },
+        {
+            "ref": "5-org.apache.derby:derby@10.8.3.0"
+        },
+        {
+            "ref": "6-javassist:javassist@3.12.1.GA"
+        },
+        {
+            "ref": "7-org.openjdk.jol:jol-core@0.6"
+        },
+        {
+            "ref": "8-mysql:mysql-connector-java@5.1.25"
+        },
+        {
+            "ref": "9-org.slf4j:slf4j-api@1.5.0"
+        },
+        {
+            "ref": "10-org.slf4j:slf4j-log4j12@1.5.0",
+            "dependsOn": [
+                "16-log4j:log4j@1.2.13"
+            ]
+        },
+        {
+            "ref": "11-org.apache.directory.server:apacheds-all@1.5.5"
+        },
+        {
+            "ref": "12-org.owasp.esapi:esapi@2.1.0.1",
+            "dependsOn": [
+                "17-commons-configuration:commons-configuration@1.10",
+                "18-commons-beanutils:commons-beanutils-core@1.8.3",
+                "19-commons-fileupload:commons-fileupload@1.3.1",
+                "20-commons-collections:commons-collections@3.2.2",
+                "21-xom:xom@1.2.5",
+                "22-org.beanshell:bsh-core@2.0b4",
+                "23-org.owasp.antisamy:antisamy@1.5.3",
+                "24-org.apache.xmlgraphics:batik-css@1.8"
+            ]
+        },
+        {
+            "ref": "13-ognl:ognl@3.0.17"
+        },
+        {
+            "ref": "14-com.sun.mail:javax.mail@1.5.1",
+            "dependsOn": [
+                "25-javax.activation:activation@1.1"
+            ]
+        },
+        {
+            "ref": "15-org.apache.logging.log4j:log4j-core@2.1",
+            "dependsOn": [
+                "26-org.apache.logging.log4j:log4j-api@2.1"
+            ]
+        },
+        {
+            "ref": "16-log4j:log4j@1.2.13"
+        },
+        {
+            "ref": "17-commons-configuration:commons-configuration@1.10",
+            "dependsOn": [
+                "27-commons-lang:commons-lang@2.6",
+                "28-commons-logging:commons-logging@1.1.1"
+            ]
+        },
+        {
+            "ref": "18-commons-beanutils:commons-beanutils-core@1.8.3"
+        },
+        {
+            "ref": "19-commons-fileupload:commons-fileupload@1.3.1",
+            "dependsOn": [
+                "29-commons-io:commons-io@2.2"
+            ]
+        },
+        {
+            "ref": "20-commons-collections:commons-collections@3.2.2"
+        },
+        {
+            "ref": "21-xom:xom@1.2.5",
+            "dependsOn": [
+                "30-xml-apis:xml-apis@1.3.03",
+                "31-xerces:xercesImpl@2.8.0",
+                "32-xalan:xalan@2.7.0"
+            ]
+        },
+        {
+            "ref": "22-org.beanshell:bsh-core@2.0b4"
+        },
+        {
+            "ref": "23-org.owasp.antisamy:antisamy@1.5.3",
+            "dependsOn": [
+                "33-net.sourceforge.nekohtml:nekohtml@1.9.16",
+                "34-commons-httpclient:commons-httpclient@3.1"
+            ]
+        },
+        {
+            "ref": "24-org.apache.xmlgraphics:batik-css@1.8",
+            "dependsOn": [
+                "35-org.apache.xmlgraphics:batik-ext@1.8",
+                "36-org.apache.xmlgraphics:batik-util@1.8",
+                "37-xml-apis:xml-apis-ext@1.3.04"
+            ]
+        },
+        {
+            "ref": "25-javax.activation:activation@1.1"
+        },
+        {
+            "ref": "26-org.apache.logging.log4j:log4j-api@2.1"
+        },
+        {
+            "ref": "27-commons-lang:commons-lang@2.6"
+        },
+        {
+            "ref": "28-commons-logging:commons-logging@1.1.1"
+        },
+        {
+            "ref": "29-commons-io:commons-io@2.2"
+        },
+        {
+            "ref": "30-xml-apis:xml-apis@1.3.03"
+        },
+        {
+            "ref": "31-xerces:xercesImpl@2.8.0"
+        },
+        {
+            "ref": "32-xalan:xalan@2.7.0"
+        },
+        {
+            "ref": "33-net.sourceforge.nekohtml:nekohtml@1.9.16"
+        },
+        {
+            "ref": "34-commons-httpclient:commons-httpclient@3.1",
+            "dependsOn": [
+                "38-commons-codec:commons-codec@1.2"
+            ]
+        },
+        {
+            "ref": "35-org.apache.xmlgraphics:batik-ext@1.8"
+        },
+        {
+            "ref": "36-org.apache.xmlgraphics:batik-util@1.8"
+        },
+        {
+            "ref": "37-xml-apis:xml-apis-ext@1.3.04"
+        },
+        {
+            "ref": "38-commons-codec:commons-codec@1.2"
+        }
+    ]
+}
