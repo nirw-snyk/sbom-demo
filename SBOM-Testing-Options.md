@@ -252,7 +252,8 @@ curl -X GET "<Snyk-REST-Base-URL>/orgs/<Org-Id>/sbom_tests/<Job-Id>/results?vers
 
 Postman collection [here](https://github.com/nirw-snyk/sbom-demo/blob/main/SBOM.postman_collection.json)
 
-example file [here](https://github.com/nirw-snyk/sbom-demo/blob/main/samples/myCyclondx1.4-Tested.json)
+example file [here](https://github.com/nirw-snyk/sbom-demo/blob/main/samples/myCyclonedx1.4-Tested.json)
+                    
 
 ###
 Next: [SBOM Enriching Options](https://github.com/nirw-snyk/sbom-demo/blob/main/SBOM-Enriching-Options.md)
