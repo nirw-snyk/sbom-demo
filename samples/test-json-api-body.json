@@ -1,0 +1,510 @@
+{
+  "data": {
+    "type": "sbom_test",
+    "attributes": {
+    "sbom": 
+    {
+      "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
+      "bomFormat": "CycloneDX",
+      "specVersion": "1.4",
+      "serialNumber": "urn:uuid:bcbd9e8a-253e-4999-a0c3-5fa0513c01fc",
+      "version": 1,
+      "metadata": {
+          "timestamp": "2024-03-12T05:47:26Z",
+          "tools": [
+              {
+                  "vendor": "Snyk",
+                  "name": "snyk-cli",
+                  "version": "1.1267.0"
+              },
+              {
+                  "vendor": "Snyk",
+                  "name": "SBOM Export API",
+                  "version": "v1.78.0"
+              }
+          ],
+          "component": {
+              "bom-ref": "1-org.t246osslab.easybuggy:easybuggy@1-SNAPSHOT",
+              "type": "application",
+              "name": "org.t246osslab.easybuggy:easybuggy",
+              "version": "1-SNAPSHOT",
+              "purl": "pkg:maven/org.t246osslab.easybuggy/easybuggy@1-SNAPSHOT"
+          }
+      },
+      "components": [
+          {
+              "bom-ref": "2-javax.servlet:javax.servlet-api@3.0.1",
+              "type": "library",
+              "group": "javax.servlet",
+              "name": "javax.servlet:javax.servlet-api",
+              "version": "3.0.1",
+              "purl": "pkg:maven/javax.servlet/javax.servlet-api@3.0.1"
+          },
+          {
+              "bom-ref": "3-javax.servlet.jsp:jsp-api@2.2",
+              "type": "library",
+              "group": "javax.servlet.jsp",
+              "name": "javax.servlet.jsp:jsp-api",
+              "version": "2.2",
+              "purl": "pkg:maven/javax.servlet.jsp/jsp-api@2.2"
+          },
+          {
+              "bom-ref": "4-javax.servlet:jstl@1.2",
+              "type": "library",
+              "group": "javax.servlet",
+              "name": "javax.servlet:jstl",
+              "version": "1.2",
+              "purl": "pkg:maven/javax.servlet/jstl@1.2"
+          },
+          {
+              "bom-ref": "5-org.apache.derby:derby@10.8.3.0",
+              "type": "library",
+              "group": "org.apache.derby",
+              "name": "org.apache.derby:derby",
+              "version": "10.8.3.0",
+              "purl": "pkg:maven/org.apache.derby/derby@10.8.3.0"
+          },
+          {
+              "bom-ref": "6-javassist:javassist@3.12.1.GA",
+              "type": "library",
+              "group": "javassist",
+              "name": "javassist:javassist",
+              "version": "3.12.1.GA",
+              "purl": "pkg:maven/javassist/javassist@3.12.1.GA"
+          },
+          {
+              "bom-ref": "7-org.openjdk.jol:jol-core@0.6",
+              "type": "library",
+              "group": "org.openjdk.jol",
+              "name": "org.openjdk.jol:jol-core",
+              "version": "0.6",
+              "purl": "pkg:maven/org.openjdk.jol/jol-core@0.6"
+          },
+          {
+              "bom-ref": "8-mysql:mysql-connector-java@5.1.25",
+              "type": "library",
+              "group": "mysql",
+              "name": "mysql:mysql-connector-java",
+              "version": "5.1.25",
+              "purl": "pkg:maven/mysql/mysql-connector-java@5.1.25"
+          },
+          {
+              "bom-ref": "9-org.slf4j:slf4j-api@1.5.0",
+              "type": "library",
+              "group": "org.slf4j",
+              "name": "org.slf4j:slf4j-api",
+              "version": "1.5.0",
+              "purl": "pkg:maven/org.slf4j/slf4j-api@1.5.0"
+          },
+          {
+              "bom-ref": "10-org.slf4j:slf4j-log4j12@1.5.0",
+              "type": "library",
+              "group": "org.slf4j",
+              "name": "org.slf4j:slf4j-log4j12",
+              "version": "1.5.0",
+              "purl": "pkg:maven/org.slf4j/slf4j-log4j12@1.5.0"
+          },
+          {
+              "bom-ref": "11-org.apache.directory.server:apacheds-all@1.5.5",
+              "type": "library",
+              "group": "org.apache.directory.server",
+              "name": "org.apache.directory.server:apacheds-all",
+              "version": "1.5.5",
+              "purl": "pkg:maven/org.apache.directory.server/apacheds-all@1.5.5"
+          },
+          {
+              "bom-ref": "12-org.owasp.esapi:esapi@2.1.0.1",
+              "type": "library",
+              "group": "org.owasp.esapi",
+              "name": "org.owasp.esapi:esapi",
+              "version": "2.1.0.1",
+              "purl": "pkg:maven/org.owasp.esapi/esapi@2.1.0.1"
+          },
+          {
+              "bom-ref": "13-ognl:ognl@3.0.17",
+              "type": "library",
+              "group": "ognl",
+              "name": "ognl:ognl",
+              "version": "3.0.17",
+              "purl": "pkg:maven/ognl/ognl@3.0.17"
+          },
+          {
+              "bom-ref": "14-com.sun.mail:javax.mail@1.5.1",
+              "type": "library",
+              "group": "com.sun.mail",
+              "name": "com.sun.mail:javax.mail",
+              "version": "1.5.1",
+              "purl": "pkg:maven/com.sun.mail/javax.mail@1.5.1"
+          },
+          {
+              "bom-ref": "15-org.apache.logging.log4j:log4j-core@2.1",
+              "type": "library",
+              "group": "org.apache.logging.log4j",
+              "name": "org.apache.logging.log4j:log4j-core",
+              "version": "2.1",
+              "purl": "pkg:maven/org.apache.logging.log4j/log4j-core@2.1"
+          },
+          {
+              "bom-ref": "16-log4j:log4j@1.2.13",
+              "type": "library",
+              "group": "log4j",
+              "name": "log4j:log4j",
+              "version": "1.2.13",
+              "purl": "pkg:maven/log4j/log4j@1.2.13"
+          },
+          {
+              "bom-ref": "17-commons-configuration:commons-configuration@1.10",
+              "type": "library",
+              "group": "commons-configuration",
+              "name": "commons-configuration:commons-configuration",
+              "version": "1.10",
+              "purl": "pkg:maven/commons-configuration/commons-configuration@1.10"
+          },
+          {
+              "bom-ref": "18-commons-beanutils:commons-beanutils-core@1.8.3",
+              "type": "library",
+              "group": "commons-beanutils",
+              "name": "commons-beanutils:commons-beanutils-core",
+              "version": "1.8.3",
+              "purl": "pkg:maven/commons-beanutils/commons-beanutils-core@1.8.3"
+          },
+          {
+              "bom-ref": "19-commons-fileupload:commons-fileupload@1.3.1",
+              "type": "library",
+              "group": "commons-fileupload",
+              "name": "commons-fileupload:commons-fileupload",
+              "version": "1.3.1",
+              "purl": "pkg:maven/commons-fileupload/commons-fileupload@1.3.1"
+          },
+          {
+              "bom-ref": "20-commons-collections:commons-collections@3.2.2",
+              "type": "library",
+              "group": "commons-collections",
+              "name": "commons-collections:commons-collections",
+              "version": "3.2.2",
+              "purl": "pkg:maven/commons-collections/commons-collections@3.2.2"
+          },
+          {
+              "bom-ref": "21-xom:xom@1.2.5",
+              "type": "library",
+              "group": "xom",
+              "name": "xom:xom",
+              "version": "1.2.5",
+              "purl": "pkg:maven/xom/xom@1.2.5"
+          },
+          {
+              "bom-ref": "22-org.beanshell:bsh-core@2.0b4",
+              "type": "library",
+              "group": "org.beanshell",
+              "name": "org.beanshell:bsh-core",
+              "version": "2.0b4",
+              "purl": "pkg:maven/org.beanshell/bsh-core@2.0b4"
+          },
+          {
+              "bom-ref": "23-org.owasp.antisamy:antisamy@1.5.3",
+              "type": "library",
+              "group": "org.owasp.antisamy",
+              "name": "org.owasp.antisamy:antisamy",
+              "version": "1.5.3",
+              "purl": "pkg:maven/org.owasp.antisamy/antisamy@1.5.3"
+          },
+          {
+              "bom-ref": "24-org.apache.xmlgraphics:batik-css@1.8",
+              "type": "library",
+              "group": "org.apache.xmlgraphics",
+              "name": "org.apache.xmlgraphics:batik-css",
+              "version": "1.8",
+              "purl": "pkg:maven/org.apache.xmlgraphics/batik-css@1.8"
+          },
+          {
+              "bom-ref": "25-javax.activation:activation@1.1",
+              "type": "library",
+              "group": "javax.activation",
+              "name": "javax.activation:activation",
+              "version": "1.1",
+              "purl": "pkg:maven/javax.activation/activation@1.1"
+          },
+          {
+              "bom-ref": "26-org.apache.logging.log4j:log4j-api@2.1",
+              "type": "library",
+              "group": "org.apache.logging.log4j",
+              "name": "org.apache.logging.log4j:log4j-api",
+              "version": "2.1",
+              "purl": "pkg:maven/org.apache.logging.log4j/log4j-api@2.1"
+          },
+          {
+              "bom-ref": "27-commons-lang:commons-lang@2.6",
+              "type": "library",
+              "group": "commons-lang",
+              "name": "commons-lang:commons-lang",
+              "version": "2.6",
+              "purl": "pkg:maven/commons-lang/commons-lang@2.6"
+          },
+          {
+              "bom-ref": "28-commons-logging:commons-logging@1.1.1",
+              "type": "library",
+              "group": "commons-logging",
+              "name": "commons-logging:commons-logging",
+              "version": "1.1.1",
+              "purl": "pkg:maven/commons-logging/commons-logging@1.1.1"
+          },
+          {
+              "bom-ref": "29-commons-io:commons-io@2.2",
+              "type": "library",
+              "group": "commons-io",
+              "name": "commons-io:commons-io",
+              "version": "2.2",
+              "purl": "pkg:maven/commons-io/commons-io@2.2"
+          },
+          {
+              "bom-ref": "30-xml-apis:xml-apis@1.3.03",
+              "type": "library",
+              "group": "xml-apis",
+              "name": "xml-apis:xml-apis",
+              "version": "1.3.03",
+              "purl": "pkg:maven/xml-apis/xml-apis@1.3.03"
+          },
+          {
+              "bom-ref": "31-xerces:xercesImpl@2.8.0",
+              "type": "library",
+              "group": "xerces",
+              "name": "xerces:xercesImpl",
+              "version": "2.8.0",
+              "purl": "pkg:maven/xerces/xercesImpl@2.8.0"
+          },
+          {
+              "bom-ref": "32-xalan:xalan@2.7.0",
+              "type": "library",
+              "group": "xalan",
+              "name": "xalan:xalan",
+              "version": "2.7.0",
+              "purl": "pkg:maven/xalan/xalan@2.7.0"
+          },
+          {
+              "bom-ref": "33-net.sourceforge.nekohtml:nekohtml@1.9.16",
+              "type": "library",
+              "group": "net.sourceforge.nekohtml",
+              "name": "net.sourceforge.nekohtml:nekohtml",
+              "version": "1.9.16",
+              "purl": "pkg:maven/net.sourceforge.nekohtml/nekohtml@1.9.16"
+          },
+          {
+              "bom-ref": "34-commons-httpclient:commons-httpclient@3.1",
+              "type": "library",
+              "group": "commons-httpclient",
+              "name": "commons-httpclient:commons-httpclient",
+              "version": "3.1",
+              "purl": "pkg:maven/commons-httpclient/commons-httpclient@3.1"
+          },
+          {
+              "bom-ref": "35-org.apache.xmlgraphics:batik-ext@1.8",
+              "type": "library",
+              "group": "org.apache.xmlgraphics",
+              "name": "org.apache.xmlgraphics:batik-ext",
+              "version": "1.8",
+              "purl": "pkg:maven/org.apache.xmlgraphics/batik-ext@1.8"
+          },
+          {
+              "bom-ref": "36-org.apache.xmlgraphics:batik-util@1.8",
+              "type": "library",
+              "group": "org.apache.xmlgraphics",
+              "name": "org.apache.xmlgraphics:batik-util",
+              "version": "1.8",
+              "purl": "pkg:maven/org.apache.xmlgraphics/batik-util@1.8"
+          },
+          {
+              "bom-ref": "37-xml-apis:xml-apis-ext@1.3.04",
+              "type": "library",
+              "group": "xml-apis",
+              "name": "xml-apis:xml-apis-ext",
+              "version": "1.3.04",
+              "purl": "pkg:maven/xml-apis/xml-apis-ext@1.3.04"
+          },
+          {
+              "bom-ref": "38-commons-codec:commons-codec@1.2",
+              "type": "library",
+              "group": "commons-codec",
+              "name": "commons-codec:commons-codec",
+              "version": "1.2",
+              "purl": "pkg:maven/commons-codec/commons-codec@1.2"
+          }
+      ],
+      "dependencies": [
+          {
+              "ref": "1-org.t246osslab.easybuggy:easybuggy@1-SNAPSHOT",
+              "dependsOn": [
+                  "2-javax.servlet:javax.servlet-api@3.0.1",
+                  "3-javax.servlet.jsp:jsp-api@2.2",
+                  "4-javax.servlet:jstl@1.2",
+                  "5-org.apache.derby:derby@10.8.3.0",
+                  "6-javassist:javassist@3.12.1.GA",
+                  "7-org.openjdk.jol:jol-core@0.6",
+                  "8-mysql:mysql-connector-java@5.1.25",
+                  "9-org.slf4j:slf4j-api@1.5.0",
+                  "10-org.slf4j:slf4j-log4j12@1.5.0",
+                  "11-org.apache.directory.server:apacheds-all@1.5.5",
+                  "12-org.owasp.esapi:esapi@2.1.0.1",
+                  "13-ognl:ognl@3.0.17",
+                  "14-com.sun.mail:javax.mail@1.5.1",
+                  "15-org.apache.logging.log4j:log4j-core@2.1"
+              ]
+          },
+          {
+              "ref": "2-javax.servlet:javax.servlet-api@3.0.1"
+          },
+          {
+              "ref": "3-javax.servlet.jsp:jsp-api@2.2"
+          },
+          {
+              "ref": "4-javax.servlet:jstl@1.2"
+          },
+          {
+              "ref": "5-org.apache.derby:derby@10.8.3.0"
+          },
+          {
+              "ref": "6-javassist:javassist@3.12.1.GA"
+          },
+          {
+              "ref": "7-org.openjdk.jol:jol-core@0.6"
+          },
+          {
+              "ref": "8-mysql:mysql-connector-java@5.1.25"
+          },
+          {
+              "ref": "9-org.slf4j:slf4j-api@1.5.0"
+          },
+          {
+              "ref": "10-org.slf4j:slf4j-log4j12@1.5.0",
+              "dependsOn": [
+                  "16-log4j:log4j@1.2.13"
+              ]
+          },
+          {
+              "ref": "11-org.apache.directory.server:apacheds-all@1.5.5"
+          },
+          {
+              "ref": "12-org.owasp.esapi:esapi@2.1.0.1",
+              "dependsOn": [
+                  "17-commons-configuration:commons-configuration@1.10",
+                  "18-commons-beanutils:commons-beanutils-core@1.8.3",
+                  "19-commons-fileupload:commons-fileupload@1.3.1",
+                  "20-commons-collections:commons-collections@3.2.2",
+                  "21-xom:xom@1.2.5",
+                  "22-org.beanshell:bsh-core@2.0b4",
+                  "23-org.owasp.antisamy:antisamy@1.5.3",
+                  "24-org.apache.xmlgraphics:batik-css@1.8"
+              ]
+          },
+          {
+              "ref": "13-ognl:ognl@3.0.17"
+          },
+          {
+              "ref": "14-com.sun.mail:javax.mail@1.5.1",
+              "dependsOn": [
+                  "25-javax.activation:activation@1.1"
+              ]
+          },
+          {
+              "ref": "15-org.apache.logging.log4j:log4j-core@2.1",
+              "dependsOn": [
+                  "26-org.apache.logging.log4j:log4j-api@2.1"
+              ]
+          },
+          {
+              "ref": "16-log4j:log4j@1.2.13"
+          },
+          {
+              "ref": "17-commons-configuration:commons-configuration@1.10",
+              "dependsOn": [
+                  "27-commons-lang:commons-lang@2.6",
+                  "28-commons-logging:commons-logging@1.1.1"
+              ]
+          },
+          {
+              "ref": "18-commons-beanutils:commons-beanutils-core@1.8.3"
+          },
+          {
+              "ref": "19-commons-fileupload:commons-fileupload@1.3.1",
+              "dependsOn": [
+                  "29-commons-io:commons-io@2.2"
+              ]
+          },
+          {
+              "ref": "20-commons-collections:commons-collections@3.2.2"
+          },
+          {
+              "ref": "21-xom:xom@1.2.5",
+              "dependsOn": [
+                  "30-xml-apis:xml-apis@1.3.03",
+                  "31-xerces:xercesImpl@2.8.0",
+                  "32-xalan:xalan@2.7.0"
+              ]
+          },
+          {
+              "ref": "22-org.beanshell:bsh-core@2.0b4"
+          },
+          {
+              "ref": "23-org.owasp.antisamy:antisamy@1.5.3",
+              "dependsOn": [
+                  "33-net.sourceforge.nekohtml:nekohtml@1.9.16",
+                  "34-commons-httpclient:commons-httpclient@3.1"
+              ]
+          },
+          {
+              "ref": "24-org.apache.xmlgraphics:batik-css@1.8",
+              "dependsOn": [
+                  "35-org.apache.xmlgraphics:batik-ext@1.8",
+                  "36-org.apache.xmlgraphics:batik-util@1.8",
+                  "37-xml-apis:xml-apis-ext@1.3.04"
+              ]
+          },
+          {
+              "ref": "25-javax.activation:activation@1.1"
+          },
+          {
+              "ref": "26-org.apache.logging.log4j:log4j-api@2.1"
+          },
+          {
+              "ref": "27-commons-lang:commons-lang@2.6"
+          },
+          {
+              "ref": "28-commons-logging:commons-logging@1.1.1"
+          },
+          {
+              "ref": "29-commons-io:commons-io@2.2"
+          },
+          {
+              "ref": "30-xml-apis:xml-apis@1.3.03"
+          },
+          {
+              "ref": "31-xerces:xercesImpl@2.8.0"
+          },
+          {
+              "ref": "32-xalan:xalan@2.7.0"
+          },
+          {
+              "ref": "33-net.sourceforge.nekohtml:nekohtml@1.9.16"
+          },
+          {
+              "ref": "34-commons-httpclient:commons-httpclient@3.1",
+              "dependsOn": [
+                  "38-commons-codec:commons-codec@1.2"
+              ]
+          },
+          {
+              "ref": "35-org.apache.xmlgraphics:batik-ext@1.8"
+          },
+          {
+              "ref": "36-org.apache.xmlgraphics:batik-util@1.8"
+          },
+          {
+              "ref": "37-xml-apis:xml-apis-ext@1.3.04"
+          },
+          {
+              "ref": "38-commons-codec:commons-codec@1.2"
+          }
+      ]
+  }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "data": {
+    "type": "sbom_test",
+    "attributes": {
+    "sbom": 
+          {
+            "_comment": "paste your sbom file content instead of this line"
+          }
+    }
+  }
+}

@@ -1,10 +1,10 @@
 # SBOM Testing Options
 
-## Test SBOM web page
+## Test SBOM web page:
 Web based  [Snyk SBOM Security Checker](https://snyk.io/code-checker/sbom-security/)
 
 
-## Test SBOM using CLI
+## Test SBOM using CLI:
 CLI using 3rd partu tool [bomber and snyk sbom provider](https://github.com/devops-kung-fu/bomber)
 
 ### Step 1: Install bomber (mac)
@@ -205,13 +205,54 @@ Version: 0.4.8
 
 ```
 bomber html report sample [here](https://htmlpreview.github.io/?https://github.com/nirw-snyk/sbom-demo/blob/main/samples/20240314-22-39-03-bomber-results.html)
-## Test SBOM using API
+
+
+## Test SBOM using API:
+
+#### Step 1: Post an SBOM test request
+https://apidocs.snyk.io/experimental?version=2024-02-21%7Eexperimental#get-/orgs/-org_id-/projects/-project_id-/sbom
+>POST /orgs/{org_id}/sbom_tests
+
+using curl:
+```
+curl -X POST "<Snyk-REST-Base-URL>/orgs/<Org-Id>/sbom_tests?version=<API-Version>" \
+ -H "accept: application/vnd.api+json"\
+ -H "authorization: <API-TOKEN>"\
+ -H "content-type: application/vnd.api+json" \
+ -d '{"data":{"type":"sbom_test","attributes":{"sbom":<paste-your-sbom-content-here>}}}' \
+```
+Successful response (201) would give a job-id which could then be used for the next API call.
+In the example below the job-id is 
+>34e8117b-7417-42d5-af17-dd588e52843a
+```
+{
+  "data": {
+    "id": "34e8117b-7417-42d5-af17-dd588e52843a",
+    "type": "sbom_tests"
+  },
+  "jsonapi": {
+    "version": "1.0"
+  },
+  "links": {
+    "self": "/rest/orgs/<Org-Id>/sbom_tests?version=<API-Version>",
+    "related": "/rest/orgs/<Org-Id>/sbom_tests/34e8117b-7417-42d5-af17-dd588e52843a?version=<API-Version>"
+  }
+}
+```
+#### Step 2: Get SBOM Test results from Job Id:
+https://apidocs.snyk.io/experimental?version=2024-02-21%7Eexperimental#get-/orgs/-org_id-/sbom_tests/-job_id-/results
+>GET /orgs/{org_id}/sbom_tests/{job_id}/results
+
+using curl:
+```
+curl -X GET "<Snyk-REST-Base-URL>/orgs/<Org-Id>/sbom_tests/<Job-Id>/results?version=<API-Version>" \
+ -H "accept: application/vnd.api+json"\
+ -H "authorization: <API-TOKEN>"\
+```
+
 Postman collection [here](https://github.com/nirw-snyk/sbom-demo/blob/main/SBOM.postman_collection.json)
 
-
-
-
-
+example file [here](https://github.com/nirw-snyk/sbom-demo/blob/main/samples/myCyclondx1.4-Tested.json)
 
 ###
 Next: [SBOM Enriching Options](https://github.com/nirw-snyk/sbom-demo/blob/main/SBOM-Enriching-Options.md)
