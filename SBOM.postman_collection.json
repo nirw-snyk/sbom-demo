@@ -3338,206 +3338,6 @@
 					]
 				},
 				{
-					"name": "Gets an SBOM test run result",
-					"request": {
-						"auth": {
-							"type": "noauth"
-						},
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/vnd.api+json"
-							},
-							{
-								"key": "Authorization",
-								"value": "Token {{APIToken}}",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "{{baseUrl}}/orgs/:org_id/sbom_tests/:job_id/results?version=2024-02-21~experimental",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"orgs",
-								":org_id",
-								"sbom_tests",
-								":job_id",
-								"results"
-							],
-							"query": [
-								{
-									"key": "version",
-									"value": "2024-02-21~experimental",
-									"description": "(Required) The requested version of the endpoint to process the request"
-								},
-								{
-									"key": "starting_after",
-									"value": "<string>",
-									"description": "Return the page of results immediately after this cursor",
-									"disabled": true
-								},
-								{
-									"key": "ending_before",
-									"value": "<string>",
-									"description": "Return the page of results immediately before this cursor",
-									"disabled": true
-								},
-								{
-									"key": "limit",
-									"value": "10",
-									"description": "Number of results to return per page",
-									"disabled": true
-								}
-							],
-							"variable": [
-								{
-									"key": "org_id",
-									"value": "{{OrgId}}",
-									"description": "(Required) Org ID"
-								},
-								{
-									"key": "job_id",
-									"value": "e186cca6-baa5-454a-b23b-ffcb81a6bd23",
-									"description": "(Required) Job ID"
-								}
-							]
-						},
-						"description": "Get an SBOM test run result"
-					},
-					"response": [
-						{
-							"name": "SBOM test results",
-							"originalRequest": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/vnd.api+json"
-									},
-									{
-										"description": "Added as a part of security scheme: bearer",
-										"key": "Authorization",
-										"value": "Bearer <token>"
-									}
-								],
-								"url": {
-									"raw": "{{baseUrl}}/orgs/:org_id/sbom_tests/:job_id/results?version=wip&starting_after=<string>&ending_before=<string>&limit=10",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"orgs",
-										":org_id",
-										"sbom_tests",
-										":job_id",
-										"results"
-									],
-									"query": [
-										{
-											"key": "version",
-											"value": "wip",
-											"description": "(Required) The requested version of the endpoint to process the request"
-										},
-										{
-											"key": "starting_after",
-											"value": "<string>",
-											"description": "Return the page of results immediately after this cursor"
-										},
-										{
-											"key": "ending_before",
-											"value": "<string>",
-											"description": "Return the page of results immediately before this cursor"
-										},
-										{
-											"key": "limit",
-											"value": "10",
-											"description": "Number of results to return per page"
-										}
-									],
-									"variable": [
-										{
-											"key": "org_id"
-										},
-										{
-											"key": "job_id"
-										}
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Content-Type",
-									"value": "application/vnd.api+json"
-								},
-								{
-									"key": "deprecation",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "location",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-request-id",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-version-lifecycle-stage",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-version-requested",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-version-served",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "sunset",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								}
-							],
-							"cookie": [],
-							"body": "{\n  \"data\": {\n    \"id\": \"<uuid>\",\n    \"type\": \"zxhn8meuwhj_fpl2_os5zzsmzh_d4_rigsohhv13\",\n    \"attributes\": {\n      \"consequat_5d5\": -59800359.67810542,\n      \"anim_85\": \"sed\",\n      \"adb8\": -60329931.29049573\n    },\n    \"relationships\": {\n      \"affected_packages\": {\n        \"data\": [\n          {\n            \"type\": \"cf3\",\n            \"id\": \"<uuid>\"\n          },\n          {\n            \"type\": \"bicnn0\",\n            \"id\": \"<uuid>\"\n          }\n        ]\n      }\n    }\n  },\n  \"included\": [\n    {\n      \"cupidatat_64\": 7062610\n    },\n    {\n      \"Duis_4fb\": \"ullamco non\"\n    }\n  ],\n  \"jsonapi\": {\n    \"version\": \"98554395927.0\"\n  },\n  \"links\": {\n    \"first\": \"<string>\",\n    \"last\": \"<string>\",\n    \"next\": \"<string>\",\n    \"prev\": \"<string>\",\n    \"related\": \"<string>\",\n    \"self\": \"<string>\"\n  }\n}"
-						}
-					]
-				},
-				{
 					"name": "Gets an SBOM test run status",
 					"request": {
 						"auth": {
@@ -4317,6 +4117,206 @@
 							],
 							"cookie": [],
 							"body": "{\n  \"jsonapi\": {\n    \"version\": \"8.12\"\n  },\n  \"errors\": [\n    {\n      \"status\": \"401\",\n      \"detail\": \"<string>\",\n      \"code\": \"<string>\",\n      \"id\": \"<uuid>\",\n      \"links\": {\n        \"about\": \"<string>\"\n      },\n      \"meta\": {\n        \"nisi_c\": false,\n        \"enim8\": -53473378,\n        \"consecteture\": 23238038.796833754\n      },\n      \"source\": {\n        \"parameter\": \"<string>\",\n        \"pointer\": \"<string>\"\n      },\n      \"title\": \"<string>\"\n    }\n  ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Gets an SBOM test run result",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.api+json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Token {{APIToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/orgs/:org_id/sbom_tests/:job_id/results?version=2024-02-21~experimental",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"orgs",
+								":org_id",
+								"sbom_tests",
+								":job_id",
+								"results"
+							],
+							"query": [
+								{
+									"key": "version",
+									"value": "2024-02-21~experimental",
+									"description": "(Required) The requested version of the endpoint to process the request"
+								},
+								{
+									"key": "starting_after",
+									"value": "<string>",
+									"description": "Return the page of results immediately after this cursor",
+									"disabled": true
+								},
+								{
+									"key": "ending_before",
+									"value": "<string>",
+									"description": "Return the page of results immediately before this cursor",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "10",
+									"description": "Number of results to return per page",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "org_id",
+									"value": "{{OrgId}}",
+									"description": "(Required) Org ID"
+								},
+								{
+									"key": "job_id",
+									"value": "e186cca6-baa5-454a-b23b-ffcb81a6bd23",
+									"description": "(Required) Job ID"
+								}
+							]
+						},
+						"description": "Get an SBOM test run result"
+					},
+					"response": [
+						{
+							"name": "SBOM test results",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/orgs/:org_id/sbom_tests/:job_id/results?version=wip&starting_after=<string>&ending_before=<string>&limit=10",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"orgs",
+										":org_id",
+										"sbom_tests",
+										":job_id",
+										"results"
+									],
+									"query": [
+										{
+											"key": "version",
+											"value": "wip",
+											"description": "(Required) The requested version of the endpoint to process the request"
+										},
+										{
+											"key": "starting_after",
+											"value": "<string>",
+											"description": "Return the page of results immediately after this cursor"
+										},
+										{
+											"key": "ending_before",
+											"value": "<string>",
+											"description": "Return the page of results immediately before this cursor"
+										},
+										{
+											"key": "limit",
+											"value": "10",
+											"description": "Number of results to return per page"
+										}
+									],
+									"variable": [
+										{
+											"key": "org_id"
+										},
+										{
+											"key": "job_id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.api+json"
+								},
+								{
+									"key": "deprecation",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "location",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-request-id",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-version-lifecycle-stage",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-version-requested",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-version-served",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "sunset",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"data\": {\n    \"id\": \"<uuid>\",\n    \"type\": \"zxhn8meuwhj_fpl2_os5zzsmzh_d4_rigsohhv13\",\n    \"attributes\": {\n      \"consequat_5d5\": -59800359.67810542,\n      \"anim_85\": \"sed\",\n      \"adb8\": -60329931.29049573\n    },\n    \"relationships\": {\n      \"affected_packages\": {\n        \"data\": [\n          {\n            \"type\": \"cf3\",\n            \"id\": \"<uuid>\"\n          },\n          {\n            \"type\": \"bicnn0\",\n            \"id\": \"<uuid>\"\n          }\n        ]\n      }\n    }\n  },\n  \"included\": [\n    {\n      \"cupidatat_64\": 7062610\n    },\n    {\n      \"Duis_4fb\": \"ullamco non\"\n    }\n  ],\n  \"jsonapi\": {\n    \"version\": \"98554395927.0\"\n  },\n  \"links\": {\n    \"first\": \"<string>\",\n    \"last\": \"<string>\",\n    \"next\": \"<string>\",\n    \"prev\": \"<string>\",\n    \"related\": \"<string>\",\n    \"self\": \"<string>\"\n  }\n}"
 						}
 					]
 				}
