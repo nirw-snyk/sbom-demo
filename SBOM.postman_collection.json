@@ -10,6 +10,3549 @@
 			"name": "Generate-SBOM",
 			"item": [
 				{
+					"name": "Auxilary",
+					"item": [
+						{
+							"name": "Get collections",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Token {{APIToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/orgs/:org_id/collections?version=2024-02-21",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"orgs",
+										":org_id",
+										"collections"
+									],
+									"query": [
+										{
+											"key": "version",
+											"value": "2024-02-21",
+											"description": "(Required) The requested version of the endpoint to process the request"
+										},
+										{
+											"key": "starting_after",
+											"value": "<string>",
+											"description": "Return the page of results immediately after this cursor",
+											"disabled": true
+										},
+										{
+											"key": "ending_before",
+											"value": "<string>",
+											"description": "Return the page of results immediately before this cursor",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "10",
+											"description": "Number of results to return per page",
+											"disabled": true
+										},
+										{
+											"key": "sort",
+											"value": "name",
+											"description": "Return collections sorted by the specified attributes",
+											"disabled": true
+										},
+										{
+											"key": "direction",
+											"value": "DESC",
+											"description": "Return collections sorted in the specified direction",
+											"disabled": true
+										},
+										{
+											"key": "name",
+											"value": "<string>",
+											"description": "Return collections which names include the provided string",
+											"disabled": true
+										},
+										{
+											"key": "is_generated",
+											"value": "<boolean>",
+											"description": "Return collections where is_generated matches the provided boolean",
+											"disabled": true
+										}
+									],
+									"variable": [
+										{
+											"key": "org_id",
+											"value": "{{OrgId}}",
+											"description": "(Required) Org ID"
+										}
+									]
+								},
+								"description": "Return a list of organization's collections with issues counts  and projects count."
+							},
+							"response": [
+								{
+									"name": "Returns a list of collections",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/vnd.api+json"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/orgs/:org_id/collections?version=work-in-progress&starting_after=<string>&ending_before=<string>&limit=10&sort=name&direction=DESC&name=<string>&is_generated=<boolean>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"orgs",
+												":org_id",
+												"collections"
+											],
+											"query": [
+												{
+													"key": "version",
+													"value": "work-in-progress",
+													"description": "(Required) The requested version of the endpoint to process the request"
+												},
+												{
+													"key": "starting_after",
+													"value": "<string>",
+													"description": "Return the page of results immediately after this cursor"
+												},
+												{
+													"key": "ending_before",
+													"value": "<string>",
+													"description": "Return the page of results immediately before this cursor"
+												},
+												{
+													"key": "limit",
+													"value": "10",
+													"description": "Number of results to return per page"
+												},
+												{
+													"key": "sort",
+													"value": "name",
+													"description": "Return collections sorted by the specified attributes"
+												},
+												{
+													"key": "direction",
+													"value": "DESC",
+													"description": "Return collections sorted in the specified direction"
+												},
+												{
+													"key": "name",
+													"value": "<string>",
+													"description": "Return collections which names include the provided string"
+												},
+												{
+													"key": "is_generated",
+													"value": "<boolean>",
+													"description": "Return collections where is_generated matches the provided boolean"
+												}
+											],
+											"variable": [
+												{
+													"key": "org_id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/vnd.api+json"
+										},
+										{
+											"key": "deprecation",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "snyk-request-id",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "snyk-version-lifecycle-stage",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "snyk-version-requested",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "snyk-version-served",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "sunset",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"data\": [\n    {\n      \"id\": \"<uuid>\",\n      \"type\": \"d2xrecer_l_g10680nnq1_ij38vzh_g502_w_rx6b8m_s_hx1puj\",\n      \"meta\": {\n        \"projects_count\": \"<number>\",\n        \"issues_critical_count\": \"<number>\",\n        \"issues_high_count\": \"<number>\",\n        \"issues_medium_count\": \"<number>\",\n        \"issues_low_count\": \"<number>\"\n      },\n      \"attributes\": {\n        \"name\": \"zalDcmeZv/\",\n        \"is_generated\": \"<boolean>\"\n      },\n      \"relationships\": {\n        \"org\": {\n          \"data\": {\n            \"type\": \"org\",\n            \"id\": \"<uuid>\"\n          }\n        },\n        \"created_by_user\": {\n          \"data\": {\n            \"type\": \"user\",\n            \"id\": \"<uuid>\"\n          }\n        }\n      }\n    },\n    {\n      \"id\": \"<uuid>\",\n      \"type\": \"k9w5oslk_vbu9w370ogp_d_thj_uvalqoo87vy_y_qo9d478xv_j2iqp\",\n      \"meta\": {\n        \"projects_count\": \"<number>\",\n        \"issues_critical_count\": \"<number>\",\n        \"issues_high_count\": \"<number>\",\n        \"issues_medium_count\": \"<number>\",\n        \"issues_low_count\": \"<number>\"\n      },\n      \"attributes\": {\n        \"name\": \" Pk5S._e8jX\",\n        \"is_generated\": \"<boolean>\"\n      },\n      \"relationships\": {\n        \"org\": {\n          \"data\": {\n            \"type\": \"org\",\n            \"id\": \"<uuid>\"\n          }\n        },\n        \"created_by_user\": {\n          \"data\": {\n            \"type\": \"user\",\n            \"id\": \"<uuid>\"\n          }\n        }\n      }\n    }\n  ],\n  \"jsonapi\": {\n    \"version\": \"126441099.796\"\n  },\n  \"links\": {\n    \"first\": \"<string>\",\n    \"last\": \"<string>\",\n    \"next\": \"<string>\",\n    \"prev\": \"<string>\",\n    \"self\": \"<string>\"\n  }\n}"
+								},
+								{
+									"name": "Bad Request: A parameter provided as a part of the request was invalid.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/vnd.api+json"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/orgs/:org_id/collections?version=work-in-progress&starting_after=<string>&ending_before=<string>&limit=10&sort=name&direction=DESC&name=<string>&is_generated=<boolean>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"orgs",
+												":org_id",
+												"collections"
+											],
+											"query": [
+												{
+													"key": "version",
+													"value": "work-in-progress",
+													"description": "(Required) The requested version of the endpoint to process the request"
+												},
+												{
+													"key": "starting_after",
+													"value": "<string>",
+													"description": "Return the page of results immediately after this cursor"
+												},
+												{
+													"key": "ending_before",
+													"value": "<string>",
+													"description": "Return the page of results immediately before this cursor"
+												},
+												{
+													"key": "limit",
+													"value": "10",
+													"description": "Number of results to return per page"
+												},
+												{
+													"key": "sort",
+													"value": "name",
+													"description": "Return collections sorted by the specified attributes"
+												},
+												{
+													"key": "direction",
+													"value": "DESC",
+													"description": "Return collections sorted in the specified direction"
+												},
+												{
+													"key": "name",
+													"value": "<string>",
+													"description": "Return collections which names include the provided string"
+												},
+												{
+													"key": "is_generated",
+													"value": "<boolean>",
+													"description": "Return collections where is_generated matches the provided boolean"
+												}
+											],
+											"variable": [
+												{
+													"key": "org_id"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/vnd.api+json"
+										},
+										{
+											"key": "deprecation",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "snyk-request-id",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "snyk-version-lifecycle-stage",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "snyk-version-requested",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "snyk-version-served",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "sunset",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"jsonapi\": {\n    \"version\": \"0.204399\"\n  },\n  \"errors\": [\n    {\n      \"status\": \"450\",\n      \"detail\": \"<string>\",\n      \"code\": \"<string>\",\n      \"id\": \"<uuid>\",\n      \"links\": {\n        \"about\": \"<string>\"\n      },\n      \"meta\": {\n        \"fugiat_d43\": 17608579.13358502,\n        \"fugiat091\": true,\n        \"dolord6\": 13592157\n      },\n      \"source\": {\n        \"parameter\": \"<string>\",\n        \"pointer\": \"<string>\"\n      },\n      \"title\": \"<string>\"\n    }\n  ]\n}"
+								},
+								{
+									"name": "Unauthorized: the request requires an authentication token.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/vnd.api+json"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/orgs/:org_id/collections?version=work-in-progress&starting_after=<string>&ending_before=<string>&limit=10&sort=name&direction=DESC&name=<string>&is_generated=<boolean>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"orgs",
+												":org_id",
+												"collections"
+											],
+											"query": [
+												{
+													"key": "version",
+													"value": "work-in-progress",
+													"description": "(Required) The requested version of the endpoint to process the request"
+												},
+												{
+													"key": "starting_after",
+													"value": "<string>",
+													"description": "Return the page of results immediately after this cursor"
+												},
+												{
+													"key": "ending_before",
+													"value": "<string>",
+													"description": "Return the page of results immediately before this cursor"
+												},
+												{
+													"key": "limit",
+													"value": "10",
+													"description": "Number of results to return per page"
+												},
+												{
+													"key": "sort",
+													"value": "name",
+													"description": "Return collections sorted by the specified attributes"
+												},
+												{
+													"key": "direction",
+													"value": "DESC",
+													"description": "Return collections sorted in the specified direction"
+												},
+												{
+													"key": "name",
+													"value": "<string>",
+													"description": "Return collections which names include the provided string"
+												},
+												{
+													"key": "is_generated",
+													"value": "<boolean>",
+													"description": "Return collections where is_generated matches the provided boolean"
+												}
+											],
+											"variable": [
+												{
+													"key": "org_id"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/vnd.api+json"
+										},
+										{
+											"key": "deprecation",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "snyk-request-id",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "snyk-version-lifecycle-stage",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "snyk-version-requested",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "snyk-version-served",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "sunset",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"jsonapi\": {\n    \"version\": \"0.204399\"\n  },\n  \"errors\": [\n    {\n      \"status\": \"450\",\n      \"detail\": \"<string>\",\n      \"code\": \"<string>\",\n      \"id\": \"<uuid>\",\n      \"links\": {\n        \"about\": \"<string>\"\n      },\n      \"meta\": {\n        \"fugiat_d43\": 17608579.13358502,\n        \"fugiat091\": true,\n        \"dolord6\": 13592157\n      },\n      \"source\": {\n        \"parameter\": \"<string>\",\n        \"pointer\": \"<string>\"\n      },\n      \"title\": \"<string>\"\n    }\n  ]\n}"
+								},
+								{
+									"name": "Forbidden: the request requires an authentication token with more or different permissions.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/vnd.api+json"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/orgs/:org_id/collections?version=work-in-progress&starting_after=<string>&ending_before=<string>&limit=10&sort=name&direction=DESC&name=<string>&is_generated=<boolean>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"orgs",
+												":org_id",
+												"collections"
+											],
+											"query": [
+												{
+													"key": "version",
+													"value": "work-in-progress",
+													"description": "(Required) The requested version of the endpoint to process the request"
+												},
+												{
+													"key": "starting_after",
+													"value": "<string>",
+													"description": "Return the page of results immediately after this cursor"
+												},
+												{
+													"key": "ending_before",
+													"value": "<string>",
+													"description": "Return the page of results immediately before this cursor"
+												},
+												{
+													"key": "limit",
+													"value": "10",
+													"description": "Number of results to return per page"
+												},
+												{
+													"key": "sort",
+													"value": "name",
+													"description": "Return collections sorted by the specified attributes"
+												},
+												{
+													"key": "direction",
+													"value": "DESC",
+													"description": "Return collections sorted in the specified direction"
+												},
+												{
+													"key": "name",
+													"value": "<string>",
+													"description": "Return collections which names include the provided string"
+												},
+												{
+													"key": "is_generated",
+													"value": "<boolean>",
+													"description": "Return collections where is_generated matches the provided boolean"
+												}
+											],
+											"variable": [
+												{
+													"key": "org_id"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/vnd.api+json"
+										},
+										{
+											"key": "deprecation",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "snyk-request-id",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "snyk-version-lifecycle-stage",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "snyk-version-requested",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "snyk-version-served",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "sunset",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"jsonapi\": {\n    \"version\": \"0.204399\"\n  },\n  \"errors\": [\n    {\n      \"status\": \"450\",\n      \"detail\": \"<string>\",\n      \"code\": \"<string>\",\n      \"id\": \"<uuid>\",\n      \"links\": {\n        \"about\": \"<string>\"\n      },\n      \"meta\": {\n        \"fugiat_d43\": 17608579.13358502,\n        \"fugiat091\": true,\n        \"dolord6\": 13592157\n      },\n      \"source\": {\n        \"parameter\": \"<string>\",\n        \"pointer\": \"<string>\"\n      },\n      \"title\": \"<string>\"\n    }\n  ]\n}"
+								},
+								{
+									"name": "Not Found: The resource being operated on could not be found.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/vnd.api+json"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/orgs/:org_id/collections?version=work-in-progress&starting_after=<string>&ending_before=<string>&limit=10&sort=name&direction=DESC&name=<string>&is_generated=<boolean>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"orgs",
+												":org_id",
+												"collections"
+											],
+											"query": [
+												{
+													"key": "version",
+													"value": "work-in-progress",
+													"description": "(Required) The requested version of the endpoint to process the request"
+												},
+												{
+													"key": "starting_after",
+													"value": "<string>",
+													"description": "Return the page of results immediately after this cursor"
+												},
+												{
+													"key": "ending_before",
+													"value": "<string>",
+													"description": "Return the page of results immediately before this cursor"
+												},
+												{
+													"key": "limit",
+													"value": "10",
+													"description": "Number of results to return per page"
+												},
+												{
+													"key": "sort",
+													"value": "name",
+													"description": "Return collections sorted by the specified attributes"
+												},
+												{
+													"key": "direction",
+													"value": "DESC",
+													"description": "Return collections sorted in the specified direction"
+												},
+												{
+													"key": "name",
+													"value": "<string>",
+													"description": "Return collections which names include the provided string"
+												},
+												{
+													"key": "is_generated",
+													"value": "<boolean>",
+													"description": "Return collections where is_generated matches the provided boolean"
+												}
+											],
+											"variable": [
+												{
+													"key": "org_id"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/vnd.api+json"
+										},
+										{
+											"key": "deprecation",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "snyk-request-id",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "snyk-version-lifecycle-stage",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "snyk-version-requested",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "snyk-version-served",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "sunset",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"jsonapi\": {\n    \"version\": \"0.204399\"\n  },\n  \"errors\": [\n    {\n      \"status\": \"450\",\n      \"detail\": \"<string>\",\n      \"code\": \"<string>\",\n      \"id\": \"<uuid>\",\n      \"links\": {\n        \"about\": \"<string>\"\n      },\n      \"meta\": {\n        \"fugiat_d43\": 17608579.13358502,\n        \"fugiat091\": true,\n        \"dolord6\": 13592157\n      },\n      \"source\": {\n        \"parameter\": \"<string>\",\n        \"pointer\": \"<string>\"\n      },\n      \"title\": \"<string>\"\n    }\n  ]\n}"
+								},
+								{
+									"name": "Internal Server Error: An error was encountered while attempting to process the request.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/vnd.api+json"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/orgs/:org_id/collections?version=work-in-progress&starting_after=<string>&ending_before=<string>&limit=10&sort=name&direction=DESC&name=<string>&is_generated=<boolean>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"orgs",
+												":org_id",
+												"collections"
+											],
+											"query": [
+												{
+													"key": "version",
+													"value": "work-in-progress",
+													"description": "(Required) The requested version of the endpoint to process the request"
+												},
+												{
+													"key": "starting_after",
+													"value": "<string>",
+													"description": "Return the page of results immediately after this cursor"
+												},
+												{
+													"key": "ending_before",
+													"value": "<string>",
+													"description": "Return the page of results immediately before this cursor"
+												},
+												{
+													"key": "limit",
+													"value": "10",
+													"description": "Number of results to return per page"
+												},
+												{
+													"key": "sort",
+													"value": "name",
+													"description": "Return collections sorted by the specified attributes"
+												},
+												{
+													"key": "direction",
+													"value": "DESC",
+													"description": "Return collections sorted in the specified direction"
+												},
+												{
+													"key": "name",
+													"value": "<string>",
+													"description": "Return collections which names include the provided string"
+												},
+												{
+													"key": "is_generated",
+													"value": "<boolean>",
+													"description": "Return collections where is_generated matches the provided boolean"
+												}
+											],
+											"variable": [
+												{
+													"key": "org_id"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/vnd.api+json"
+										},
+										{
+											"key": "deprecation",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "snyk-request-id",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "snyk-version-lifecycle-stage",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "snyk-version-requested",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "snyk-version-served",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "sunset",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"jsonapi\": {\n    \"version\": \"0.204399\"\n  },\n  \"errors\": [\n    {\n      \"status\": \"450\",\n      \"detail\": \"<string>\",\n      \"code\": \"<string>\",\n      \"id\": \"<uuid>\",\n      \"links\": {\n        \"about\": \"<string>\"\n      },\n      \"meta\": {\n        \"fugiat_d43\": 17608579.13358502,\n        \"fugiat091\": true,\n        \"dolord6\": 13592157\n      },\n      \"source\": {\n        \"parameter\": \"<string>\",\n        \"pointer\": \"<string>\"\n      },\n      \"title\": \"<string>\"\n    }\n  ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Get targets by org ID",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Token {{APIToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/orgs/:org_id/targets?version=2024-02-21",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"orgs",
+										":org_id",
+										"targets"
+									],
+									"query": [
+										{
+											"key": "version",
+											"value": "2024-02-21",
+											"description": "(Required) The requested version of the endpoint to process the request"
+										},
+										{
+											"key": "starting_after",
+											"value": "<string>",
+											"description": "Return the page of results immediately after this cursor",
+											"disabled": true
+										},
+										{
+											"key": "ending_before",
+											"value": "<string>",
+											"description": "Return the page of results immediately before this cursor",
+											"disabled": true
+										},
+										{
+											"key": "count",
+											"value": "<boolean>",
+											"description": "Calculate total amount of filtered results",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "10",
+											"description": "Number of results to return per page",
+											"disabled": true
+										},
+										{
+											"key": "is_private",
+											"value": "<boolean>",
+											"description": "Return targets that match the provided value of is_private",
+											"disabled": true
+										},
+										{
+											"key": "exclude_empty",
+											"value": "true",
+											"description": "Return only the targets that has projects",
+											"disabled": true
+										},
+										{
+											"key": "url",
+											"value": "<string>",
+											"description": "Return targets that match the provided remote_url.",
+											"disabled": true
+										},
+										{
+											"key": "source_types",
+											"value": "nexus-cr,github-enterprise",
+											"description": "Return targets that match the provided source_types",
+											"disabled": true
+										},
+										{
+											"key": "display_name",
+											"value": "<string>",
+											"description": "Return targets with display names starting with the provided string",
+											"disabled": true
+										},
+										{
+											"key": "created_gte",
+											"value": "<dateTime>",
+											"description": "Return only targets which have been created at or after the specified date.\n",
+											"disabled": true
+										}
+									],
+									"variable": [
+										{
+											"key": "org_id",
+											"value": "{{OrgId}}",
+											"description": "(Required) The id of the org to return a list of targets"
+										}
+									]
+								},
+								"description": "Get a list of an organization's targets."
+							},
+							"response": [
+								{
+									"name": "A list of targets is returned for the targeted org",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/vnd.api+json"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/orgs/:org_id/targets?version=work-in-progress&starting_after=<string>&ending_before=<string>&count=<boolean>&limit=10&is_private=<boolean>&exclude_empty=true&url=<string>&source_types=nexus-cr,github-enterprise&display_name=<string>&created_gte=<dateTime>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"orgs",
+												":org_id",
+												"targets"
+											],
+											"query": [
+												{
+													"key": "version",
+													"value": "work-in-progress",
+													"description": "(Required) The requested version of the endpoint to process the request"
+												},
+												{
+													"key": "starting_after",
+													"value": "<string>",
+													"description": "Return the page of results immediately after this cursor"
+												},
+												{
+													"key": "ending_before",
+													"value": "<string>",
+													"description": "Return the page of results immediately before this cursor"
+												},
+												{
+													"key": "count",
+													"value": "<boolean>",
+													"description": "Calculate total amount of filtered results"
+												},
+												{
+													"key": "limit",
+													"value": "10",
+													"description": "Number of results to return per page"
+												},
+												{
+													"key": "is_private",
+													"value": "<boolean>",
+													"description": "Return targets that match the provided value of is_private"
+												},
+												{
+													"key": "exclude_empty",
+													"value": "true",
+													"description": "Return only the targets that has projects"
+												},
+												{
+													"key": "url",
+													"value": "<string>",
+													"description": "Return targets that match the provided remote_url."
+												},
+												{
+													"key": "source_types",
+													"value": "nexus-cr,github-enterprise",
+													"description": "Return targets that match the provided source_types"
+												},
+												{
+													"key": "display_name",
+													"value": "<string>",
+													"description": "Return targets with display names starting with the provided string"
+												},
+												{
+													"key": "created_gte",
+													"value": "<dateTime>",
+													"description": "Return only targets which have been created at or after the specified date.\n"
+												}
+											],
+											"variable": [
+												{
+													"key": "org_id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/vnd.api+json"
+										},
+										{
+											"key": "deprecation",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "snyk-request-id",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "snyk-version-lifecycle-stage",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "snyk-version-requested",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "snyk-version-served",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "sunset",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"jsonapi\": {\n    \"version\": \"0.747\"\n  },\n  \"data\": [\n    {\n      \"type\": \"<string>\",\n      \"id\": \"<uuid>\",\n      \"attributes\": {\n        \"display_name\": \"<string>\",\n        \"url\": \"<string>\",\n        \"is_private\": \"<boolean>\",\n        \"created_at\": \"<dateTime>\"\n      },\n      \"relationships\": {\n        \"organization\": {\n          \"data\": {\n            \"type\": \"<string>\",\n            \"id\": \"<uuid>\"\n          }\n        },\n        \"integration\": {\n          \"data\": {\n            \"id\": \"<uuid>\",\n            \"type\": \"<string>\",\n            \"attributes\": {\n              \"integration_type\": \"<string>\"\n            }\n          }\n        }\n      }\n    },\n    {\n      \"type\": \"<string>\",\n      \"id\": \"<uuid>\",\n      \"attributes\": {\n        \"display_name\": \"<string>\",\n        \"url\": \"<string>\",\n        \"is_private\": \"<boolean>\",\n        \"created_at\": \"<dateTime>\"\n      },\n      \"relationships\": {\n        \"organization\": {\n          \"data\": {\n            \"type\": \"<string>\",\n            \"id\": \"<uuid>\"\n          }\n        },\n        \"integration\": {\n          \"data\": {\n            \"id\": \"<uuid>\",\n            \"type\": \"<string>\",\n            \"attributes\": {\n              \"integration_type\": \"<string>\"\n            }\n          }\n        }\n      }\n    }\n  ],\n  \"links\": {\n    \"first\": \"<string>\",\n    \"last\": \"<string>\",\n    \"next\": \"<string>\",\n    \"prev\": \"<string>\",\n    \"related\": \"<string>\",\n    \"self\": \"<string>\"\n  },\n  \"meta\": {\n    \"count\": \"<number>\"\n  }\n}"
+								},
+								{
+									"name": "Bad Request: A parameter provided as a part of the request was invalid.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/vnd.api+json"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/orgs/:org_id/targets?version=work-in-progress&starting_after=<string>&ending_before=<string>&count=<boolean>&limit=10&is_private=<boolean>&exclude_empty=true&url=<string>&source_types=nexus-cr,github-enterprise&display_name=<string>&created_gte=<dateTime>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"orgs",
+												":org_id",
+												"targets"
+											],
+											"query": [
+												{
+													"key": "version",
+													"value": "work-in-progress",
+													"description": "(Required) The requested version of the endpoint to process the request"
+												},
+												{
+													"key": "starting_after",
+													"value": "<string>",
+													"description": "Return the page of results immediately after this cursor"
+												},
+												{
+													"key": "ending_before",
+													"value": "<string>",
+													"description": "Return the page of results immediately before this cursor"
+												},
+												{
+													"key": "count",
+													"value": "<boolean>",
+													"description": "Calculate total amount of filtered results"
+												},
+												{
+													"key": "limit",
+													"value": "10",
+													"description": "Number of results to return per page"
+												},
+												{
+													"key": "is_private",
+													"value": "<boolean>",
+													"description": "Return targets that match the provided value of is_private"
+												},
+												{
+													"key": "exclude_empty",
+													"value": "true",
+													"description": "Return only the targets that has projects"
+												},
+												{
+													"key": "url",
+													"value": "<string>",
+													"description": "Return targets that match the provided remote_url."
+												},
+												{
+													"key": "source_types",
+													"value": "nexus-cr,github-enterprise",
+													"description": "Return targets that match the provided source_types"
+												},
+												{
+													"key": "display_name",
+													"value": "<string>",
+													"description": "Return targets with display names starting with the provided string"
+												},
+												{
+													"key": "created_gte",
+													"value": "<dateTime>",
+													"description": "Return only targets which have been created at or after the specified date.\n"
+												}
+											],
+											"variable": [
+												{
+													"key": "org_id"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/vnd.api+json"
+										},
+										{
+											"key": "deprecation",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "snyk-request-id",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "snyk-version-lifecycle-stage",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "snyk-version-requested",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "snyk-version-served",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "sunset",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"jsonapi\": {\n    \"version\": \"0.204399\"\n  },\n  \"errors\": [\n    {\n      \"status\": \"450\",\n      \"detail\": \"<string>\",\n      \"code\": \"<string>\",\n      \"id\": \"<uuid>\",\n      \"links\": {\n        \"about\": \"<string>\"\n      },\n      \"meta\": {\n        \"fugiat_d43\": 17608579.13358502,\n        \"fugiat091\": true,\n        \"dolord6\": 13592157\n      },\n      \"source\": {\n        \"parameter\": \"<string>\",\n        \"pointer\": \"<string>\"\n      },\n      \"title\": \"<string>\"\n    }\n  ]\n}"
+								},
+								{
+									"name": "Unauthorized: the request requires an authentication token.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/vnd.api+json"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/orgs/:org_id/targets?version=work-in-progress&starting_after=<string>&ending_before=<string>&count=<boolean>&limit=10&is_private=<boolean>&exclude_empty=true&url=<string>&source_types=nexus-cr,github-enterprise&display_name=<string>&created_gte=<dateTime>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"orgs",
+												":org_id",
+												"targets"
+											],
+											"query": [
+												{
+													"key": "version",
+													"value": "work-in-progress",
+													"description": "(Required) The requested version of the endpoint to process the request"
+												},
+												{
+													"key": "starting_after",
+													"value": "<string>",
+													"description": "Return the page of results immediately after this cursor"
+												},
+												{
+													"key": "ending_before",
+													"value": "<string>",
+													"description": "Return the page of results immediately before this cursor"
+												},
+												{
+													"key": "count",
+													"value": "<boolean>",
+													"description": "Calculate total amount of filtered results"
+												},
+												{
+													"key": "limit",
+													"value": "10",
+													"description": "Number of results to return per page"
+												},
+												{
+													"key": "is_private",
+													"value": "<boolean>",
+													"description": "Return targets that match the provided value of is_private"
+												},
+												{
+													"key": "exclude_empty",
+													"value": "true",
+													"description": "Return only the targets that has projects"
+												},
+												{
+													"key": "url",
+													"value": "<string>",
+													"description": "Return targets that match the provided remote_url."
+												},
+												{
+													"key": "source_types",
+													"value": "nexus-cr,github-enterprise",
+													"description": "Return targets that match the provided source_types"
+												},
+												{
+													"key": "display_name",
+													"value": "<string>",
+													"description": "Return targets with display names starting with the provided string"
+												},
+												{
+													"key": "created_gte",
+													"value": "<dateTime>",
+													"description": "Return only targets which have been created at or after the specified date.\n"
+												}
+											],
+											"variable": [
+												{
+													"key": "org_id"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/vnd.api+json"
+										},
+										{
+											"key": "deprecation",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "snyk-request-id",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "snyk-version-lifecycle-stage",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "snyk-version-requested",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "snyk-version-served",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "sunset",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"jsonapi\": {\n    \"version\": \"0.204399\"\n  },\n  \"errors\": [\n    {\n      \"status\": \"450\",\n      \"detail\": \"<string>\",\n      \"code\": \"<string>\",\n      \"id\": \"<uuid>\",\n      \"links\": {\n        \"about\": \"<string>\"\n      },\n      \"meta\": {\n        \"fugiat_d43\": 17608579.13358502,\n        \"fugiat091\": true,\n        \"dolord6\": 13592157\n      },\n      \"source\": {\n        \"parameter\": \"<string>\",\n        \"pointer\": \"<string>\"\n      },\n      \"title\": \"<string>\"\n    }\n  ]\n}"
+								},
+								{
+									"name": "Forbidden: the request requires an authentication token with more or different permissions.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/vnd.api+json"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/orgs/:org_id/targets?version=work-in-progress&starting_after=<string>&ending_before=<string>&count=<boolean>&limit=10&is_private=<boolean>&exclude_empty=true&url=<string>&source_types=nexus-cr,github-enterprise&display_name=<string>&created_gte=<dateTime>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"orgs",
+												":org_id",
+												"targets"
+											],
+											"query": [
+												{
+													"key": "version",
+													"value": "work-in-progress",
+													"description": "(Required) The requested version of the endpoint to process the request"
+												},
+												{
+													"key": "starting_after",
+													"value": "<string>",
+													"description": "Return the page of results immediately after this cursor"
+												},
+												{
+													"key": "ending_before",
+													"value": "<string>",
+													"description": "Return the page of results immediately before this cursor"
+												},
+												{
+													"key": "count",
+													"value": "<boolean>",
+													"description": "Calculate total amount of filtered results"
+												},
+												{
+													"key": "limit",
+													"value": "10",
+													"description": "Number of results to return per page"
+												},
+												{
+													"key": "is_private",
+													"value": "<boolean>",
+													"description": "Return targets that match the provided value of is_private"
+												},
+												{
+													"key": "exclude_empty",
+													"value": "true",
+													"description": "Return only the targets that has projects"
+												},
+												{
+													"key": "url",
+													"value": "<string>",
+													"description": "Return targets that match the provided remote_url."
+												},
+												{
+													"key": "source_types",
+													"value": "nexus-cr,github-enterprise",
+													"description": "Return targets that match the provided source_types"
+												},
+												{
+													"key": "display_name",
+													"value": "<string>",
+													"description": "Return targets with display names starting with the provided string"
+												},
+												{
+													"key": "created_gte",
+													"value": "<dateTime>",
+													"description": "Return only targets which have been created at or after the specified date.\n"
+												}
+											],
+											"variable": [
+												{
+													"key": "org_id"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/vnd.api+json"
+										},
+										{
+											"key": "deprecation",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "snyk-request-id",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "snyk-version-lifecycle-stage",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "snyk-version-requested",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "snyk-version-served",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "sunset",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"jsonapi\": {\n    \"version\": \"0.204399\"\n  },\n  \"errors\": [\n    {\n      \"status\": \"450\",\n      \"detail\": \"<string>\",\n      \"code\": \"<string>\",\n      \"id\": \"<uuid>\",\n      \"links\": {\n        \"about\": \"<string>\"\n      },\n      \"meta\": {\n        \"fugiat_d43\": 17608579.13358502,\n        \"fugiat091\": true,\n        \"dolord6\": 13592157\n      },\n      \"source\": {\n        \"parameter\": \"<string>\",\n        \"pointer\": \"<string>\"\n      },\n      \"title\": \"<string>\"\n    }\n  ]\n}"
+								},
+								{
+									"name": "Not Found: The resource being operated on could not be found.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/vnd.api+json"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/orgs/:org_id/targets?version=work-in-progress&starting_after=<string>&ending_before=<string>&count=<boolean>&limit=10&is_private=<boolean>&exclude_empty=true&url=<string>&source_types=nexus-cr,github-enterprise&display_name=<string>&created_gte=<dateTime>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"orgs",
+												":org_id",
+												"targets"
+											],
+											"query": [
+												{
+													"key": "version",
+													"value": "work-in-progress",
+													"description": "(Required) The requested version of the endpoint to process the request"
+												},
+												{
+													"key": "starting_after",
+													"value": "<string>",
+													"description": "Return the page of results immediately after this cursor"
+												},
+												{
+													"key": "ending_before",
+													"value": "<string>",
+													"description": "Return the page of results immediately before this cursor"
+												},
+												{
+													"key": "count",
+													"value": "<boolean>",
+													"description": "Calculate total amount of filtered results"
+												},
+												{
+													"key": "limit",
+													"value": "10",
+													"description": "Number of results to return per page"
+												},
+												{
+													"key": "is_private",
+													"value": "<boolean>",
+													"description": "Return targets that match the provided value of is_private"
+												},
+												{
+													"key": "exclude_empty",
+													"value": "true",
+													"description": "Return only the targets that has projects"
+												},
+												{
+													"key": "url",
+													"value": "<string>",
+													"description": "Return targets that match the provided remote_url."
+												},
+												{
+													"key": "source_types",
+													"value": "nexus-cr,github-enterprise",
+													"description": "Return targets that match the provided source_types"
+												},
+												{
+													"key": "display_name",
+													"value": "<string>",
+													"description": "Return targets with display names starting with the provided string"
+												},
+												{
+													"key": "created_gte",
+													"value": "<dateTime>",
+													"description": "Return only targets which have been created at or after the specified date.\n"
+												}
+											],
+											"variable": [
+												{
+													"key": "org_id"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/vnd.api+json"
+										},
+										{
+											"key": "deprecation",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "snyk-request-id",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "snyk-version-lifecycle-stage",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "snyk-version-requested",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "snyk-version-served",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "sunset",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"jsonapi\": {\n    \"version\": \"0.204399\"\n  },\n  \"errors\": [\n    {\n      \"status\": \"450\",\n      \"detail\": \"<string>\",\n      \"code\": \"<string>\",\n      \"id\": \"<uuid>\",\n      \"links\": {\n        \"about\": \"<string>\"\n      },\n      \"meta\": {\n        \"fugiat_d43\": 17608579.13358502,\n        \"fugiat091\": true,\n        \"dolord6\": 13592157\n      },\n      \"source\": {\n        \"parameter\": \"<string>\",\n        \"pointer\": \"<string>\"\n      },\n      \"title\": \"<string>\"\n    }\n  ]\n}"
+								},
+								{
+									"name": "Internal Server Error: An error was encountered while attempting to process the request.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/vnd.api+json"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/orgs/:org_id/targets?version=work-in-progress&starting_after=<string>&ending_before=<string>&count=<boolean>&limit=10&is_private=<boolean>&exclude_empty=true&url=<string>&source_types=nexus-cr,github-enterprise&display_name=<string>&created_gte=<dateTime>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"orgs",
+												":org_id",
+												"targets"
+											],
+											"query": [
+												{
+													"key": "version",
+													"value": "work-in-progress",
+													"description": "(Required) The requested version of the endpoint to process the request"
+												},
+												{
+													"key": "starting_after",
+													"value": "<string>",
+													"description": "Return the page of results immediately after this cursor"
+												},
+												{
+													"key": "ending_before",
+													"value": "<string>",
+													"description": "Return the page of results immediately before this cursor"
+												},
+												{
+													"key": "count",
+													"value": "<boolean>",
+													"description": "Calculate total amount of filtered results"
+												},
+												{
+													"key": "limit",
+													"value": "10",
+													"description": "Number of results to return per page"
+												},
+												{
+													"key": "is_private",
+													"value": "<boolean>",
+													"description": "Return targets that match the provided value of is_private"
+												},
+												{
+													"key": "exclude_empty",
+													"value": "true",
+													"description": "Return only the targets that has projects"
+												},
+												{
+													"key": "url",
+													"value": "<string>",
+													"description": "Return targets that match the provided remote_url."
+												},
+												{
+													"key": "source_types",
+													"value": "nexus-cr,github-enterprise",
+													"description": "Return targets that match the provided source_types"
+												},
+												{
+													"key": "display_name",
+													"value": "<string>",
+													"description": "Return targets with display names starting with the provided string"
+												},
+												{
+													"key": "created_gte",
+													"value": "<dateTime>",
+													"description": "Return only targets which have been created at or after the specified date.\n"
+												}
+											],
+											"variable": [
+												{
+													"key": "org_id"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/vnd.api+json"
+										},
+										{
+											"key": "deprecation",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "snyk-request-id",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "snyk-version-lifecycle-stage",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "snyk-version-requested",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "snyk-version-served",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "sunset",
+											"value": "",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"jsonapi\": {\n    \"version\": \"0.204399\"\n  },\n  \"errors\": [\n    {\n      \"status\": \"450\",\n      \"detail\": \"<string>\",\n      \"code\": \"<string>\",\n      \"id\": \"<uuid>\",\n      \"links\": {\n        \"about\": \"<string>\"\n      },\n      \"meta\": {\n        \"fugiat_d43\": 17608579.13358502,\n        \"fugiat091\": true,\n        \"dolord6\": 13592157\n      },\n      \"source\": {\n        \"parameter\": \"<string>\",\n        \"pointer\": \"<string>\"\n      },\n      \"title\": \"<string>\"\n    }\n  ]\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Get a project’s SBOM document",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.api+json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Token {{APIToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/orgs/:org_id/projects/:project_id/sbom?version={{Version}}&format=spdx2.3%2Bjson",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"orgs",
+								":org_id",
+								"projects",
+								":project_id",
+								"sbom"
+							],
+							"query": [
+								{
+									"key": "version",
+									"value": "{{Version}}",
+									"description": "(Required) The requested version of the endpoint to process the request"
+								},
+								{
+									"key": "format",
+									"value": "spdx2.3%2Bjson",
+									"description": "The desired SBOM format of the response."
+								}
+							],
+							"variable": [
+								{
+									"key": "org_id",
+									"value": "{{OrgId}}"
+								},
+								{
+									"key": "project_id",
+									"value": "{{ProjectId}}"
+								}
+							]
+						},
+						"description": "This endpoint lets you retrieve the SBOM document of a software project.\nIt supports the following formats:\n* CycloneDX version 1.4 in JSON (set `format` to `cyclonedx1.4+json`).\n* CycloneDX version 1.4 in XML (set `format` to `cyclonedx1.4+xml`).\n* SPDX version 2.3 in JSON (set `format` to `spdx2.3+json`).\n\nBy default it will respond with an empty JSON:API response."
+					},
+					"response": [
+						{
+							"name": "Returns the SBOM document of a project",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/orgs/:org_id/projects/:project_id/sbom?version=work-in-progress&format=cyclonedx1.4+xml",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"orgs",
+										":org_id",
+										"projects",
+										":project_id",
+										"sbom"
+									],
+									"query": [
+										{
+											"key": "version",
+											"value": "work-in-progress",
+											"description": "(Required) The requested version of the endpoint to process the request"
+										},
+										{
+											"key": "format",
+											"value": "cyclonedx1.4+xml",
+											"description": "The desired SBOM format of the response."
+										}
+									],
+									"variable": [
+										{
+											"key": "org_id"
+										},
+										{
+											"key": "project_id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "deprecation",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-request-id",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-version-lifecycle-stage",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-version-requested",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-version-served",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "sunset",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"commodo8_\": false,\n  \"sunt57\": false,\n  \"magna__e\": false,\n  \"occaecat_f62\": \"laborum nulla\",\n  \"labore_28\": true\n}"
+						},
+						{
+							"name": "Bad Request: A parameter provided as a part of the request was invalid.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/orgs/:org_id/projects/:project_id/sbom?version=work-in-progress&format=cyclonedx1.4+xml",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"orgs",
+										":org_id",
+										"projects",
+										":project_id",
+										"sbom"
+									],
+									"query": [
+										{
+											"key": "version",
+											"value": "work-in-progress",
+											"description": "(Required) The requested version of the endpoint to process the request"
+										},
+										{
+											"key": "format",
+											"value": "cyclonedx1.4+xml",
+											"description": "The desired SBOM format of the response."
+										}
+									],
+									"variable": [
+										{
+											"key": "org_id"
+										},
+										{
+											"key": "project_id"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.api+json"
+								},
+								{
+									"key": "deprecation",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-request-id",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-version-lifecycle-stage",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-version-requested",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-version-served",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "sunset",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"jsonapi\": {\n    \"version\": \"0.204399\"\n  },\n  \"errors\": [\n    {\n      \"status\": \"450\",\n      \"detail\": \"<string>\",\n      \"code\": \"<string>\",\n      \"id\": \"<uuid>\",\n      \"links\": {\n        \"about\": \"<string>\"\n      },\n      \"meta\": {\n        \"fugiat_d43\": 17608579.13358502,\n        \"fugiat091\": true,\n        \"dolord6\": 13592157\n      },\n      \"source\": {\n        \"parameter\": \"<string>\",\n        \"pointer\": \"<string>\"\n      },\n      \"title\": \"<string>\"\n    }\n  ]\n}"
+						},
+						{
+							"name": "Unauthorized: the request requires an authentication token.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/orgs/:org_id/projects/:project_id/sbom?version=work-in-progress&format=cyclonedx1.4+xml",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"orgs",
+										":org_id",
+										"projects",
+										":project_id",
+										"sbom"
+									],
+									"query": [
+										{
+											"key": "version",
+											"value": "work-in-progress",
+											"description": "(Required) The requested version of the endpoint to process the request"
+										},
+										{
+											"key": "format",
+											"value": "cyclonedx1.4+xml",
+											"description": "The desired SBOM format of the response."
+										}
+									],
+									"variable": [
+										{
+											"key": "org_id"
+										},
+										{
+											"key": "project_id"
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.api+json"
+								},
+								{
+									"key": "deprecation",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-request-id",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-version-lifecycle-stage",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-version-requested",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-version-served",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "sunset",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"jsonapi\": {\n    \"version\": \"0.204399\"\n  },\n  \"errors\": [\n    {\n      \"status\": \"450\",\n      \"detail\": \"<string>\",\n      \"code\": \"<string>\",\n      \"id\": \"<uuid>\",\n      \"links\": {\n        \"about\": \"<string>\"\n      },\n      \"meta\": {\n        \"fugiat_d43\": 17608579.13358502,\n        \"fugiat091\": true,\n        \"dolord6\": 13592157\n      },\n      \"source\": {\n        \"parameter\": \"<string>\",\n        \"pointer\": \"<string>\"\n      },\n      \"title\": \"<string>\"\n    }\n  ]\n}"
+						},
+						{
+							"name": "Forbidden: the request requires an authentication token with more or different permissions.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/orgs/:org_id/projects/:project_id/sbom?version=work-in-progress&format=cyclonedx1.4+xml",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"orgs",
+										":org_id",
+										"projects",
+										":project_id",
+										"sbom"
+									],
+									"query": [
+										{
+											"key": "version",
+											"value": "work-in-progress",
+											"description": "(Required) The requested version of the endpoint to process the request"
+										},
+										{
+											"key": "format",
+											"value": "cyclonedx1.4+xml",
+											"description": "The desired SBOM format of the response."
+										}
+									],
+									"variable": [
+										{
+											"key": "org_id"
+										},
+										{
+											"key": "project_id"
+										}
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.api+json"
+								},
+								{
+									"key": "deprecation",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-request-id",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-version-lifecycle-stage",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-version-requested",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-version-served",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "sunset",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"jsonapi\": {\n    \"version\": \"0.204399\"\n  },\n  \"errors\": [\n    {\n      \"status\": \"450\",\n      \"detail\": \"<string>\",\n      \"code\": \"<string>\",\n      \"id\": \"<uuid>\",\n      \"links\": {\n        \"about\": \"<string>\"\n      },\n      \"meta\": {\n        \"fugiat_d43\": 17608579.13358502,\n        \"fugiat091\": true,\n        \"dolord6\": 13592157\n      },\n      \"source\": {\n        \"parameter\": \"<string>\",\n        \"pointer\": \"<string>\"\n      },\n      \"title\": \"<string>\"\n    }\n  ]\n}"
+						},
+						{
+							"name": "Not Found: The resource being operated on could not be found.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/orgs/:org_id/projects/:project_id/sbom?version=work-in-progress&format=cyclonedx1.4+xml",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"orgs",
+										":org_id",
+										"projects",
+										":project_id",
+										"sbom"
+									],
+									"query": [
+										{
+											"key": "version",
+											"value": "work-in-progress",
+											"description": "(Required) The requested version of the endpoint to process the request"
+										},
+										{
+											"key": "format",
+											"value": "cyclonedx1.4+xml",
+											"description": "The desired SBOM format of the response."
+										}
+									],
+									"variable": [
+										{
+											"key": "org_id"
+										},
+										{
+											"key": "project_id"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.api+json"
+								},
+								{
+									"key": "deprecation",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-request-id",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-version-lifecycle-stage",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-version-requested",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-version-served",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "sunset",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"jsonapi\": {\n    \"version\": \"0.204399\"\n  },\n  \"errors\": [\n    {\n      \"status\": \"450\",\n      \"detail\": \"<string>\",\n      \"code\": \"<string>\",\n      \"id\": \"<uuid>\",\n      \"links\": {\n        \"about\": \"<string>\"\n      },\n      \"meta\": {\n        \"fugiat_d43\": 17608579.13358502,\n        \"fugiat091\": true,\n        \"dolord6\": 13592157\n      },\n      \"source\": {\n        \"parameter\": \"<string>\",\n        \"pointer\": \"<string>\"\n      },\n      \"title\": \"<string>\"\n    }\n  ]\n}"
+						},
+						{
+							"name": "Conflict: The requested operation conflicts with the current state of the resource in some way.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/orgs/:org_id/projects/:project_id/sbom?version=work-in-progress&format=cyclonedx1.4+xml",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"orgs",
+										":org_id",
+										"projects",
+										":project_id",
+										"sbom"
+									],
+									"query": [
+										{
+											"key": "version",
+											"value": "work-in-progress",
+											"description": "(Required) The requested version of the endpoint to process the request"
+										},
+										{
+											"key": "format",
+											"value": "cyclonedx1.4+xml",
+											"description": "The desired SBOM format of the response."
+										}
+									],
+									"variable": [
+										{
+											"key": "org_id"
+										},
+										{
+											"key": "project_id"
+										}
+									]
+								}
+							},
+							"status": "Conflict",
+							"code": 409,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.api+json"
+								},
+								{
+									"key": "deprecation",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-request-id",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-version-lifecycle-stage",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-version-requested",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-version-served",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "sunset",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"jsonapi\": {\n    \"version\": \"0.204399\"\n  },\n  \"errors\": [\n    {\n      \"status\": \"450\",\n      \"detail\": \"<string>\",\n      \"code\": \"<string>\",\n      \"id\": \"<uuid>\",\n      \"links\": {\n        \"about\": \"<string>\"\n      },\n      \"meta\": {\n        \"fugiat_d43\": 17608579.13358502,\n        \"fugiat091\": true,\n        \"dolord6\": 13592157\n      },\n      \"source\": {\n        \"parameter\": \"<string>\",\n        \"pointer\": \"<string>\"\n      },\n      \"title\": \"<string>\"\n    }\n  ]\n}"
+						},
+						{
+							"name": "Internal Server Error: An error was encountered while attempting to process the request.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/orgs/:org_id/projects/:project_id/sbom?version=work-in-progress&format=cyclonedx1.4+xml",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"orgs",
+										":org_id",
+										"projects",
+										":project_id",
+										"sbom"
+									],
+									"query": [
+										{
+											"key": "version",
+											"value": "work-in-progress",
+											"description": "(Required) The requested version of the endpoint to process the request"
+										},
+										{
+											"key": "format",
+											"value": "cyclonedx1.4+xml",
+											"description": "The desired SBOM format of the response."
+										}
+									],
+									"variable": [
+										{
+											"key": "org_id"
+										},
+										{
+											"key": "project_id"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.api+json"
+								},
+								{
+									"key": "deprecation",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-request-id",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-version-lifecycle-stage",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-version-requested",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-version-served",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "sunset",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"jsonapi\": {\n    \"version\": \"0.204399\"\n  },\n  \"errors\": [\n    {\n      \"status\": \"450\",\n      \"detail\": \"<string>\",\n      \"code\": \"<string>\",\n      \"id\": \"<uuid>\",\n      \"links\": {\n        \"about\": \"<string>\"\n      },\n      \"meta\": {\n        \"fugiat_d43\": 17608579.13358502,\n        \"fugiat091\": true,\n        \"dolord6\": 13592157\n      },\n      \"source\": {\n        \"parameter\": \"<string>\",\n        \"pointer\": \"<string>\"\n      },\n      \"title\": \"<string>\"\n    }\n  ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get a target’s SBOM document",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.api+json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Token {{APIToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/orgs/:org_id/targets/:target_id/sbom?version=2024-02-21~experimental&format=cyclonedx1.4%2Bjson",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"orgs",
+								":org_id",
+								"targets",
+								":target_id",
+								"sbom"
+							],
+							"query": [
+								{
+									"key": "version",
+									"value": "2024-02-21~experimental",
+									"description": "(Required) The requested version of the endpoint to process the request"
+								},
+								{
+									"key": "format",
+									"value": "cyclonedx1.4%2Bjson",
+									"description": "The desired SBOM format of the response."
+								}
+							],
+							"variable": [
+								{
+									"key": "org_id",
+									"value": "{{OrgId}}"
+								},
+								{
+									"key": "target_id",
+									"value": "{{TargetId}}"
+								}
+							]
+						},
+						"description": "This endpoint lets you retrieve the SBOM document of a software project.\nIt supports the following formats:\n* CycloneDX version 1.4 in JSON (set `format` to `cyclonedx1.4+json`).\n* CycloneDX version 1.4 in XML (set `format` to `cyclonedx1.4+xml`).\n* SPDX version 2.3 in JSON (set `format` to `spdx2.3+json`).\n\nBy default it will respond with an empty JSON:API response."
+					},
+					"response": [
+						{
+							"name": "Returns the SBOM document of a project",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/orgs/:org_id/projects/:project_id/sbom?version=work-in-progress&format=cyclonedx1.4+xml",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"orgs",
+										":org_id",
+										"projects",
+										":project_id",
+										"sbom"
+									],
+									"query": [
+										{
+											"key": "version",
+											"value": "work-in-progress",
+											"description": "(Required) The requested version of the endpoint to process the request"
+										},
+										{
+											"key": "format",
+											"value": "cyclonedx1.4+xml",
+											"description": "The desired SBOM format of the response."
+										}
+									],
+									"variable": [
+										{
+											"key": "org_id"
+										},
+										{
+											"key": "project_id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "deprecation",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-request-id",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-version-lifecycle-stage",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-version-requested",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-version-served",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "sunset",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"commodo8_\": false,\n  \"sunt57\": false,\n  \"magna__e\": false,\n  \"occaecat_f62\": \"laborum nulla\",\n  \"labore_28\": true\n}"
+						},
+						{
+							"name": "Bad Request: A parameter provided as a part of the request was invalid.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/orgs/:org_id/projects/:project_id/sbom?version=work-in-progress&format=cyclonedx1.4+xml",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"orgs",
+										":org_id",
+										"projects",
+										":project_id",
+										"sbom"
+									],
+									"query": [
+										{
+											"key": "version",
+											"value": "work-in-progress",
+											"description": "(Required) The requested version of the endpoint to process the request"
+										},
+										{
+											"key": "format",
+											"value": "cyclonedx1.4+xml",
+											"description": "The desired SBOM format of the response."
+										}
+									],
+									"variable": [
+										{
+											"key": "org_id"
+										},
+										{
+											"key": "project_id"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.api+json"
+								},
+								{
+									"key": "deprecation",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-request-id",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-version-lifecycle-stage",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-version-requested",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-version-served",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "sunset",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"jsonapi\": {\n    \"version\": \"0.204399\"\n  },\n  \"errors\": [\n    {\n      \"status\": \"450\",\n      \"detail\": \"<string>\",\n      \"code\": \"<string>\",\n      \"id\": \"<uuid>\",\n      \"links\": {\n        \"about\": \"<string>\"\n      },\n      \"meta\": {\n        \"fugiat_d43\": 17608579.13358502,\n        \"fugiat091\": true,\n        \"dolord6\": 13592157\n      },\n      \"source\": {\n        \"parameter\": \"<string>\",\n        \"pointer\": \"<string>\"\n      },\n      \"title\": \"<string>\"\n    }\n  ]\n}"
+						},
+						{
+							"name": "Unauthorized: the request requires an authentication token.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/orgs/:org_id/projects/:project_id/sbom?version=work-in-progress&format=cyclonedx1.4+xml",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"orgs",
+										":org_id",
+										"projects",
+										":project_id",
+										"sbom"
+									],
+									"query": [
+										{
+											"key": "version",
+											"value": "work-in-progress",
+											"description": "(Required) The requested version of the endpoint to process the request"
+										},
+										{
+											"key": "format",
+											"value": "cyclonedx1.4+xml",
+											"description": "The desired SBOM format of the response."
+										}
+									],
+									"variable": [
+										{
+											"key": "org_id"
+										},
+										{
+											"key": "project_id"
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.api+json"
+								},
+								{
+									"key": "deprecation",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-request-id",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-version-lifecycle-stage",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-version-requested",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-version-served",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "sunset",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"jsonapi\": {\n    \"version\": \"0.204399\"\n  },\n  \"errors\": [\n    {\n      \"status\": \"450\",\n      \"detail\": \"<string>\",\n      \"code\": \"<string>\",\n      \"id\": \"<uuid>\",\n      \"links\": {\n        \"about\": \"<string>\"\n      },\n      \"meta\": {\n        \"fugiat_d43\": 17608579.13358502,\n        \"fugiat091\": true,\n        \"dolord6\": 13592157\n      },\n      \"source\": {\n        \"parameter\": \"<string>\",\n        \"pointer\": \"<string>\"\n      },\n      \"title\": \"<string>\"\n    }\n  ]\n}"
+						},
+						{
+							"name": "Forbidden: the request requires an authentication token with more or different permissions.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/orgs/:org_id/projects/:project_id/sbom?version=work-in-progress&format=cyclonedx1.4+xml",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"orgs",
+										":org_id",
+										"projects",
+										":project_id",
+										"sbom"
+									],
+									"query": [
+										{
+											"key": "version",
+											"value": "work-in-progress",
+											"description": "(Required) The requested version of the endpoint to process the request"
+										},
+										{
+											"key": "format",
+											"value": "cyclonedx1.4+xml",
+											"description": "The desired SBOM format of the response."
+										}
+									],
+									"variable": [
+										{
+											"key": "org_id"
+										},
+										{
+											"key": "project_id"
+										}
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.api+json"
+								},
+								{
+									"key": "deprecation",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-request-id",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-version-lifecycle-stage",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-version-requested",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-version-served",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "sunset",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"jsonapi\": {\n    \"version\": \"0.204399\"\n  },\n  \"errors\": [\n    {\n      \"status\": \"450\",\n      \"detail\": \"<string>\",\n      \"code\": \"<string>\",\n      \"id\": \"<uuid>\",\n      \"links\": {\n        \"about\": \"<string>\"\n      },\n      \"meta\": {\n        \"fugiat_d43\": 17608579.13358502,\n        \"fugiat091\": true,\n        \"dolord6\": 13592157\n      },\n      \"source\": {\n        \"parameter\": \"<string>\",\n        \"pointer\": \"<string>\"\n      },\n      \"title\": \"<string>\"\n    }\n  ]\n}"
+						},
+						{
+							"name": "Not Found: The resource being operated on could not be found.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/orgs/:org_id/projects/:project_id/sbom?version=work-in-progress&format=cyclonedx1.4+xml",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"orgs",
+										":org_id",
+										"projects",
+										":project_id",
+										"sbom"
+									],
+									"query": [
+										{
+											"key": "version",
+											"value": "work-in-progress",
+											"description": "(Required) The requested version of the endpoint to process the request"
+										},
+										{
+											"key": "format",
+											"value": "cyclonedx1.4+xml",
+											"description": "The desired SBOM format of the response."
+										}
+									],
+									"variable": [
+										{
+											"key": "org_id"
+										},
+										{
+											"key": "project_id"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.api+json"
+								},
+								{
+									"key": "deprecation",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-request-id",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-version-lifecycle-stage",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-version-requested",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-version-served",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "sunset",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"jsonapi\": {\n    \"version\": \"0.204399\"\n  },\n  \"errors\": [\n    {\n      \"status\": \"450\",\n      \"detail\": \"<string>\",\n      \"code\": \"<string>\",\n      \"id\": \"<uuid>\",\n      \"links\": {\n        \"about\": \"<string>\"\n      },\n      \"meta\": {\n        \"fugiat_d43\": 17608579.13358502,\n        \"fugiat091\": true,\n        \"dolord6\": 13592157\n      },\n      \"source\": {\n        \"parameter\": \"<string>\",\n        \"pointer\": \"<string>\"\n      },\n      \"title\": \"<string>\"\n    }\n  ]\n}"
+						},
+						{
+							"name": "Conflict: The requested operation conflicts with the current state of the resource in some way.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/orgs/:org_id/projects/:project_id/sbom?version=work-in-progress&format=cyclonedx1.4+xml",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"orgs",
+										":org_id",
+										"projects",
+										":project_id",
+										"sbom"
+									],
+									"query": [
+										{
+											"key": "version",
+											"value": "work-in-progress",
+											"description": "(Required) The requested version of the endpoint to process the request"
+										},
+										{
+											"key": "format",
+											"value": "cyclonedx1.4+xml",
+											"description": "The desired SBOM format of the response."
+										}
+									],
+									"variable": [
+										{
+											"key": "org_id"
+										},
+										{
+											"key": "project_id"
+										}
+									]
+								}
+							},
+							"status": "Conflict",
+							"code": 409,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.api+json"
+								},
+								{
+									"key": "deprecation",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-request-id",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-version-lifecycle-stage",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-version-requested",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-version-served",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "sunset",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"jsonapi\": {\n    \"version\": \"0.204399\"\n  },\n  \"errors\": [\n    {\n      \"status\": \"450\",\n      \"detail\": \"<string>\",\n      \"code\": \"<string>\",\n      \"id\": \"<uuid>\",\n      \"links\": {\n        \"about\": \"<string>\"\n      },\n      \"meta\": {\n        \"fugiat_d43\": 17608579.13358502,\n        \"fugiat091\": true,\n        \"dolord6\": 13592157\n      },\n      \"source\": {\n        \"parameter\": \"<string>\",\n        \"pointer\": \"<string>\"\n      },\n      \"title\": \"<string>\"\n    }\n  ]\n}"
+						},
+						{
+							"name": "Internal Server Error: An error was encountered while attempting to process the request.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/orgs/:org_id/projects/:project_id/sbom?version=work-in-progress&format=cyclonedx1.4+xml",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"orgs",
+										":org_id",
+										"projects",
+										":project_id",
+										"sbom"
+									],
+									"query": [
+										{
+											"key": "version",
+											"value": "work-in-progress",
+											"description": "(Required) The requested version of the endpoint to process the request"
+										},
+										{
+											"key": "format",
+											"value": "cyclonedx1.4+xml",
+											"description": "The desired SBOM format of the response."
+										}
+									],
+									"variable": [
+										{
+											"key": "org_id"
+										},
+										{
+											"key": "project_id"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.api+json"
+								},
+								{
+									"key": "deprecation",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-request-id",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-version-lifecycle-stage",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-version-requested",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "snyk-version-served",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "sunset",
+									"value": "",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"jsonapi\": {\n    \"version\": \"0.204399\"\n  },\n  \"errors\": [\n    {\n      \"status\": \"450\",\n      \"detail\": \"<string>\",\n      \"code\": \"<string>\",\n      \"id\": \"<uuid>\",\n      \"links\": {\n        \"about\": \"<string>\"\n      },\n      \"meta\": {\n        \"fugiat_d43\": 17608579.13358502,\n        \"fugiat091\": true,\n        \"dolord6\": 13592157\n      },\n      \"source\": {\n        \"parameter\": \"<string>\",\n        \"pointer\": \"<string>\"\n      },\n      \"title\": \"<string>\"\n    }\n  ]\n}"
+						}
+					]
+				},
+				{
 					"name": "Get a collection’s SBOM document",
 					"request": {
 						"auth": {
@@ -827,1648 +4370,6 @@
 							"body": "{\n  \"jsonapi\": {\n    \"version\": \"0.204399\"\n  },\n  \"errors\": [\n    {\n      \"status\": \"450\",\n      \"detail\": \"<string>\",\n      \"code\": \"<string>\",\n      \"id\": \"<uuid>\",\n      \"links\": {\n        \"about\": \"<string>\"\n      },\n      \"meta\": {\n        \"fugiat_d43\": 17608579.13358502,\n        \"fugiat091\": true,\n        \"dolord6\": 13592157\n      },\n      \"source\": {\n        \"parameter\": \"<string>\",\n        \"pointer\": \"<string>\"\n      },\n      \"title\": \"<string>\"\n    }\n  ]\n}"
 						}
 					]
-				},
-				{
-					"name": "Get a project’s SBOM document",
-					"request": {
-						"auth": {
-							"type": "noauth"
-						},
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/vnd.api+json"
-							},
-							{
-								"key": "Authorization",
-								"value": "Token {{APIToken}}",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "{{baseUrl}}/orgs/:org_id/projects/:project_id/sbom?version=2024-02-21&format=spdx2.3%2Bjson",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"orgs",
-								":org_id",
-								"projects",
-								":project_id",
-								"sbom"
-							],
-							"query": [
-								{
-									"key": "version",
-									"value": "2024-02-21",
-									"description": "(Required) The requested version of the endpoint to process the request"
-								},
-								{
-									"key": "format",
-									"value": "spdx2.3%2Bjson",
-									"description": "The desired SBOM format of the response."
-								}
-							],
-							"variable": [
-								{
-									"key": "org_id",
-									"value": "{{OrgId}}"
-								},
-								{
-									"key": "project_id",
-									"value": "{{ProjectId}}"
-								}
-							]
-						},
-						"description": "This endpoint lets you retrieve the SBOM document of a software project.\nIt supports the following formats:\n* CycloneDX version 1.4 in JSON (set `format` to `cyclonedx1.4+json`).\n* CycloneDX version 1.4 in XML (set `format` to `cyclonedx1.4+xml`).\n* SPDX version 2.3 in JSON (set `format` to `spdx2.3+json`).\n\nBy default it will respond with an empty JSON:API response."
-					},
-					"response": [
-						{
-							"name": "Returns the SBOM document of a project",
-							"originalRequest": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json"
-									},
-									{
-										"description": "Added as a part of security scheme: bearer",
-										"key": "Authorization",
-										"value": "Bearer <token>"
-									}
-								],
-								"url": {
-									"raw": "{{baseUrl}}/orgs/:org_id/projects/:project_id/sbom?version=work-in-progress&format=cyclonedx1.4+xml",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"orgs",
-										":org_id",
-										"projects",
-										":project_id",
-										"sbom"
-									],
-									"query": [
-										{
-											"key": "version",
-											"value": "work-in-progress",
-											"description": "(Required) The requested version of the endpoint to process the request"
-										},
-										{
-											"key": "format",
-											"value": "cyclonedx1.4+xml",
-											"description": "The desired SBOM format of the response."
-										}
-									],
-									"variable": [
-										{
-											"key": "org_id"
-										},
-										{
-											"key": "project_id"
-										}
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "deprecation",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-request-id",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-version-lifecycle-stage",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-version-requested",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-version-served",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "sunset",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								}
-							],
-							"cookie": [],
-							"body": "{\n  \"commodo8_\": false,\n  \"sunt57\": false,\n  \"magna__e\": false,\n  \"occaecat_f62\": \"laborum nulla\",\n  \"labore_28\": true\n}"
-						},
-						{
-							"name": "Bad Request: A parameter provided as a part of the request was invalid.",
-							"originalRequest": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/vnd.api+json"
-									},
-									{
-										"description": "Added as a part of security scheme: bearer",
-										"key": "Authorization",
-										"value": "Bearer <token>"
-									}
-								],
-								"url": {
-									"raw": "{{baseUrl}}/orgs/:org_id/projects/:project_id/sbom?version=work-in-progress&format=cyclonedx1.4+xml",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"orgs",
-										":org_id",
-										"projects",
-										":project_id",
-										"sbom"
-									],
-									"query": [
-										{
-											"key": "version",
-											"value": "work-in-progress",
-											"description": "(Required) The requested version of the endpoint to process the request"
-										},
-										{
-											"key": "format",
-											"value": "cyclonedx1.4+xml",
-											"description": "The desired SBOM format of the response."
-										}
-									],
-									"variable": [
-										{
-											"key": "org_id"
-										},
-										{
-											"key": "project_id"
-										}
-									]
-								}
-							},
-							"status": "Bad Request",
-							"code": 400,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Content-Type",
-									"value": "application/vnd.api+json"
-								},
-								{
-									"key": "deprecation",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-request-id",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-version-lifecycle-stage",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-version-requested",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-version-served",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "sunset",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								}
-							],
-							"cookie": [],
-							"body": "{\n  \"jsonapi\": {\n    \"version\": \"0.204399\"\n  },\n  \"errors\": [\n    {\n      \"status\": \"450\",\n      \"detail\": \"<string>\",\n      \"code\": \"<string>\",\n      \"id\": \"<uuid>\",\n      \"links\": {\n        \"about\": \"<string>\"\n      },\n      \"meta\": {\n        \"fugiat_d43\": 17608579.13358502,\n        \"fugiat091\": true,\n        \"dolord6\": 13592157\n      },\n      \"source\": {\n        \"parameter\": \"<string>\",\n        \"pointer\": \"<string>\"\n      },\n      \"title\": \"<string>\"\n    }\n  ]\n}"
-						},
-						{
-							"name": "Unauthorized: the request requires an authentication token.",
-							"originalRequest": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/vnd.api+json"
-									},
-									{
-										"description": "Added as a part of security scheme: bearer",
-										"key": "Authorization",
-										"value": "Bearer <token>"
-									}
-								],
-								"url": {
-									"raw": "{{baseUrl}}/orgs/:org_id/projects/:project_id/sbom?version=work-in-progress&format=cyclonedx1.4+xml",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"orgs",
-										":org_id",
-										"projects",
-										":project_id",
-										"sbom"
-									],
-									"query": [
-										{
-											"key": "version",
-											"value": "work-in-progress",
-											"description": "(Required) The requested version of the endpoint to process the request"
-										},
-										{
-											"key": "format",
-											"value": "cyclonedx1.4+xml",
-											"description": "The desired SBOM format of the response."
-										}
-									],
-									"variable": [
-										{
-											"key": "org_id"
-										},
-										{
-											"key": "project_id"
-										}
-									]
-								}
-							},
-							"status": "Unauthorized",
-							"code": 401,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Content-Type",
-									"value": "application/vnd.api+json"
-								},
-								{
-									"key": "deprecation",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-request-id",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-version-lifecycle-stage",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-version-requested",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-version-served",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "sunset",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								}
-							],
-							"cookie": [],
-							"body": "{\n  \"jsonapi\": {\n    \"version\": \"0.204399\"\n  },\n  \"errors\": [\n    {\n      \"status\": \"450\",\n      \"detail\": \"<string>\",\n      \"code\": \"<string>\",\n      \"id\": \"<uuid>\",\n      \"links\": {\n        \"about\": \"<string>\"\n      },\n      \"meta\": {\n        \"fugiat_d43\": 17608579.13358502,\n        \"fugiat091\": true,\n        \"dolord6\": 13592157\n      },\n      \"source\": {\n        \"parameter\": \"<string>\",\n        \"pointer\": \"<string>\"\n      },\n      \"title\": \"<string>\"\n    }\n  ]\n}"
-						},
-						{
-							"name": "Forbidden: the request requires an authentication token with more or different permissions.",
-							"originalRequest": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/vnd.api+json"
-									},
-									{
-										"description": "Added as a part of security scheme: bearer",
-										"key": "Authorization",
-										"value": "Bearer <token>"
-									}
-								],
-								"url": {
-									"raw": "{{baseUrl}}/orgs/:org_id/projects/:project_id/sbom?version=work-in-progress&format=cyclonedx1.4+xml",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"orgs",
-										":org_id",
-										"projects",
-										":project_id",
-										"sbom"
-									],
-									"query": [
-										{
-											"key": "version",
-											"value": "work-in-progress",
-											"description": "(Required) The requested version of the endpoint to process the request"
-										},
-										{
-											"key": "format",
-											"value": "cyclonedx1.4+xml",
-											"description": "The desired SBOM format of the response."
-										}
-									],
-									"variable": [
-										{
-											"key": "org_id"
-										},
-										{
-											"key": "project_id"
-										}
-									]
-								}
-							},
-							"status": "Forbidden",
-							"code": 403,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Content-Type",
-									"value": "application/vnd.api+json"
-								},
-								{
-									"key": "deprecation",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-request-id",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-version-lifecycle-stage",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-version-requested",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-version-served",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "sunset",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								}
-							],
-							"cookie": [],
-							"body": "{\n  \"jsonapi\": {\n    \"version\": \"0.204399\"\n  },\n  \"errors\": [\n    {\n      \"status\": \"450\",\n      \"detail\": \"<string>\",\n      \"code\": \"<string>\",\n      \"id\": \"<uuid>\",\n      \"links\": {\n        \"about\": \"<string>\"\n      },\n      \"meta\": {\n        \"fugiat_d43\": 17608579.13358502,\n        \"fugiat091\": true,\n        \"dolord6\": 13592157\n      },\n      \"source\": {\n        \"parameter\": \"<string>\",\n        \"pointer\": \"<string>\"\n      },\n      \"title\": \"<string>\"\n    }\n  ]\n}"
-						},
-						{
-							"name": "Not Found: The resource being operated on could not be found.",
-							"originalRequest": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/vnd.api+json"
-									},
-									{
-										"description": "Added as a part of security scheme: bearer",
-										"key": "Authorization",
-										"value": "Bearer <token>"
-									}
-								],
-								"url": {
-									"raw": "{{baseUrl}}/orgs/:org_id/projects/:project_id/sbom?version=work-in-progress&format=cyclonedx1.4+xml",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"orgs",
-										":org_id",
-										"projects",
-										":project_id",
-										"sbom"
-									],
-									"query": [
-										{
-											"key": "version",
-											"value": "work-in-progress",
-											"description": "(Required) The requested version of the endpoint to process the request"
-										},
-										{
-											"key": "format",
-											"value": "cyclonedx1.4+xml",
-											"description": "The desired SBOM format of the response."
-										}
-									],
-									"variable": [
-										{
-											"key": "org_id"
-										},
-										{
-											"key": "project_id"
-										}
-									]
-								}
-							},
-							"status": "Not Found",
-							"code": 404,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Content-Type",
-									"value": "application/vnd.api+json"
-								},
-								{
-									"key": "deprecation",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-request-id",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-version-lifecycle-stage",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-version-requested",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-version-served",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "sunset",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								}
-							],
-							"cookie": [],
-							"body": "{\n  \"jsonapi\": {\n    \"version\": \"0.204399\"\n  },\n  \"errors\": [\n    {\n      \"status\": \"450\",\n      \"detail\": \"<string>\",\n      \"code\": \"<string>\",\n      \"id\": \"<uuid>\",\n      \"links\": {\n        \"about\": \"<string>\"\n      },\n      \"meta\": {\n        \"fugiat_d43\": 17608579.13358502,\n        \"fugiat091\": true,\n        \"dolord6\": 13592157\n      },\n      \"source\": {\n        \"parameter\": \"<string>\",\n        \"pointer\": \"<string>\"\n      },\n      \"title\": \"<string>\"\n    }\n  ]\n}"
-						},
-						{
-							"name": "Conflict: The requested operation conflicts with the current state of the resource in some way.",
-							"originalRequest": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/vnd.api+json"
-									},
-									{
-										"description": "Added as a part of security scheme: bearer",
-										"key": "Authorization",
-										"value": "Bearer <token>"
-									}
-								],
-								"url": {
-									"raw": "{{baseUrl}}/orgs/:org_id/projects/:project_id/sbom?version=work-in-progress&format=cyclonedx1.4+xml",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"orgs",
-										":org_id",
-										"projects",
-										":project_id",
-										"sbom"
-									],
-									"query": [
-										{
-											"key": "version",
-											"value": "work-in-progress",
-											"description": "(Required) The requested version of the endpoint to process the request"
-										},
-										{
-											"key": "format",
-											"value": "cyclonedx1.4+xml",
-											"description": "The desired SBOM format of the response."
-										}
-									],
-									"variable": [
-										{
-											"key": "org_id"
-										},
-										{
-											"key": "project_id"
-										}
-									]
-								}
-							},
-							"status": "Conflict",
-							"code": 409,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Content-Type",
-									"value": "application/vnd.api+json"
-								},
-								{
-									"key": "deprecation",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-request-id",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-version-lifecycle-stage",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-version-requested",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-version-served",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "sunset",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								}
-							],
-							"cookie": [],
-							"body": "{\n  \"jsonapi\": {\n    \"version\": \"0.204399\"\n  },\n  \"errors\": [\n    {\n      \"status\": \"450\",\n      \"detail\": \"<string>\",\n      \"code\": \"<string>\",\n      \"id\": \"<uuid>\",\n      \"links\": {\n        \"about\": \"<string>\"\n      },\n      \"meta\": {\n        \"fugiat_d43\": 17608579.13358502,\n        \"fugiat091\": true,\n        \"dolord6\": 13592157\n      },\n      \"source\": {\n        \"parameter\": \"<string>\",\n        \"pointer\": \"<string>\"\n      },\n      \"title\": \"<string>\"\n    }\n  ]\n}"
-						},
-						{
-							"name": "Internal Server Error: An error was encountered while attempting to process the request.",
-							"originalRequest": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/vnd.api+json"
-									},
-									{
-										"description": "Added as a part of security scheme: bearer",
-										"key": "Authorization",
-										"value": "Bearer <token>"
-									}
-								],
-								"url": {
-									"raw": "{{baseUrl}}/orgs/:org_id/projects/:project_id/sbom?version=work-in-progress&format=cyclonedx1.4+xml",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"orgs",
-										":org_id",
-										"projects",
-										":project_id",
-										"sbom"
-									],
-									"query": [
-										{
-											"key": "version",
-											"value": "work-in-progress",
-											"description": "(Required) The requested version of the endpoint to process the request"
-										},
-										{
-											"key": "format",
-											"value": "cyclonedx1.4+xml",
-											"description": "The desired SBOM format of the response."
-										}
-									],
-									"variable": [
-										{
-											"key": "org_id"
-										},
-										{
-											"key": "project_id"
-										}
-									]
-								}
-							},
-							"status": "Internal Server Error",
-							"code": 500,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Content-Type",
-									"value": "application/vnd.api+json"
-								},
-								{
-									"key": "deprecation",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-request-id",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-version-lifecycle-stage",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-version-requested",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-version-served",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "sunset",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								}
-							],
-							"cookie": [],
-							"body": "{\n  \"jsonapi\": {\n    \"version\": \"0.204399\"\n  },\n  \"errors\": [\n    {\n      \"status\": \"450\",\n      \"detail\": \"<string>\",\n      \"code\": \"<string>\",\n      \"id\": \"<uuid>\",\n      \"links\": {\n        \"about\": \"<string>\"\n      },\n      \"meta\": {\n        \"fugiat_d43\": 17608579.13358502,\n        \"fugiat091\": true,\n        \"dolord6\": 13592157\n      },\n      \"source\": {\n        \"parameter\": \"<string>\",\n        \"pointer\": \"<string>\"\n      },\n      \"title\": \"<string>\"\n    }\n  ]\n}"
-						}
-					]
-				},
-				{
-					"name": "Get a target’s SBOM document",
-					"request": {
-						"auth": {
-							"type": "noauth"
-						},
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/vnd.api+json"
-							},
-							{
-								"key": "Authorization",
-								"value": "Token {{APIToken}}",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "{{baseUrl}}/orgs/:org_id/projects/:project_id/sbom?version=2024-02-21&format=spdx2.3%2Bjson",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"orgs",
-								":org_id",
-								"projects",
-								":project_id",
-								"sbom"
-							],
-							"query": [
-								{
-									"key": "version",
-									"value": "2024-02-21",
-									"description": "(Required) The requested version of the endpoint to process the request"
-								},
-								{
-									"key": "format",
-									"value": "spdx2.3%2Bjson",
-									"description": "The desired SBOM format of the response."
-								}
-							],
-							"variable": [
-								{
-									"key": "org_id",
-									"value": "{{OrgId}}"
-								},
-								{
-									"key": "project_id",
-									"value": "{{ProjectId}}"
-								}
-							]
-						},
-						"description": "This endpoint lets you retrieve the SBOM document of a software project.\nIt supports the following formats:\n* CycloneDX version 1.4 in JSON (set `format` to `cyclonedx1.4+json`).\n* CycloneDX version 1.4 in XML (set `format` to `cyclonedx1.4+xml`).\n* SPDX version 2.3 in JSON (set `format` to `spdx2.3+json`).\n\nBy default it will respond with an empty JSON:API response."
-					},
-					"response": [
-						{
-							"name": "Returns the SBOM document of a project",
-							"originalRequest": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json"
-									},
-									{
-										"description": "Added as a part of security scheme: bearer",
-										"key": "Authorization",
-										"value": "Bearer <token>"
-									}
-								],
-								"url": {
-									"raw": "{{baseUrl}}/orgs/:org_id/projects/:project_id/sbom?version=work-in-progress&format=cyclonedx1.4+xml",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"orgs",
-										":org_id",
-										"projects",
-										":project_id",
-										"sbom"
-									],
-									"query": [
-										{
-											"key": "version",
-											"value": "work-in-progress",
-											"description": "(Required) The requested version of the endpoint to process the request"
-										},
-										{
-											"key": "format",
-											"value": "cyclonedx1.4+xml",
-											"description": "The desired SBOM format of the response."
-										}
-									],
-									"variable": [
-										{
-											"key": "org_id"
-										},
-										{
-											"key": "project_id"
-										}
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "deprecation",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-request-id",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-version-lifecycle-stage",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-version-requested",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-version-served",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "sunset",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								}
-							],
-							"cookie": [],
-							"body": "{\n  \"commodo8_\": false,\n  \"sunt57\": false,\n  \"magna__e\": false,\n  \"occaecat_f62\": \"laborum nulla\",\n  \"labore_28\": true\n}"
-						},
-						{
-							"name": "Bad Request: A parameter provided as a part of the request was invalid.",
-							"originalRequest": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/vnd.api+json"
-									},
-									{
-										"description": "Added as a part of security scheme: bearer",
-										"key": "Authorization",
-										"value": "Bearer <token>"
-									}
-								],
-								"url": {
-									"raw": "{{baseUrl}}/orgs/:org_id/projects/:project_id/sbom?version=work-in-progress&format=cyclonedx1.4+xml",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"orgs",
-										":org_id",
-										"projects",
-										":project_id",
-										"sbom"
-									],
-									"query": [
-										{
-											"key": "version",
-											"value": "work-in-progress",
-											"description": "(Required) The requested version of the endpoint to process the request"
-										},
-										{
-											"key": "format",
-											"value": "cyclonedx1.4+xml",
-											"description": "The desired SBOM format of the response."
-										}
-									],
-									"variable": [
-										{
-											"key": "org_id"
-										},
-										{
-											"key": "project_id"
-										}
-									]
-								}
-							},
-							"status": "Bad Request",
-							"code": 400,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Content-Type",
-									"value": "application/vnd.api+json"
-								},
-								{
-									"key": "deprecation",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-request-id",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-version-lifecycle-stage",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-version-requested",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-version-served",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "sunset",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								}
-							],
-							"cookie": [],
-							"body": "{\n  \"jsonapi\": {\n    \"version\": \"0.204399\"\n  },\n  \"errors\": [\n    {\n      \"status\": \"450\",\n      \"detail\": \"<string>\",\n      \"code\": \"<string>\",\n      \"id\": \"<uuid>\",\n      \"links\": {\n        \"about\": \"<string>\"\n      },\n      \"meta\": {\n        \"fugiat_d43\": 17608579.13358502,\n        \"fugiat091\": true,\n        \"dolord6\": 13592157\n      },\n      \"source\": {\n        \"parameter\": \"<string>\",\n        \"pointer\": \"<string>\"\n      },\n      \"title\": \"<string>\"\n    }\n  ]\n}"
-						},
-						{
-							"name": "Unauthorized: the request requires an authentication token.",
-							"originalRequest": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/vnd.api+json"
-									},
-									{
-										"description": "Added as a part of security scheme: bearer",
-										"key": "Authorization",
-										"value": "Bearer <token>"
-									}
-								],
-								"url": {
-									"raw": "{{baseUrl}}/orgs/:org_id/projects/:project_id/sbom?version=work-in-progress&format=cyclonedx1.4+xml",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"orgs",
-										":org_id",
-										"projects",
-										":project_id",
-										"sbom"
-									],
-									"query": [
-										{
-											"key": "version",
-											"value": "work-in-progress",
-											"description": "(Required) The requested version of the endpoint to process the request"
-										},
-										{
-											"key": "format",
-											"value": "cyclonedx1.4+xml",
-											"description": "The desired SBOM format of the response."
-										}
-									],
-									"variable": [
-										{
-											"key": "org_id"
-										},
-										{
-											"key": "project_id"
-										}
-									]
-								}
-							},
-							"status": "Unauthorized",
-							"code": 401,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Content-Type",
-									"value": "application/vnd.api+json"
-								},
-								{
-									"key": "deprecation",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-request-id",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-version-lifecycle-stage",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-version-requested",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-version-served",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "sunset",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								}
-							],
-							"cookie": [],
-							"body": "{\n  \"jsonapi\": {\n    \"version\": \"0.204399\"\n  },\n  \"errors\": [\n    {\n      \"status\": \"450\",\n      \"detail\": \"<string>\",\n      \"code\": \"<string>\",\n      \"id\": \"<uuid>\",\n      \"links\": {\n        \"about\": \"<string>\"\n      },\n      \"meta\": {\n        \"fugiat_d43\": 17608579.13358502,\n        \"fugiat091\": true,\n        \"dolord6\": 13592157\n      },\n      \"source\": {\n        \"parameter\": \"<string>\",\n        \"pointer\": \"<string>\"\n      },\n      \"title\": \"<string>\"\n    }\n  ]\n}"
-						},
-						{
-							"name": "Forbidden: the request requires an authentication token with more or different permissions.",
-							"originalRequest": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/vnd.api+json"
-									},
-									{
-										"description": "Added as a part of security scheme: bearer",
-										"key": "Authorization",
-										"value": "Bearer <token>"
-									}
-								],
-								"url": {
-									"raw": "{{baseUrl}}/orgs/:org_id/projects/:project_id/sbom?version=work-in-progress&format=cyclonedx1.4+xml",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"orgs",
-										":org_id",
-										"projects",
-										":project_id",
-										"sbom"
-									],
-									"query": [
-										{
-											"key": "version",
-											"value": "work-in-progress",
-											"description": "(Required) The requested version of the endpoint to process the request"
-										},
-										{
-											"key": "format",
-											"value": "cyclonedx1.4+xml",
-											"description": "The desired SBOM format of the response."
-										}
-									],
-									"variable": [
-										{
-											"key": "org_id"
-										},
-										{
-											"key": "project_id"
-										}
-									]
-								}
-							},
-							"status": "Forbidden",
-							"code": 403,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Content-Type",
-									"value": "application/vnd.api+json"
-								},
-								{
-									"key": "deprecation",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-request-id",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-version-lifecycle-stage",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-version-requested",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-version-served",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "sunset",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								}
-							],
-							"cookie": [],
-							"body": "{\n  \"jsonapi\": {\n    \"version\": \"0.204399\"\n  },\n  \"errors\": [\n    {\n      \"status\": \"450\",\n      \"detail\": \"<string>\",\n      \"code\": \"<string>\",\n      \"id\": \"<uuid>\",\n      \"links\": {\n        \"about\": \"<string>\"\n      },\n      \"meta\": {\n        \"fugiat_d43\": 17608579.13358502,\n        \"fugiat091\": true,\n        \"dolord6\": 13592157\n      },\n      \"source\": {\n        \"parameter\": \"<string>\",\n        \"pointer\": \"<string>\"\n      },\n      \"title\": \"<string>\"\n    }\n  ]\n}"
-						},
-						{
-							"name": "Not Found: The resource being operated on could not be found.",
-							"originalRequest": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/vnd.api+json"
-									},
-									{
-										"description": "Added as a part of security scheme: bearer",
-										"key": "Authorization",
-										"value": "Bearer <token>"
-									}
-								],
-								"url": {
-									"raw": "{{baseUrl}}/orgs/:org_id/projects/:project_id/sbom?version=work-in-progress&format=cyclonedx1.4+xml",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"orgs",
-										":org_id",
-										"projects",
-										":project_id",
-										"sbom"
-									],
-									"query": [
-										{
-											"key": "version",
-											"value": "work-in-progress",
-											"description": "(Required) The requested version of the endpoint to process the request"
-										},
-										{
-											"key": "format",
-											"value": "cyclonedx1.4+xml",
-											"description": "The desired SBOM format of the response."
-										}
-									],
-									"variable": [
-										{
-											"key": "org_id"
-										},
-										{
-											"key": "project_id"
-										}
-									]
-								}
-							},
-							"status": "Not Found",
-							"code": 404,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Content-Type",
-									"value": "application/vnd.api+json"
-								},
-								{
-									"key": "deprecation",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-request-id",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-version-lifecycle-stage",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-version-requested",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-version-served",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "sunset",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								}
-							],
-							"cookie": [],
-							"body": "{\n  \"jsonapi\": {\n    \"version\": \"0.204399\"\n  },\n  \"errors\": [\n    {\n      \"status\": \"450\",\n      \"detail\": \"<string>\",\n      \"code\": \"<string>\",\n      \"id\": \"<uuid>\",\n      \"links\": {\n        \"about\": \"<string>\"\n      },\n      \"meta\": {\n        \"fugiat_d43\": 17608579.13358502,\n        \"fugiat091\": true,\n        \"dolord6\": 13592157\n      },\n      \"source\": {\n        \"parameter\": \"<string>\",\n        \"pointer\": \"<string>\"\n      },\n      \"title\": \"<string>\"\n    }\n  ]\n}"
-						},
-						{
-							"name": "Conflict: The requested operation conflicts with the current state of the resource in some way.",
-							"originalRequest": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/vnd.api+json"
-									},
-									{
-										"description": "Added as a part of security scheme: bearer",
-										"key": "Authorization",
-										"value": "Bearer <token>"
-									}
-								],
-								"url": {
-									"raw": "{{baseUrl}}/orgs/:org_id/projects/:project_id/sbom?version=work-in-progress&format=cyclonedx1.4+xml",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"orgs",
-										":org_id",
-										"projects",
-										":project_id",
-										"sbom"
-									],
-									"query": [
-										{
-											"key": "version",
-											"value": "work-in-progress",
-											"description": "(Required) The requested version of the endpoint to process the request"
-										},
-										{
-											"key": "format",
-											"value": "cyclonedx1.4+xml",
-											"description": "The desired SBOM format of the response."
-										}
-									],
-									"variable": [
-										{
-											"key": "org_id"
-										},
-										{
-											"key": "project_id"
-										}
-									]
-								}
-							},
-							"status": "Conflict",
-							"code": 409,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Content-Type",
-									"value": "application/vnd.api+json"
-								},
-								{
-									"key": "deprecation",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-request-id",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-version-lifecycle-stage",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-version-requested",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-version-served",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "sunset",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								}
-							],
-							"cookie": [],
-							"body": "{\n  \"jsonapi\": {\n    \"version\": \"0.204399\"\n  },\n  \"errors\": [\n    {\n      \"status\": \"450\",\n      \"detail\": \"<string>\",\n      \"code\": \"<string>\",\n      \"id\": \"<uuid>\",\n      \"links\": {\n        \"about\": \"<string>\"\n      },\n      \"meta\": {\n        \"fugiat_d43\": 17608579.13358502,\n        \"fugiat091\": true,\n        \"dolord6\": 13592157\n      },\n      \"source\": {\n        \"parameter\": \"<string>\",\n        \"pointer\": \"<string>\"\n      },\n      \"title\": \"<string>\"\n    }\n  ]\n}"
-						},
-						{
-							"name": "Internal Server Error: An error was encountered while attempting to process the request.",
-							"originalRequest": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/vnd.api+json"
-									},
-									{
-										"description": "Added as a part of security scheme: bearer",
-										"key": "Authorization",
-										"value": "Bearer <token>"
-									}
-								],
-								"url": {
-									"raw": "{{baseUrl}}/orgs/:org_id/projects/:project_id/sbom?version=work-in-progress&format=cyclonedx1.4+xml",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"orgs",
-										":org_id",
-										"projects",
-										":project_id",
-										"sbom"
-									],
-									"query": [
-										{
-											"key": "version",
-											"value": "work-in-progress",
-											"description": "(Required) The requested version of the endpoint to process the request"
-										},
-										{
-											"key": "format",
-											"value": "cyclonedx1.4+xml",
-											"description": "The desired SBOM format of the response."
-										}
-									],
-									"variable": [
-										{
-											"key": "org_id"
-										},
-										{
-											"key": "project_id"
-										}
-									]
-								}
-							},
-							"status": "Internal Server Error",
-							"code": 500,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Content-Type",
-									"value": "application/vnd.api+json"
-								},
-								{
-									"key": "deprecation",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-request-id",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-version-lifecycle-stage",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-version-requested",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "snyk-version-served",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								},
-								{
-									"key": "sunset",
-									"value": "",
-									"description": {
-										"content": "",
-										"type": "text/plain"
-									}
-								}
-							],
-							"cookie": [],
-							"body": "{\n  \"jsonapi\": {\n    \"version\": \"0.204399\"\n  },\n  \"errors\": [\n    {\n      \"status\": \"450\",\n      \"detail\": \"<string>\",\n      \"code\": \"<string>\",\n      \"id\": \"<uuid>\",\n      \"links\": {\n        \"about\": \"<string>\"\n      },\n      \"meta\": {\n        \"fugiat_d43\": 17608579.13358502,\n        \"fugiat091\": true,\n        \"dolord6\": 13592157\n      },\n      \"source\": {\n        \"parameter\": \"<string>\",\n        \"pointer\": \"<string>\"\n      },\n      \"title\": \"<string>\"\n    }\n  ]\n}"
-						}
-					]
 				}
 			]
 		},
@@ -2500,7 +4401,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"data\": {\n    \"type\": \"sbom_test\",\n    \"attributes\": {\n    \"sbom\": \n          {\n            \"_comment\": \"paste your sbom file content instead of this line\"\n          }\n    }\n  }\n}",
+							"raw": "{\n  \"data\": {\n    \"type\": \"sbom_test\",\n    \"attributes\": {\n    \"sbom\": \n    {\n      \"$schema\": \"http://cyclonedx.org/schema/bom-1.4.schema.json\",\n      \"bomFormat\": \"CycloneDX\",\n      \"specVersion\": \"1.4\",\n      \"serialNumber\": \"urn:uuid:bcbd9e8a-253e-4999-a0c3-5fa0513c01fc\",\n      \"version\": 1,\n      \"metadata\": {\n          \"timestamp\": \"2024-03-12T05:47:26Z\",\n          \"tools\": [\n              {\n                  \"vendor\": \"Snyk\",\n                  \"name\": \"snyk-cli\",\n                  \"version\": \"1.1267.0\"\n              },\n              {\n                  \"vendor\": \"Snyk\",\n                  \"name\": \"SBOM Export API\",\n                  \"version\": \"v1.78.0\"\n              }\n          ],\n          \"component\": {\n              \"bom-ref\": \"1-org.t246osslab.easybuggy:easybuggy@1-SNAPSHOT\",\n              \"type\": \"application\",\n              \"name\": \"org.t246osslab.easybuggy:easybuggy\",\n              \"version\": \"1-SNAPSHOT\",\n              \"purl\": \"pkg:maven/org.t246osslab.easybuggy/easybuggy@1-SNAPSHOT\"\n          }\n      },\n      \"components\": [\n          {\n              \"bom-ref\": \"2-javax.servlet:javax.servlet-api@3.0.1\",\n              \"type\": \"library\",\n              \"group\": \"javax.servlet\",\n              \"name\": \"javax.servlet:javax.servlet-api\",\n              \"version\": \"3.0.1\",\n              \"purl\": \"pkg:maven/javax.servlet/javax.servlet-api@3.0.1\"\n          },\n          {\n              \"bom-ref\": \"3-javax.servlet.jsp:jsp-api@2.2\",\n              \"type\": \"library\",\n              \"group\": \"javax.servlet.jsp\",\n              \"name\": \"javax.servlet.jsp:jsp-api\",\n              \"version\": \"2.2\",\n              \"purl\": \"pkg:maven/javax.servlet.jsp/jsp-api@2.2\"\n          },\n          {\n              \"bom-ref\": \"4-javax.servlet:jstl@1.2\",\n              \"type\": \"library\",\n              \"group\": \"javax.servlet\",\n              \"name\": \"javax.servlet:jstl\",\n              \"version\": \"1.2\",\n              \"purl\": \"pkg:maven/javax.servlet/jstl@1.2\"\n          },\n          {\n              \"bom-ref\": \"5-org.apache.derby:derby@10.8.3.0\",\n              \"type\": \"library\",\n              \"group\": \"org.apache.derby\",\n              \"name\": \"org.apache.derby:derby\",\n              \"version\": \"10.8.3.0\",\n              \"purl\": \"pkg:maven/org.apache.derby/derby@10.8.3.0\"\n          },\n          {\n              \"bom-ref\": \"6-javassist:javassist@3.12.1.GA\",\n              \"type\": \"library\",\n              \"group\": \"javassist\",\n              \"name\": \"javassist:javassist\",\n              \"version\": \"3.12.1.GA\",\n              \"purl\": \"pkg:maven/javassist/javassist@3.12.1.GA\"\n          },\n          {\n              \"bom-ref\": \"7-org.openjdk.jol:jol-core@0.6\",\n              \"type\": \"library\",\n              \"group\": \"org.openjdk.jol\",\n              \"name\": \"org.openjdk.jol:jol-core\",\n              \"version\": \"0.6\",\n              \"purl\": \"pkg:maven/org.openjdk.jol/jol-core@0.6\"\n          },\n          {\n              \"bom-ref\": \"8-mysql:mysql-connector-java@5.1.25\",\n              \"type\": \"library\",\n              \"group\": \"mysql\",\n              \"name\": \"mysql:mysql-connector-java\",\n              \"version\": \"5.1.25\",\n              \"purl\": \"pkg:maven/mysql/mysql-connector-java@5.1.25\"\n          },\n          {\n              \"bom-ref\": \"9-org.slf4j:slf4j-api@1.5.0\",\n              \"type\": \"library\",\n              \"group\": \"org.slf4j\",\n              \"name\": \"org.slf4j:slf4j-api\",\n              \"version\": \"1.5.0\",\n              \"purl\": \"pkg:maven/org.slf4j/slf4j-api@1.5.0\"\n          },\n          {\n              \"bom-ref\": \"10-org.slf4j:slf4j-log4j12@1.5.0\",\n              \"type\": \"library\",\n              \"group\": \"org.slf4j\",\n              \"name\": \"org.slf4j:slf4j-log4j12\",\n              \"version\": \"1.5.0\",\n              \"purl\": \"pkg:maven/org.slf4j/slf4j-log4j12@1.5.0\"\n          },\n          {\n              \"bom-ref\": \"11-org.apache.directory.server:apacheds-all@1.5.5\",\n              \"type\": \"library\",\n              \"group\": \"org.apache.directory.server\",\n              \"name\": \"org.apache.directory.server:apacheds-all\",\n              \"version\": \"1.5.5\",\n              \"purl\": \"pkg:maven/org.apache.directory.server/apacheds-all@1.5.5\"\n          },\n          {\n              \"bom-ref\": \"12-org.owasp.esapi:esapi@2.1.0.1\",\n              \"type\": \"library\",\n              \"group\": \"org.owasp.esapi\",\n              \"name\": \"org.owasp.esapi:esapi\",\n              \"version\": \"2.1.0.1\",\n              \"purl\": \"pkg:maven/org.owasp.esapi/esapi@2.1.0.1\"\n          },\n          {\n              \"bom-ref\": \"13-ognl:ognl@3.0.17\",\n              \"type\": \"library\",\n              \"group\": \"ognl\",\n              \"name\": \"ognl:ognl\",\n              \"version\": \"3.0.17\",\n              \"purl\": \"pkg:maven/ognl/ognl@3.0.17\"\n          },\n          {\n              \"bom-ref\": \"14-com.sun.mail:javax.mail@1.5.1\",\n              \"type\": \"library\",\n              \"group\": \"com.sun.mail\",\n              \"name\": \"com.sun.mail:javax.mail\",\n              \"version\": \"1.5.1\",\n              \"purl\": \"pkg:maven/com.sun.mail/javax.mail@1.5.1\"\n          },\n          {\n              \"bom-ref\": \"15-org.apache.logging.log4j:log4j-core@2.1\",\n              \"type\": \"library\",\n              \"group\": \"org.apache.logging.log4j\",\n              \"name\": \"org.apache.logging.log4j:log4j-core\",\n              \"version\": \"2.1\",\n              \"purl\": \"pkg:maven/org.apache.logging.log4j/log4j-core@2.1\"\n          },\n          {\n              \"bom-ref\": \"16-log4j:log4j@1.2.13\",\n              \"type\": \"library\",\n              \"group\": \"log4j\",\n              \"name\": \"log4j:log4j\",\n              \"version\": \"1.2.13\",\n              \"purl\": \"pkg:maven/log4j/log4j@1.2.13\"\n          },\n          {\n              \"bom-ref\": \"17-commons-configuration:commons-configuration@1.10\",\n              \"type\": \"library\",\n              \"group\": \"commons-configuration\",\n              \"name\": \"commons-configuration:commons-configuration\",\n              \"version\": \"1.10\",\n              \"purl\": \"pkg:maven/commons-configuration/commons-configuration@1.10\"\n          },\n          {\n              \"bom-ref\": \"18-commons-beanutils:commons-beanutils-core@1.8.3\",\n              \"type\": \"library\",\n              \"group\": \"commons-beanutils\",\n              \"name\": \"commons-beanutils:commons-beanutils-core\",\n              \"version\": \"1.8.3\",\n              \"purl\": \"pkg:maven/commons-beanutils/commons-beanutils-core@1.8.3\"\n          },\n          {\n              \"bom-ref\": \"19-commons-fileupload:commons-fileupload@1.3.1\",\n              \"type\": \"library\",\n              \"group\": \"commons-fileupload\",\n              \"name\": \"commons-fileupload:commons-fileupload\",\n              \"version\": \"1.3.1\",\n              \"purl\": \"pkg:maven/commons-fileupload/commons-fileupload@1.3.1\"\n          },\n          {\n              \"bom-ref\": \"20-commons-collections:commons-collections@3.2.2\",\n              \"type\": \"library\",\n              \"group\": \"commons-collections\",\n              \"name\": \"commons-collections:commons-collections\",\n              \"version\": \"3.2.2\",\n              \"purl\": \"pkg:maven/commons-collections/commons-collections@3.2.2\"\n          },\n          {\n              \"bom-ref\": \"21-xom:xom@1.2.5\",\n              \"type\": \"library\",\n              \"group\": \"xom\",\n              \"name\": \"xom:xom\",\n              \"version\": \"1.2.5\",\n              \"purl\": \"pkg:maven/xom/xom@1.2.5\"\n          },\n          {\n              \"bom-ref\": \"22-org.beanshell:bsh-core@2.0b4\",\n              \"type\": \"library\",\n              \"group\": \"org.beanshell\",\n              \"name\": \"org.beanshell:bsh-core\",\n              \"version\": \"2.0b4\",\n              \"purl\": \"pkg:maven/org.beanshell/bsh-core@2.0b4\"\n          },\n          {\n              \"bom-ref\": \"23-org.owasp.antisamy:antisamy@1.5.3\",\n              \"type\": \"library\",\n              \"group\": \"org.owasp.antisamy\",\n              \"name\": \"org.owasp.antisamy:antisamy\",\n              \"version\": \"1.5.3\",\n              \"purl\": \"pkg:maven/org.owasp.antisamy/antisamy@1.5.3\"\n          },\n          {\n              \"bom-ref\": \"24-org.apache.xmlgraphics:batik-css@1.8\",\n              \"type\": \"library\",\n              \"group\": \"org.apache.xmlgraphics\",\n              \"name\": \"org.apache.xmlgraphics:batik-css\",\n              \"version\": \"1.8\",\n              \"purl\": \"pkg:maven/org.apache.xmlgraphics/batik-css@1.8\"\n          },\n          {\n              \"bom-ref\": \"25-javax.activation:activation@1.1\",\n              \"type\": \"library\",\n              \"group\": \"javax.activation\",\n              \"name\": \"javax.activation:activation\",\n              \"version\": \"1.1\",\n              \"purl\": \"pkg:maven/javax.activation/activation@1.1\"\n          },\n          {\n              \"bom-ref\": \"26-org.apache.logging.log4j:log4j-api@2.1\",\n              \"type\": \"library\",\n              \"group\": \"org.apache.logging.log4j\",\n              \"name\": \"org.apache.logging.log4j:log4j-api\",\n              \"version\": \"2.1\",\n              \"purl\": \"pkg:maven/org.apache.logging.log4j/log4j-api@2.1\"\n          },\n          {\n              \"bom-ref\": \"27-commons-lang:commons-lang@2.6\",\n              \"type\": \"library\",\n              \"group\": \"commons-lang\",\n              \"name\": \"commons-lang:commons-lang\",\n              \"version\": \"2.6\",\n              \"purl\": \"pkg:maven/commons-lang/commons-lang@2.6\"\n          },\n          {\n              \"bom-ref\": \"28-commons-logging:commons-logging@1.1.1\",\n              \"type\": \"library\",\n              \"group\": \"commons-logging\",\n              \"name\": \"commons-logging:commons-logging\",\n              \"version\": \"1.1.1\",\n              \"purl\": \"pkg:maven/commons-logging/commons-logging@1.1.1\"\n          },\n          {\n              \"bom-ref\": \"29-commons-io:commons-io@2.2\",\n              \"type\": \"library\",\n              \"group\": \"commons-io\",\n              \"name\": \"commons-io:commons-io\",\n              \"version\": \"2.2\",\n              \"purl\": \"pkg:maven/commons-io/commons-io@2.2\"\n          },\n          {\n              \"bom-ref\": \"30-xml-apis:xml-apis@1.3.03\",\n              \"type\": \"library\",\n              \"group\": \"xml-apis\",\n              \"name\": \"xml-apis:xml-apis\",\n              \"version\": \"1.3.03\",\n              \"purl\": \"pkg:maven/xml-apis/xml-apis@1.3.03\"\n          },\n          {\n              \"bom-ref\": \"31-xerces:xercesImpl@2.8.0\",\n              \"type\": \"library\",\n              \"group\": \"xerces\",\n              \"name\": \"xerces:xercesImpl\",\n              \"version\": \"2.8.0\",\n              \"purl\": \"pkg:maven/xerces/xercesImpl@2.8.0\"\n          },\n          {\n              \"bom-ref\": \"32-xalan:xalan@2.7.0\",\n              \"type\": \"library\",\n              \"group\": \"xalan\",\n              \"name\": \"xalan:xalan\",\n              \"version\": \"2.7.0\",\n              \"purl\": \"pkg:maven/xalan/xalan@2.7.0\"\n          },\n          {\n              \"bom-ref\": \"33-net.sourceforge.nekohtml:nekohtml@1.9.16\",\n              \"type\": \"library\",\n              \"group\": \"net.sourceforge.nekohtml\",\n              \"name\": \"net.sourceforge.nekohtml:nekohtml\",\n              \"version\": \"1.9.16\",\n              \"purl\": \"pkg:maven/net.sourceforge.nekohtml/nekohtml@1.9.16\"\n          },\n          {\n              \"bom-ref\": \"34-commons-httpclient:commons-httpclient@3.1\",\n              \"type\": \"library\",\n              \"group\": \"commons-httpclient\",\n              \"name\": \"commons-httpclient:commons-httpclient\",\n              \"version\": \"3.1\",\n              \"purl\": \"pkg:maven/commons-httpclient/commons-httpclient@3.1\"\n          },\n          {\n              \"bom-ref\": \"35-org.apache.xmlgraphics:batik-ext@1.8\",\n              \"type\": \"library\",\n              \"group\": \"org.apache.xmlgraphics\",\n              \"name\": \"org.apache.xmlgraphics:batik-ext\",\n              \"version\": \"1.8\",\n              \"purl\": \"pkg:maven/org.apache.xmlgraphics/batik-ext@1.8\"\n          },\n          {\n              \"bom-ref\": \"36-org.apache.xmlgraphics:batik-util@1.8\",\n              \"type\": \"library\",\n              \"group\": \"org.apache.xmlgraphics\",\n              \"name\": \"org.apache.xmlgraphics:batik-util\",\n              \"version\": \"1.8\",\n              \"purl\": \"pkg:maven/org.apache.xmlgraphics/batik-util@1.8\"\n          },\n          {\n              \"bom-ref\": \"37-xml-apis:xml-apis-ext@1.3.04\",\n              \"type\": \"library\",\n              \"group\": \"xml-apis\",\n              \"name\": \"xml-apis:xml-apis-ext\",\n              \"version\": \"1.3.04\",\n              \"purl\": \"pkg:maven/xml-apis/xml-apis-ext@1.3.04\"\n          },\n          {\n              \"bom-ref\": \"38-commons-codec:commons-codec@1.2\",\n              \"type\": \"library\",\n              \"group\": \"commons-codec\",\n              \"name\": \"commons-codec:commons-codec\",\n              \"version\": \"1.2\",\n              \"purl\": \"pkg:maven/commons-codec/commons-codec@1.2\"\n          }\n      ],\n      \"dependencies\": [\n          {\n              \"ref\": \"1-org.t246osslab.easybuggy:easybuggy@1-SNAPSHOT\",\n              \"dependsOn\": [\n                  \"2-javax.servlet:javax.servlet-api@3.0.1\",\n                  \"3-javax.servlet.jsp:jsp-api@2.2\",\n                  \"4-javax.servlet:jstl@1.2\",\n                  \"5-org.apache.derby:derby@10.8.3.0\",\n                  \"6-javassist:javassist@3.12.1.GA\",\n                  \"7-org.openjdk.jol:jol-core@0.6\",\n                  \"8-mysql:mysql-connector-java@5.1.25\",\n                  \"9-org.slf4j:slf4j-api@1.5.0\",\n                  \"10-org.slf4j:slf4j-log4j12@1.5.0\",\n                  \"11-org.apache.directory.server:apacheds-all@1.5.5\",\n                  \"12-org.owasp.esapi:esapi@2.1.0.1\",\n                  \"13-ognl:ognl@3.0.17\",\n                  \"14-com.sun.mail:javax.mail@1.5.1\",\n                  \"15-org.apache.logging.log4j:log4j-core@2.1\"\n              ]\n          },\n          {\n              \"ref\": \"2-javax.servlet:javax.servlet-api@3.0.1\"\n          },\n          {\n              \"ref\": \"3-javax.servlet.jsp:jsp-api@2.2\"\n          },\n          {\n              \"ref\": \"4-javax.servlet:jstl@1.2\"\n          },\n          {\n              \"ref\": \"5-org.apache.derby:derby@10.8.3.0\"\n          },\n          {\n              \"ref\": \"6-javassist:javassist@3.12.1.GA\"\n          },\n          {\n              \"ref\": \"7-org.openjdk.jol:jol-core@0.6\"\n          },\n          {\n              \"ref\": \"8-mysql:mysql-connector-java@5.1.25\"\n          },\n          {\n              \"ref\": \"9-org.slf4j:slf4j-api@1.5.0\"\n          },\n          {\n              \"ref\": \"10-org.slf4j:slf4j-log4j12@1.5.0\",\n              \"dependsOn\": [\n                  \"16-log4j:log4j@1.2.13\"\n              ]\n          },\n          {\n              \"ref\": \"11-org.apache.directory.server:apacheds-all@1.5.5\"\n          },\n          {\n              \"ref\": \"12-org.owasp.esapi:esapi@2.1.0.1\",\n              \"dependsOn\": [\n                  \"17-commons-configuration:commons-configuration@1.10\",\n                  \"18-commons-beanutils:commons-beanutils-core@1.8.3\",\n                  \"19-commons-fileupload:commons-fileupload@1.3.1\",\n                  \"20-commons-collections:commons-collections@3.2.2\",\n                  \"21-xom:xom@1.2.5\",\n                  \"22-org.beanshell:bsh-core@2.0b4\",\n                  \"23-org.owasp.antisamy:antisamy@1.5.3\",\n                  \"24-org.apache.xmlgraphics:batik-css@1.8\"\n              ]\n          },\n          {\n              \"ref\": \"13-ognl:ognl@3.0.17\"\n          },\n          {\n              \"ref\": \"14-com.sun.mail:javax.mail@1.5.1\",\n              \"dependsOn\": [\n                  \"25-javax.activation:activation@1.1\"\n              ]\n          },\n          {\n              \"ref\": \"15-org.apache.logging.log4j:log4j-core@2.1\",\n              \"dependsOn\": [\n                  \"26-org.apache.logging.log4j:log4j-api@2.1\"\n              ]\n          },\n          {\n              \"ref\": \"16-log4j:log4j@1.2.13\"\n          },\n          {\n              \"ref\": \"17-commons-configuration:commons-configuration@1.10\",\n              \"dependsOn\": [\n                  \"27-commons-lang:commons-lang@2.6\",\n                  \"28-commons-logging:commons-logging@1.1.1\"\n              ]\n          },\n          {\n              \"ref\": \"18-commons-beanutils:commons-beanutils-core@1.8.3\"\n          },\n          {\n              \"ref\": \"19-commons-fileupload:commons-fileupload@1.3.1\",\n              \"dependsOn\": [\n                  \"29-commons-io:commons-io@2.2\"\n              ]\n          },\n          {\n              \"ref\": \"20-commons-collections:commons-collections@3.2.2\"\n          },\n          {\n              \"ref\": \"21-xom:xom@1.2.5\",\n              \"dependsOn\": [\n                  \"30-xml-apis:xml-apis@1.3.03\",\n                  \"31-xerces:xercesImpl@2.8.0\",\n                  \"32-xalan:xalan@2.7.0\"\n              ]\n          },\n          {\n              \"ref\": \"22-org.beanshell:bsh-core@2.0b4\"\n          },\n          {\n              \"ref\": \"23-org.owasp.antisamy:antisamy@1.5.3\",\n              \"dependsOn\": [\n                  \"33-net.sourceforge.nekohtml:nekohtml@1.9.16\",\n                  \"34-commons-httpclient:commons-httpclient@3.1\"\n              ]\n          },\n          {\n              \"ref\": \"24-org.apache.xmlgraphics:batik-css@1.8\",\n              \"dependsOn\": [\n                  \"35-org.apache.xmlgraphics:batik-ext@1.8\",\n                  \"36-org.apache.xmlgraphics:batik-util@1.8\",\n                  \"37-xml-apis:xml-apis-ext@1.3.04\"\n              ]\n          },\n          {\n              \"ref\": \"25-javax.activation:activation@1.1\"\n          },\n          {\n              \"ref\": \"26-org.apache.logging.log4j:log4j-api@2.1\"\n          },\n          {\n              \"ref\": \"27-commons-lang:commons-lang@2.6\"\n          },\n          {\n              \"ref\": \"28-commons-logging:commons-logging@1.1.1\"\n          },\n          {\n              \"ref\": \"29-commons-io:commons-io@2.2\"\n          },\n          {\n              \"ref\": \"30-xml-apis:xml-apis@1.3.03\"\n          },\n          {\n              \"ref\": \"31-xerces:xercesImpl@2.8.0\"\n          },\n          {\n              \"ref\": \"32-xalan:xalan@2.7.0\"\n          },\n          {\n              \"ref\": \"33-net.sourceforge.nekohtml:nekohtml@1.9.16\"\n          },\n          {\n              \"ref\": \"34-commons-httpclient:commons-httpclient@3.1\",\n              \"dependsOn\": [\n                  \"38-commons-codec:commons-codec@1.2\"\n              ]\n          },\n          {\n              \"ref\": \"35-org.apache.xmlgraphics:batik-ext@1.8\"\n          },\n          {\n              \"ref\": \"36-org.apache.xmlgraphics:batik-util@1.8\"\n          },\n          {\n              \"ref\": \"37-xml-apis:xml-apis-ext@1.3.04\"\n          },\n          {\n              \"ref\": \"38-commons-codec:commons-codec@1.2\"\n          }\n      ]\n  }\n    }\n  }\n}",
 							"options": {
 								"raw": {
 									"headerFamily": "json",
@@ -2509,7 +4410,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseUrl}}/orgs/:org_id/sbom_tests?version=2024-02-21~experimental",
+							"raw": "{{baseUrl}}/orgs/:org_id/sbom_tests?version=2023-08-31~beta",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -2521,15 +4422,14 @@
 							"query": [
 								{
 									"key": "version",
-									"value": "2024-02-21~experimental",
+									"value": "2023-08-31~beta",
 									"description": "(Required) The requested version of the endpoint to process the request"
 								}
 							],
 							"variable": [
 								{
 									"key": "org_id",
-									"value": "{{OrgId}}",
-									"description": "(Required) Org ID"
+									"value": ""
 								}
 							]
 						},
@@ -3356,7 +5256,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/orgs/:org_id/sbom_tests/:job_id?version=2024-02-21~experimental",
+							"raw": "{{baseUrl}}/orgs/:org_id/sbom_tests/:job_id?version=2023-08-31~beta",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -3369,7 +5269,7 @@
 							"query": [
 								{
 									"key": "version",
-									"value": "2024-02-21~experimental",
+									"value": "2023-08-31~beta",
 									"description": "(Required) The requested version of the endpoint to process the request"
 								}
 							],
@@ -3381,7 +5281,7 @@
 								},
 								{
 									"key": "job_id",
-									"value": "6b76f427-b634-4940-9f8f-1ec9198273d5",
+									"value": "024f3a21-5a35-4df4-a327-a63b75e4c770",
 									"description": "(Required) Job ID"
 								}
 							]
@@ -4139,7 +6039,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/orgs/:org_id/sbom_tests/:job_id/results?version=2024-02-21~experimental",
+							"raw": "{{baseUrl}}/orgs/:org_id/sbom_tests/:job_id/results?version=2023-08-31~beta",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -4153,7 +6053,7 @@
 							"query": [
 								{
 									"key": "version",
-									"value": "2024-02-21~experimental",
+									"value": "2023-08-31~beta",
 									"description": "(Required) The requested version of the endpoint to process the request"
 								},
 								{
@@ -4183,7 +6083,7 @@
 								},
 								{
 									"key": "job_id",
-									"value": "e186cca6-baa5-454a-b23b-ffcb81a6bd23",
+									"value": "be63a2da-8045-4971-a5b6-12f991b8a3fa",
 									"description": "(Required) Job ID"
 								}
 							]
