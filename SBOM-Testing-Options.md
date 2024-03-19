@@ -5,7 +5,7 @@ Web based  [Snyk SBOM Security Checker](https://snyk.io/code-checker/sbom-securi
 
 
 ## Test SBOM using CLI:
-CLI using 3rd partu tool [bomber and snyk sbom provider](https://github.com/devops-kung-fu/bomber)
+CLI using 3rd party tool [bomber and snyk sbom provider](https://github.com/devops-kung-fu/bomber)
 
 ### Step 1: Install bomber (mac)
 ```
