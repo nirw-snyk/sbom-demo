@@ -85,4 +85,4 @@ Vulnerability snapshot saved at SCA-report.html
 
 
 ###
-Next: [SBOM Testing Options](https://github.com/nirw-snyk/sbom-demo/blob/main/SBOM-Creation-Options.md)
+Next: [SBOM Creation Options](https://github.com/nirw-snyk/sbom-demo/blob/main/SBOM-Creation-Options.md)

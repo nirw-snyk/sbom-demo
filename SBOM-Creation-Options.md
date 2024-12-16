@@ -1,5 +1,9 @@
 # SBOM file Creation Options
-#### snyk sbom full help
+#### The first way we will generate an SBOM would be using the snyk UI on a target level (FF must be enabled by your account team):
+
+![sbom.png preview](https://github.com/nirw-snyk/sbom-demo/blob/main/images/sbom.png)
+
+#### Next we can generate an SBOM using snyk CLI - see full help:
 ```
 ➜  easybuggy git:(demo-feature-branch) ✗ snyk sbom --help
 SBOM
@@ -11,9 +15,9 @@ Prerequisites
   The snyk sbom feature requires an internet connection.
 
 Usage
-  $ snyk sbom --format=<cyclonedx1.4+json|cyclonedx1.4+xml|spdx2.3+json> [--file=<FILE>]
-  [--unmanaged] [--org=<ORG_ID>] [--dev] [--all-projects] [--name=<NAME>]
-  [--version=<VERSION>] [--exclude=<NAME>[,<NAME>...]]
+  $ snyk sbom --format=<cyclonedx1.4+json|cyclonedx1.4+xml|cyclonedx1.5+json|cyclonedx1.5+xml|spdx
+  2.3+json> [--org=<ORG_ID>] [--file=<FILE>] [--unmanaged] [--dev] [--all-projects]
+  [--name=<NAME>] [--version=<VERSION>] [--exclude=<NAME>[,<NAME>...]]
   [--detection-depth=<DEPTH>] [--prune-repeated-subdependencies|-p] [--maven-aggregate-project]
   [--scan-unmanaged] [--scan-all-unmanaged] [--sub-project=<NAME>]
   [--gradle-sub-project=<NAME>] [--all-sub-projects]
