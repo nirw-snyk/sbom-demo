@@ -3,8 +3,176 @@
 ## Test SBOM web page:
 Web based  [Snyk SBOM Security Checker](https://snyk.io/code-checker/sbom-security/)
 
+## Test SBOM using snyk CLI- see full help:
+```
+➜  easybuggy git:(master) ✗ snyk sbom test --help
+SBOM test
+  Feature availability: This feature is available to customers on Snyk Enterprise plans.
 
-## Test SBOM using CLI:
+Usage
+  snyk sbom test --experimental --file=<FILE_PATH> [<options>]
+
+Description
+  The snyk sbom test command checks SBOM files for vulnerabilities in open-source packages.
+
+Exit codes
+  Possible exit codes and their meaning:
+
+  0: success (scan completed), no vulnerabilities found
+  1: action_needed (scan completed), vulnerabilities found
+  2: failure, try to re-run the command
+
+Configure the Snyk CLI
+  You can use environment variables to configure the Snyk CLI and set variables for connecting with
+  the Snyk API. See Configure the Snyk CLI https://docs.snyk.io/snyk-cli/configure-the-snyk-cli
+
+Debug
+  Use the -d or --debug option to output the debug logs.
+
+Options
+  --experimental
+    Required. Use experimental command features. This option is currently required as the command is
+    in its experimental phase.
+
+  --file=<FILE_PATH>
+    Required. Specify the file path of the SBOM document.
+
+    The snyk sbom test command accepts the following file formats:
+
+    -  CycloneDX: JSON version 1.4 and 1.5
+    -  SPDX: JSON version 2.3
+
+    Packages and components within the provided SBOM file must be identified by a PackageURL (purl).
+
+    Supported purl types are: apk, cargo, cocoapods, composer, deb, gem, generic, golang, hex, maven
+    , npm, nuget, pub, pypi, rpm, swift.
+
+    Example: $ snyk sbom test --experimental --file=bom.cdx.json
+
+  --json
+    Print results on the console as a JSON data structure.
+
+    Example: $ snyk sbom test --experimental --file=bom.cdx.json --json
+```
+##### Test a cyclonedx1.4.json sbom file using snyk sbom test cli:
+```
+➜  easybuggy git:(master) ✗ snyk sbom test --experimental --file=mysbom.cyc1.4.json
+
+Testing mysbom.cyc1.4.json
+
+
+Open issues:
+
+× [LOW] Information Exposure
+  Introduced through: pkg:maven/commons-codec/commons-codec@1.2
+  URL: https://security.snyk.io/vuln/SNYK-JAVA-COMMONSCODEC-561518
+
+× [LOW] Man-in-the-Middle (MitM)
+  Introduced through: pkg:maven/log4j/log4j@1.2.13
+  URL: https://security.snyk.io/vuln/SNYK-JAVA-LOG4J-1300176
+
+× [LOW] Improper Access Control
+  Introduced through: pkg:maven/mysql/mysql-connector-java@5.1.25
+  URL: https://security.snyk.io/vuln/SNYK-JAVA-MYSQL-31449
+....
+
+× [HIGH] Denial of Service (DoS)
+  Introduced through: pkg:maven/xerces/xercesImpl@2.8.0
+  URL: https://security.snyk.io/vuln/SNYK-JAVA-XERCES-2359991
+
+× [HIGH] Denial of Service (DoS)
+  Introduced through: pkg:maven/xerces/xercesImpl@2.8.0
+  URL: https://security.snyk.io/vuln/SNYK-JAVA-XERCES-31585
+
+× [HIGH] GPL-2.0 license
+  Introduced through: pkg:maven/mysql/mysql-connector-java@5.1.25
+  URL: https://security.snyk.io/vuln/snyk:lic:maven:mysql:mysql-connector-java:GPL-2.0
+
+× [CRITICAL] Arbitrary Code Execution
+  Introduced through: pkg:maven/commons-fileupload/commons-fileupload@1.3.1
+  URL: https://security.snyk.io/vuln/SNYK-JAVA-COMMONSFILEUPLOAD-30401
+
+× [CRITICAL] Deserialization of Untrusted Data
+  Introduced through: pkg:maven/log4j/log4j@1.2.13
+  URL: https://security.snyk.io/vuln/SNYK-JAVA-LOG4J-572732
+
+× [CRITICAL] Remote Code Execution (RCE)
+  Introduced through: pkg:maven/org.apache.logging.log4j/log4j-core@2.1
+  URL: https://security.snyk.io/vuln/SNYK-JAVA-ORGAPACHELOGGINGLOG4J-2314720
+
+× [CRITICAL] Remote Code Execution (RCE)
+  Introduced through: pkg:maven/org.apache.logging.log4j/log4j-core@2.1
+  URL: https://security.snyk.io/vuln/SNYK-JAVA-ORGAPACHELOGGINGLOG4J-2320014
+
+× [CRITICAL] Deserialization of Untrusted Data
+  Introduced through: pkg:maven/org.apache.logging.log4j/log4j-core@2.1
+  URL: https://security.snyk.io/vuln/SNYK-JAVA-ORGAPACHELOGGINGLOG4J-31409
+
+× [CRITICAL] Arbitrary Code Execution
+  Introduced through: pkg:maven/xalan/xalan@2.7.0
+  URL: https://security.snyk.io/vuln/SNYK-JAVA-XALAN-2953385
+
+╭─────────────────────────────────────────────────────────────────────╮
+│  Test summary                                                       │
+│    Organization:    2fe09a63-6bf6-4d85-8cba-1064663760ff            │
+│    Test type:       Software Bill of Materials                      │
+│    Path:            mysbom.cyc1.4.json                              │
+│                                                                     │
+│    Open issues:     62 [ 6 CRITICAL  16 HIGH  35 MEDIUM  5 LOW ]    │
+╰─────────────────────────────────────────────────────────────────────╯
+```
+example file [here](https://github.com/nirw-snyk/sbom-demo/blob/main/samples/myCyclonedx1.4.json)
+
+>Note: the raw json output was beautified
+
+## Test SBOM using API:
+
+#### Step 1: Post an SBOM test request
+https://apidocs.snyk.io/experimental?version=2024-02-21%7Eexperimental#get-/orgs/-org_id-/projects/-project_id-/sbom
+>POST /orgs/{org_id}/sbom_tests
+
+using curl:
+```
+curl -X POST "<Snyk-REST-Base-URL>/orgs/<Org-Id>/sbom_tests?version=<API-Version>" \
+ -H "accept: application/vnd.api+json"\
+ -H "authorization: <API-TOKEN>"\
+ -H "content-type: application/vnd.api+json" \
+ -d '{"data":{"type":"sbom_test","attributes":{"sbom":<paste-your-sbom-content-here>}}}' \
+```
+Successful response (201) would give a job-id which could then be used for the next API call.
+In the example below the job-id is 
+>34e8117b-7417-42d5-af17-dd588e52843a
+```
+{
+  "data": {
+    "id": "34e8117b-7417-42d5-af17-dd588e52843a",
+    "type": "sbom_tests"
+  },
+  "jsonapi": {
+    "version": "1.0"
+  },
+  "links": {
+    "self": "/rest/orgs/<Org-Id>/sbom_tests?version=<API-Version>",
+    "related": "/rest/orgs/<Org-Id>/sbom_tests/34e8117b-7417-42d5-af17-dd588e52843a?version=<API-Version>"
+  }
+}
+```
+#### Step 2: Get SBOM Test results from Job Id:
+https://apidocs.snyk.io/experimental?version=2024-02-21%7Eexperimental#get-/orgs/-org_id-/sbom_tests/-job_id-/results
+>GET /orgs/{org_id}/sbom_tests/{job_id}/results
+
+using curl:
+```
+curl -X GET "<Snyk-REST-Base-URL>/orgs/<Org-Id>/sbom_tests/<Job-Id>/results?version=<API-Version>" \
+ -H "accept: application/vnd.api+json"\
+ -H "authorization: <API-TOKEN>"\
+```
+
+Postman collection [here](https://github.com/nirw-snyk/sbom-demo/blob/main/SBOM.postman_collection.json)
+
+example file [here](https://github.com/nirw-snyk/sbom-demo/blob/main/samples/myCyclonedx1.4-Tested.json)
+                    
+## Test SBOM using CLI and a 3rd party - bomber:
 CLI using 3rd party tool [bomber and snyk sbom provider](https://github.com/devops-kung-fu/bomber)
 
 ### Step 1: Install bomber (mac)
@@ -206,54 +374,6 @@ Version: 0.4.8
 ```
 bomber html report sample [here](https://htmlpreview.github.io/?https://github.com/nirw-snyk/sbom-demo/blob/main/samples/20240314-22-39-03-bomber-results.html)
 
-
-## Test SBOM using API:
-
-#### Step 1: Post an SBOM test request
-https://apidocs.snyk.io/experimental?version=2024-02-21%7Eexperimental#get-/orgs/-org_id-/projects/-project_id-/sbom
->POST /orgs/{org_id}/sbom_tests
-
-using curl:
-```
-curl -X POST "<Snyk-REST-Base-URL>/orgs/<Org-Id>/sbom_tests?version=<API-Version>" \
- -H "accept: application/vnd.api+json"\
- -H "authorization: <API-TOKEN>"\
- -H "content-type: application/vnd.api+json" \
- -d '{"data":{"type":"sbom_test","attributes":{"sbom":<paste-your-sbom-content-here>}}}' \
-```
-Successful response (201) would give a job-id which could then be used for the next API call.
-In the example below the job-id is 
->34e8117b-7417-42d5-af17-dd588e52843a
-```
-{
-  "data": {
-    "id": "34e8117b-7417-42d5-af17-dd588e52843a",
-    "type": "sbom_tests"
-  },
-  "jsonapi": {
-    "version": "1.0"
-  },
-  "links": {
-    "self": "/rest/orgs/<Org-Id>/sbom_tests?version=<API-Version>",
-    "related": "/rest/orgs/<Org-Id>/sbom_tests/34e8117b-7417-42d5-af17-dd588e52843a?version=<API-Version>"
-  }
-}
-```
-#### Step 2: Get SBOM Test results from Job Id:
-https://apidocs.snyk.io/experimental?version=2024-02-21%7Eexperimental#get-/orgs/-org_id-/sbom_tests/-job_id-/results
->GET /orgs/{org_id}/sbom_tests/{job_id}/results
-
-using curl:
-```
-curl -X GET "<Snyk-REST-Base-URL>/orgs/<Org-Id>/sbom_tests/<Job-Id>/results?version=<API-Version>" \
- -H "accept: application/vnd.api+json"\
- -H "authorization: <API-TOKEN>"\
-```
-
-Postman collection [here](https://github.com/nirw-snyk/sbom-demo/blob/main/SBOM.postman_collection.json)
-
-example file [here](https://github.com/nirw-snyk/sbom-demo/blob/main/samples/myCyclonedx1.4-Tested.json)
-                    
 
 ###
 Next: [SBOM Enriching Options](https://github.com/nirw-snyk/sbom-demo/blob/main/SBOM-Enriching-Options.md)
