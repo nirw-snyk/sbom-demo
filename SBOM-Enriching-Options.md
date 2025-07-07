@@ -49,7 +49,8 @@ easybuggy git:(demo-feature-branch) ✗ parlay snyk enrich myCyclonedx1.4.json >
 ```
 example file [here](https://github.com/nirw-snyk/sbom-demo/blob/main/samples/mySnykEnrichedCyclonedx1.4.json)
 >Note 1: the raw json output was beautified
->Note 2: parlay currently using hardcoded API endpoint - we'll be adding support to use the SNYK_API envieonment variable in the near future.
+>Note 2: parlay is using the default api: https://api.snyk.io. To use a non-default one set the SNYK_API environment variable.
+>For example AU1: export SNYK_API=https://app.au.snyk.io/api
 
 
 #### enriching with [OpenSSF Scorecard](https://securityscorecards.dev/)
